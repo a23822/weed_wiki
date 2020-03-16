@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+
+@mixin clear {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@mixin mask($length: 0) {
+    position: absolute;
+    top: $length;
+    left: $length;
+    right: $length;
+    bottom: $length;
+}
+
+@mixin galfol {
+    @media screen and (max-width: 319px) and (orientation:portrait) {
+        @content;
+    }
+
+    @media screen and (max-height: 319px) and (orientation:landscape) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) and (orientation:portrait) {
+        @content;
+    }
+    
+    @media screen and (min-height: 768px) and (orientation:landscape) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width: 1024px) and (orientation:portrait) {
+        @content;
+    }
+
+    @media screen and (min-width: 1024px) and (orientation:landscape) {
+        @content;
+    }
+}

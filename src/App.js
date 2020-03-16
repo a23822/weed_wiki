@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import Main from './components/main/main';
+import Header from './components/header/header';
+import Wiki from './components/wiki/wiki';
+import Todo from './components/toto/todo';
+import Uniform from './components/uniform/uniform';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="weed_wiki">
+      <Header/>
+      <Route path="/" component={Main} exact={true}/>
+      <Route path="/wiki" component={Wiki} exact={true}/>
+      <Route path="/todo" component={Todo} exact={true}/>
+      <Route path="/uniform" component={Uniform} exact={true}/>
     </div>
   );
 }

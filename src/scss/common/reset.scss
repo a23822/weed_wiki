@@ -1,0 +1,64 @@
+@charset 'UTF-8';
+@import './scss/common/mixins.scss';
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,legend,input,textarea,button,article,aside,footer,header,nav,section{
+    margin:0;
+    padding:0
+}
+body,input,textarea,select,table,button {
+    font-family: noto,-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
+    font-size:1.4rem;
+    line-height:2rem;
+}
+html {
+    font-size:10px;
+    line-height:10px;
+}
+@include galfol {
+    html{
+        font-size:8px;
+        line-height:8px;
+    }
+}
+input {
+    border: 0;
+}
+button {
+    background-color: #fff;
+    border: 0;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+ul,ol{
+    list-style:none;
+}
+i,em,address {
+    font-style:normal;
+}
+a {
+    color:inherit;
+    text-decoration:none;
+}
+table{
+    border-collapse:collapse;
+}
+.blind{
+    overflow:hidden;
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+}
+mark{
+    color:inherit;
+    font-weight:normal;
+    background:none;
+}
+
+@font-face {
+    font-family: noto;
+    src: url('../../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf') format('opentype');
+}

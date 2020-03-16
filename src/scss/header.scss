@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+
+.header_wrap{
+    position:relative;
+    &:before{
+        content:'';
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        height:2rem;
+        background:linear-gradient(to bottom, #fff, rgba(255,255,255,0));
+    }
+    .btn_menu{
+        position:absolute;
+        top:1rem;
+        left:1rem;
+        width:3rem;
+        height:3rem;
+        background-color:red;
+        border-radius:50%;
+    }
+    .header_banner{
+        height:20rem;
+        background-color:blue;
+    }
+    .menu_tablist{
+        position:relative;
+        font-size:0;
+        line-height:5rem;
+        white-space:nowrap;
+        overflow-x:auto;
+        -ms-overflow-style:none;
+        scrollbar-width:none;
+        text-align:center;
+        &::-webkit-scrollbar{
+            display:none;
+        }
+        &>li{
+            display:inline-block;
+            vertical-align:top;
+        }
+        .tab{
+            display:block;
+            padding:0 20px;
+            font-size:14px;
+            background-color:#424141;
+            color:#fff;
+            &[aria-selected=true]{
+                position:relative;
+                color:#21825c;
+                background-color:#f6f6f6;
+                &:after{
+                    content:'';
+                    position:absolute;
+                    bottom:0;
+                    left:16px;
+                    right:16px;
+                    height:2px;
+                    background-color:#a4d792;
+                }
+            }
+        }
+    }
+}

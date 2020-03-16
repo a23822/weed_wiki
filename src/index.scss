@@ -1,0 +1,9 @@
+@charset 'UTF-8';
+@import './scss/common/reset.scss';
+
+.weed_wiki {
+  position: relative;
+
+    @import './scss/header.scss';
+    @import './scss/main.scss';
+}
