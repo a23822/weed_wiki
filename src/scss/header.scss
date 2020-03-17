@@ -26,13 +26,13 @@
     }
     .menu_tablist{
         position:relative;
+        background-color:#424141;
         font-size:0;
         line-height:5rem;
         white-space:nowrap;
         overflow-x:auto;
         -ms-overflow-style:none;
         scrollbar-width:none;
-        text-align:center;
         &::-webkit-scrollbar{
             display:none;
         }
@@ -44,7 +44,6 @@
             display:block;
             padding:0 20px;
             font-size:14px;
-            background-color:#424141;
             color:#fff;
             &[aria-selected=true]{
                 position:relative;
