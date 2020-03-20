@@ -1,12 +1,13 @@
 @charset 'UTF-8';
 @import './scss/common/mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,legend,input,textarea,button,article,aside,footer,header,nav,section{
     margin:0;
     padding:0
 }
 body,input,textarea,select,table,button {
-    font-family: noto,-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size:1.4rem;
     line-height:2rem;
 }

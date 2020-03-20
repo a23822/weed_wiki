@@ -5,6 +5,8 @@ import Header from './components/header/header';
 import Wiki from './components/wiki/wiki';
 import Todo from './components/toto/todo';
 import Uniform from './components/uniform/uniform';
+import SignIn from './components/auth/signin';
+import SignUp from './components/auth/signup';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Route path="/wiki" component={Wiki} exact={true}/>
       <Route path="/todo" component={Todo} exact={true}/>
       <Route path="/uniform" component={Uniform} exact={true}/>
+      <Route path="/signin" component={SignIn} exact={true}/>
+      <Route path="/signup" component={SignUp} exact={true}/>
     </div>
   );
 }
