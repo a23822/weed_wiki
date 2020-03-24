@@ -7,7 +7,7 @@ const Header = () => {
         {
             id: 1,
             menuName:'Home',
-            link:'/',
+            link:'/home',
         },
         {
             id: 2,

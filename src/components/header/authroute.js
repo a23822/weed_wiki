@@ -1,6 +1,6 @@
 import React, { useContext, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../firebase/index';
+import Auth from '../auth';
 
 const AuthRoute = () => {
     const {currentUser} = useContext(AuthContext);
@@ -8,8 +8,8 @@ const AuthRoute = () => {
     return(
         <Fragment>
             {currentUser?
-                <div>로그인됨</div> :
-                <Link exact="true" to="/signin" className="signin_btn">로그인</Link>
+                <div className="menu_btn">로그인됨</div> :
+                <Auth/>
             }
         </Fragment>
     )
