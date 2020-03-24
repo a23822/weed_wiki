@@ -1,4 +1,5 @@
 @charset 'UTF-8';
+@import '../scss/common/mixins.scss';
 @import url('https://fonts.googleapis.com/css?family=Gugi&display=swap');
 
 .signin_btn{
@@ -43,6 +44,7 @@
     }
     .ico_area{
         text-align:center;
+        pointer-events:none;
         .ico_weedman{
             width:10rem;
         }
@@ -65,24 +67,31 @@
         .inp_wrap{
             position: relative;
             padding: 0 2rem;
-            line-height:5.5rem;
+            line-height:5rem;
             border-radius: 3rem;
             background-color:#fff;
             overflow:hidden;
+            & + .inp_wrap{
+                margin-top: 2rem;
+            }
+            @include tablet{
+                width:44rem;
+                margin:0 auto;
+            }
         }
         .inp_label{
             position:absolute;
-            top:0.5rem;
+            top:0.7rem;
             left:2rem;
-            right:2rem;
             color:#999;
-            font-size:1.3rem;
-            line-height:1.6rem;
+            font-size:1.4rem;
+            line-height:1.7rem;
             font-weight:bold;
+            font-family: 'Black Has Sans', sans-serif;
         }
         .inp_bx{
             position: relative;
-            top:0.5rem;
+            top:0.7rem;
             width:100%;
             height:5.5rem;
             background-color:transparent;
@@ -90,6 +99,20 @@
             line-height:4.5rem;
             &:focus{
                 outline:0;
+            }
+        }
+        .btn_area{
+            margin-top:2rem;
+            .submit_btn{
+                display:block;
+                width:100%;
+                line-height:5rem;
+                border-radius: 3rem;
+                background-color:#fff;
+                @include tablet{
+                    width:48rem;
+                    margin:0 auto;
+                }
             }
         }
     }
@@ -146,12 +169,34 @@
                 margin-top: 10px;
             }
             .link_btn{
+                position:relative;
                 display:block;
                 &:after{
                     @include clear;
                 }
                 &.active{
-
+                    &:before{
+                        content:'';
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        bottom:0;
+                        background-color:rgba(#a4d792,0.4);
+                        box-shadow: 0 0 0.5rem 0.5rem rgba(#a4d792,0.4);
+                    }
+                    .menu_mark{
+                        &:before{
+                            content:'';
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            width:100%;
+                            bottom:0;
+                            background-color:rgba(#21825c,0.35);
+                            border-radius:7px;
+                        }
+                    }
                 }
                 .menu_mark{
                     position: relative;
@@ -162,14 +207,20 @@
                     border-radius:7px;
                     background-color:#fff;
                     text-align:center;
-                    .ico_login{
+                    .nav_ico{
                         position:absolute;
                         top:50%;
                         left:50%;
                         transform:translate(-50%,-50%);
                         color:#fff;
-                        width:3rem;
-                        height:3rem;
+                        &.ico_login{
+                            width:2.5rem;
+                            height:2.5rem;
+                        }
+                        &.ico_signup{
+                            width:5rem;
+                            height:2.5rem;
+                        }
                     }
                 }
                 .txt{

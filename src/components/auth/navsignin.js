@@ -5,7 +5,7 @@ const NavSignIn = () => {
     return(
         <Fragment>
             <span className="menu_mark">
-                <FiLogIn className="ico_login"/>
+                <FiLogIn className="nav_ico ico_login"/>
             </span>
             <span className="txt">로그인</span>
         </Fragment>
