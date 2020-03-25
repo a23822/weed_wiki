@@ -11,11 +11,10 @@ function App() {
     <div className="weed_wiki">
       <Header/>
       <Switch>
-        <Route path="/" component={Main} exact={true}/>
-        <Route path="/home" component={Main} exact={true}/>
-        <Route path="/wiki" component={Wiki} exact={true}/>
-        <Route path="/todo" component={Todo} exact={true}/>
-        <Route path="/uniform" component={Uniform} exact={true}/>
+        <Route exact path={["/", "/home"]} component={Main}/>
+        <Route exact path="/wiki" component={Wiki}/>
+        <Route exact path="/todo" component={Todo}/>
+        <Route exact path="/uniform" component={Uniform}/>
       </Switch>
     </div>
   );

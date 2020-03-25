@@ -57,7 +57,7 @@ const Auth = () => {
                 </button>
                 <div className="form_area">
                     <Switch>
-                        <Route path={[`/home`, '/wiki', '/todo', '/uniform', `/signin`]} component={SignIn}/>
+                        <Route exact path={[`/`, `/home`, '/wiki', '/todo', '/uniform', `/signin`]} component={SignIn}/>
                         <Route exact path={`/signup`} component={SignUp}/>
                     </Switch>
                 </div>
