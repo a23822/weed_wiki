@@ -17,16 +17,20 @@
     }
 }
 .type_sign{
+    pointer-events:none;
     opacity:0;
     right:100%;
     transition: 1s right ease-in;
     background-color: rgba(0,0,0,0.85);
     transition: 0.8s all ease-in;
+    &.is_visible{
+        pointer-events:initial;
+    }
 
     .exit_btn{
         position:absolute;
-        top: 10px;
-        right:10px;
+        top: 1rem;
+        right:1rem;
         width:3rem;
         height:3rem;
         svg{
@@ -41,6 +45,8 @@
         left:0;
         right:0;
         transform:translateY(-50%);
+        max-height:80%;
+        overflow-y:auto;
     }
     .ico_area{
         text-align:center;
@@ -62,8 +68,11 @@
         text-shadow:1px 1px 1px #a4d792;
         font-family:'Gugi', sans-serif;
     }
+    form{
+        
+    }
     .form_inner{
-        padding: 1rem 1.5rem;
+        padding: 0 1.5rem;
         .inp_wrap{
             position: relative;
             padding: 0 2rem;
@@ -75,8 +84,10 @@
                 margin-top: 2rem;
             }
             @include tablet{
-                width:44rem;
+                width:40rem;
                 margin:0 auto;
+            }
+            @include pc{
             }
         }
         .inp_label{
@@ -100,6 +111,10 @@
             &:focus{
                 outline:0;
             }
+            &::placeholder{
+                color:rgba(#666, 0.5);
+                font-size:1.2rem;
+            }
         }
         .btn_area{
             margin-top:2rem;
@@ -110,8 +125,11 @@
                 border-radius: 3rem;
                 background-color:#fff;
                 @include tablet{
-                    width:48rem;
+                    width:44rem;
                     margin:0 auto;
+                }
+                @include pc{
+
                 }
             }
         }
@@ -174,7 +192,7 @@
                 &:after{
                     @include clear;
                 }
-                &.active{
+                &[aria-selected=true]{
                     &:before{
                         content:'';
                         position:absolute;

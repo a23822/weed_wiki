@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import NavSignIn from './navsignin';
 import NavSignUp from './navsignup';
 
-const AuthNav = () => {
+const AuthNav = (props) => {
     const [navItems, setNavItems] = useState([
         {
             id: 1,
@@ -18,6 +18,18 @@ const AuthNav = () => {
             link: `/signup`,
         }
     ])
+    //nav초기화
+    const initialFlag = props.isNavInitial;
+    useEffect(()=>{
+        if (initialFlag){
+            setNavItems(
+                navItems.map(item =>
+                    item.id === 1 ? {...item, ariaSelected:true} : {...item, ariaSelected:false}
+                )
+            )
+        }
+    },[initialFlag])
+
     const onClickNav = (index) => {
         setNavItems(
             navItems.map(item =>
