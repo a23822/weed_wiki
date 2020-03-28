@@ -1,11 +1,12 @@
-import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { withRouter } from 'react-router-dom';
 import Ico_WeedMan from '../../img/ico_weedman.png';
-import { firebaseApp, AuthContext } from '../firebase/index';
+import { firebaseApp } from '../firebase/index';
 
 const SignIn = ({ history }) => {
     const handleSignIn = useCallback(
         async event => {
+            event.preventDefault();
             console.log(event.target.elements);
             const formElements = event.target.elements;
             const email = formElements[0].value;
@@ -20,12 +21,6 @@ const SignIn = ({ history }) => {
             }
         }, [history]
     )
-
-    const {currentUser} = useContext(AuthContext);
-
-    if (currentUser) {
-        return <Redirect to="/home"/>;
-    }
 
     return(
         <form onSubmit={handleSignIn}>

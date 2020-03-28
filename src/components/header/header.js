@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import AuthRoute from './authroute';
+import Auth from '../nav';
 
 const Header = () => {
     const tab_info = [
@@ -28,7 +28,7 @@ const Header = () => {
 
     return(
         <div className="header_wrap">
-            <AuthRoute/>
+            <Auth/>
             <div className="header_banner">
                 
             </div>

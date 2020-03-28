@@ -17,9 +17,7 @@ const config = {
     measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 }
 export const firebaseApp = app.initializeApp(config);
-
 export const AuthContext = createContext('');
-
 export const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
 

@@ -1,10 +1,13 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useContext } from 'react';
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import SignIn from './signin';
 import SignUp from './signup';
 import AuthNav from './authnav';
+import NavContent from './content';
 import { IoIosCloseCircle, IoIosCloseCircleOutline } from "react-icons/io";
+import { AuthContext } from '../firebase/index';
+import ico_default_profile from '../../img/ico_default_profile.svg';
 
 const Auth = () => {
     //레이어
@@ -22,6 +25,9 @@ const Auth = () => {
     let history = useHistory();
     let location = useLocation();
     const [temp_location, setTempLocation] = useState('/home');
+
+    //로그인여부
+    const { currentUser } = useContext(AuthContext);
 
     const onClickLink = () => {
         if (!is_clicked){
@@ -48,7 +54,12 @@ const Auth = () => {
 
     return(
         <Fragment>
-            <button type="button" onClick={onClickLink} className={signin_btn_classNames}>로그인</button>
+            { currentUser?
+                <button type="button" onClick={onClickLink} className={signin_btn_classNames}>
+                    <img src={ico_default_profile} width="100%" height="100%" alt=""/>
+                </button> :
+                <button type="button" onClick={onClickLink} className={signin_btn_classNames}>로그인</button>
+            }
             <div className={cap_layer_classNames}>
                 <button type="button"
                     onClick={onClickLink} onMouseEnter={onHoverOver} onMouseLeave={onHoverOut}
@@ -57,7 +68,8 @@ const Auth = () => {
                 </button>
                 <div className="form_area">
                     <Switch>
-                        <Route exact path={[`/`, `/home`, '/wiki', '/todo', '/uniform', `/signin`]} component={SignIn}/>
+                        <Route exact path={[`/`, `/home`, '/wiki', '/todo', '/uniform', `/signin`]}
+                            component={currentUser? NavContent : SignIn}/>
                         <Route exact path={`/signup`} component={SignUp}/>
                     </Switch>
                 </div>
