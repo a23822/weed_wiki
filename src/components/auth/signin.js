@@ -1,15 +1,34 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useCallback, useContext } from 'react';
+import { withRouter, Redirect } from 'react-router-dom';
 import Ico_WeedMan from '../../img/ico_weedman.png';
+import { firebaseApp, AuthContext } from '../firebase/index';
 
-const SignIn = () => {
-    const history = useHistory();
+const SignIn = ({ history }) => {
+    const handleSignIn = useCallback(
+        async event => {
+            console.log(event.target.elements);
+            const formElements = event.target.elements;
+            const email = formElements[0].value;
+            const password = formElements[1].value;
+            console.log(`이메일값은 ${email} 비밀번호값은 ${password}`)
+            try {
+                await firebaseApp.auth()
+                    .signInWithEmailAndPassword(email, password);
+                history.push('/home');
+            } catch (error) {
+                alert(error);
+            }
+        }, [history]
+    )
 
-    const onClickSubmit = () => {
-        history.push('/home');
+    const {currentUser} = useContext(AuthContext);
+
+    if (currentUser) {
+        return <Redirect to="/home"/>;
     }
+
     return(
-        <form>
+        <form onSubmit={handleSignIn}>
             <div className="ico_area">
                 <img src={Ico_WeedMan} className="ico_weedman" alt=""/>
             </div>
@@ -24,11 +43,11 @@ const SignIn = () => {
                     <label className="inp_label" aria-hidden="true">비밀번호</label>
                 </div>
                 <div className="btn_area">
-                    <button type="submit" onClick={onClickSubmit} className="submit_btn">로그인</button>
+                    <button type="submit" className="submit_btn">로그인</button>
                 </div>
             </div>
         </form>
     )
 }
 
-export default SignIn;
+export default withRouter(SignIn);

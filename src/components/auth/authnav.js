@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import NavSignIn from './navsignin';
 import NavSignUp from './navsignup';
+import NavSignOut from './navsignout';
 
 const AuthNav = (props) => {
     const [navItems, setNavItems] = useState([
@@ -16,6 +17,12 @@ const AuthNav = (props) => {
             menu: <NavSignUp/>,
             ariaSelected:false,
             link: `/signup`,
+        },
+        {
+            id: 3,
+            menu: <NavSignOut/>,
+            ariaSelected:false,
+            link: '/home',
         }
     ])
     //nav초기화
