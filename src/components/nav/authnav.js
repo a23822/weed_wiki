@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import NavSignIn from './navsignin';
 import NavSignUp from './navsignup';
 import NavSignOut from './navsignout';
@@ -20,33 +20,35 @@ const AuthNav = (props) => {
             link: `/signup`,
         }
     ])
-    //nav초기화
-    const initialFlag = props.isNavInitial;
-    
-    useEffect(()=>{
-        if (initialFlag){
-            setNavItems(
-                navItems.map(item =>
-                    item.id === 1 ? {...item, ariaSelected:true} : {...item, ariaSelected:false}
-                )
-            )
-        }
-    },[])
 
     //로그인여부
     const { currentUser } = useContext(AuthContext);
 
-    const onClickNav = (index) => {
+    const changeAriaSelected = (index) => {
         setNavItems(
             navItems.map(item =>
                 item.id === index ? {...item, ariaSelected:true} : {...item, ariaSelected:false}
             )
         )
     }
-    
+
+    //로그아웃
+    const history = useHistory();
+
     const onClickSignOut = () => {
         firebaseApp.auth().signOut();
+        history.push('/home');
+        props.setBtn(false);
     }
+
+    const initialFlag = props.isNavInitial;
+
+    //nav초기화
+    useEffect(()=>{
+        if (initialFlag){
+            changeAriaSelected(1);
+        }
+    },[initialFlag])
 
     return(
         <div className="cap_layer type_auth">
@@ -72,7 +74,7 @@ const AuthNav = (props) => {
                         </NavLink>
                     </li> :
                     navItems.map(item => (
-                        <li role="presentation" key={item.id} className="item" onClick={() => onClickNav(item.id)}>
+                        <li role="presentation" key={item.id} className="item" onClick={() => changeAriaSelected(item.id)}>
                             <NavLink exact to={item.link} role="tab" aria-selected={item.ariaSelected}
                             className="link_btn">
                                 {item.menu}

@@ -1,26 +1,22 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Ico_WeedMan from '../../img/ico_weedman.png';
 import { firebaseApp } from '../firebase/index';
 
-const SignIn = ({ history }) => {
-    const handleSignIn = useCallback(
-        async event => {
-            event.preventDefault();
-            console.log(event.target.elements);
-            const formElements = event.target.elements;
-            const email = formElements[0].value;
-            const password = formElements[1].value;
-            console.log(`이메일값은 ${email} 비밀번호값은 ${password}`)
-            try {
-                await firebaseApp.auth()
-                    .signInWithEmailAndPassword(email, password);
-                history.push('/home');
-            } catch (error) {
-                alert(error);
-            }
-        }, [history]
-    )
+const SignIn = ({ history, setBtn }) => {
+    const handleSignIn = (e) => {
+        e.preventDefault();
+        const formElements = e.target.elements;
+        const email = formElements[0].value;
+        const password = formElements[1].value;
+        try {
+            firebaseApp.auth().signInWithEmailAndPassword(email, password);
+            history.push('/home');
+            setBtn(false);
+        } catch (error) {
+            console.log(error);
+        }
+    } 
 
     return(
         <form onSubmit={handleSignIn}>

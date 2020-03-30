@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import * as app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 import 'firebase/firebase-firestore';
 import dotenv from 'dotenv';
 

@@ -69,12 +69,23 @@ const Auth = () => {
                 <div className="form_area">
                     <Switch>
                         <Route exact path={[`/`, `/home`, '/wiki', '/todo', '/uniform', `/signin`]}
-                            component={currentUser? NavContent : SignIn}/>
-                        <Route exact path={`/signup`} component={SignUp}/>
+                            render={(props)=>(
+                                currentUser?
+                                    <NavContent/> :
+                                    <SignIn {...props} setBtn={setBtn}/>
+                                )
+                            }/>
+                        <Route exact path={`/signup`}
+                            render={(props)=>(
+                                <SignUp {...props} setBtn={setBtn}/>
+                            )}
+                        />
                     </Switch>
                 </div>
             </div>
-            <AuthNav isNavInitial={isNavInitial} setNavInitial={setNavInitial}/>
+            <AuthNav isNavInitial={isNavInitial} setNavInitial={setNavInitial}
+                setBtn={setBtn}
+            />
         </Fragment>
     )
 }
