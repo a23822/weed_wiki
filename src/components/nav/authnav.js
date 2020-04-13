@@ -24,6 +24,30 @@ const AuthNav = (props) => {
     //로그인여부
     const { currentUser } = useContext(AuthContext);
 
+    //회원정보
+    const [userAgentName, setUserAgentName] = useState('');
+    const [userRank, setUserRank] = useState('');
+    const [userAliance, setUserAliance] = useState('');
+
+    firebaseApp.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            var userRef = firebaseApp.database().ref('users/' + user.uid)
+            userRef.once('value').then(function(snapshot) {
+                setUserAgentName(snapshot.child('agentName').val());
+                setUserRank(snapshot.child('rank').val());
+                setUserAliance(snapshot.child('aliance').val());
+            })
+        }
+        else {
+            console.log("no logged in")
+        }
+    })
+    // var userRef = firebaseApp.database().ref('users/' + user_id);
+    // userRef.once('value')
+    //     .then(funtion(snapshot) {
+    //         const agentName = snapshot.agentName;
+    //     })
+
     const changeAriaSelected = (index) => {
         setNavItems(
             navItems.map(item =>
@@ -57,10 +81,13 @@ const AuthNav = (props) => {
                     { currentUser?
                         <Fragment>
                             <div className="label_wrap">
-                                <span className="label type_cadre">1급</span>
+                                { userRank === '준회원'? 
+                                    <span className="label type_cadre">준회원</span> :
+                                    <span className="label type_cadre">1급</span>
+                                }
                                 <span className="label type_arca">Arca</span>
                             </div>
-                            <p className="profile_id">킹오브잡초맨</p>
+                            <p className="profile_id">{userAgentName}</p>
                         </Fragment> :
                         <p className="placeholder">로그인해주세요</p>
                     }

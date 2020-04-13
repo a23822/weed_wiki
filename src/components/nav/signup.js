@@ -18,28 +18,35 @@ const SignUp = (props) => {
         })
     }
 
-    const isValid = dataList['form_pw']>6 ||
-                    dataList['form_pw'] === dataList['form_pw_chk'];
-    
+    const isValid = dataList['form_email'].length > 0 &&
+        dataList['form_pw'].length >= 6 &&
+        dataList['form_pw'] === dataList['form_pw_chk'] &&
+        dataList['form_pw'].length>0 &&
+        dataList['form_agentName'].length>0;
+
     //회원가입 관련
     const handleSignUp = useCallback(
         async e => {
             e.preventDefault();
-            
-            if (isValid) {
-                try {
-                    await firebaseApp.auth()
-                        .createUserWithEmailAndPassword(dataList['form_email'], dataList['form_pw']);
-                    props.history.push('/home');
-                    const user_id = firebaseApp.auth().currentUser.uid;
-                    const userRef = firebaseApp.database().ref('users/' + user_id);
-                    userRef.set({
-                        'email': dataList['form_email'],
-                        'agentName': dataList['form_agentName'],
-                    });
-                } catch(error) {
-                    alert(error);
-                }
+            try {
+                const formElements = e.target.elements;
+                const email = formElements[0].value;
+                const password = formElements[1].value;
+                const agentName = formElements[3].value;
+                await firebaseApp.auth()
+                    .createUserWithEmailAndPassword(email, password);
+                props.history.push('/home');
+                props.setBtn(false);
+                const user_id = firebaseApp.auth().currentUser.uid;
+                const userRef = firebaseApp.database().ref('users/' + user_id);
+                userRef.set({
+                    'email': email,
+                    'agentName': agentName,
+                    'rank': '준회원',
+                    'aliance': '',
+                });
+            } catch(error) {
+                alert(error);
             }
         }, []
     )
@@ -53,7 +60,7 @@ const SignUp = (props) => {
                     <label className="inp_label" aria-hidden="true">이메일</label>
                 </div>
                 <div className="inp_wrap">
-                    <input type="password" aria-label="비밀번호" name="form_pw" placeholder="비밀번호를 입력해주세요"
+                    <input type="password" aria-label="비밀번호" name="form_pw" placeholder="최소 6글자 입력해주세요"
                     onChange={changeFormData} className="inp_bx"/>
                     <label className="inp_label" aria-hidden="true">비밀번호</label>
                 </div>
@@ -68,7 +75,9 @@ const SignUp = (props) => {
                     <label className="inp_label" aria-hidden="true">에이전트명</label>
                 </div>
                 <div className="btn_area">
-                    <button type="submit" className="submit_btn">회원가입</button>
+                    <button type="submit" className="submit_btn" disabled={!isValid}>
+                        {isValid? '회원가입' : '양식을 다시 확인해주세요'}
+                    </button>
                 </div>
             </div>
         </form>
