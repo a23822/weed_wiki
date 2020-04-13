@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+@import '../scss/common/mixins.scss';
+
+.admin_page{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff;
+    z-index:5000;
+
+    .admin_title{
+        color:#242424;
+        font-size: 1.8rem;
+        line-height:2.3rem;
+    }
+
+    .admin_item{
+        display: block;
+        padding: 2rem;
+        color:#242424;
+        font-weight: bold;
+    }
+}

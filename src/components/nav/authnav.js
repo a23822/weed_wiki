@@ -4,6 +4,9 @@ import NavSignIn from './navsignin';
 import NavSignUp from './navsignup';
 import NavSignOut from './navsignout';
 import { firebaseApp, AuthContext } from '../firebase/index';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const AuthNav = (props) => {
     const [navItems, setNavItems] = useState([
@@ -28,6 +31,8 @@ const AuthNav = (props) => {
     const [userAgentName, setUserAgentName] = useState('');
     const [userRank, setUserRank] = useState('');
     const [userAliance, setUserAliance] = useState('');
+    const [isAdmin, setIsAdmin] = useState(false);
+    const adminId = process.env.REACT_APP_ADMIN_ID;
 
     firebaseApp.auth().onAuthStateChanged(function(user) {
         if (user) {
@@ -40,6 +45,10 @@ const AuthNav = (props) => {
         }
         else {
             console.log("no logged in")
+        }
+        //admin 계정인지 아닌지
+        if (user && user.uid === adminId) {
+            setIsAdmin(true);
         }
     })
     // var userRef = firebaseApp.database().ref('users/' + user_id);
@@ -62,6 +71,11 @@ const AuthNav = (props) => {
     const onClickSignOut = () => {
         firebaseApp.auth().signOut();
         history.push('/home');
+        props.setBtn(false);
+    }
+
+    const onClickAdmin = () => {
+        history.push('/admin');
         props.setBtn(false);
     }
 
@@ -108,6 +122,13 @@ const AuthNav = (props) => {
                             </NavLink>
                         </li>
                     ))
+                }
+                { isAdmin?
+                    <li role="presentation" className="item">
+                        <NavLink exact to="/admin" onClick={onClickAdmin} role="tab" aria-selected="false" className="link_btn">
+                            Admin
+                        </NavLink>
+                    </li> : null
                 }
             </ul>
         </div>
