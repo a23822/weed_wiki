@@ -72,6 +72,7 @@ const AuthNav = (props) => {
         firebaseApp.auth().signOut();
         history.push('/home');
         props.setBtn(false);
+        window.location.reload();
     }
 
     const onClickAdmin = () => {
