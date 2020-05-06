@@ -9,14 +9,100 @@
     bottom:0;
     background-color:#fff;
     z-index:5000;
-
+    .admin_inner{
+        display:flex;
+        height:100%;
+        flex-direction:column;
+    }
+    .admin_content{
+        position: relative;
+        height:100%;
+        margin:auto 0 0;
+        overflow:hidden;
+        &:before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:3rem;
+            background-image:linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1));
+        }
+        &:after{
+            content:'';
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            height:3rem;
+            background-image:linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+        }
+        .card_area{
+            padding:0 1.6rem;
+            height:100%;
+            overflow-y:auto;
+        }
+        .card_wrap{
+            padding:2rem;
+            background-color:#ababab;
+            border:1px solid #333;
+            box-sizing:border-box;
+            border-radius:20px;
+            &:after{
+                @include clear;
+            }
+            &+.card_wrap{
+                margin-top:2rem;
+            }
+            &:first-child{
+                margin-top:3rem;
+            }
+            &:last-child{
+                margin-bottom:3rem;
+            }
+            .user_name{
+                display:block;
+                margin:5px;
+                font-size:1.6rem;
+                line-height:2rem;
+                font-weight:bold;
+                color:#fff;
+            }
+            .info_wrap{
+                float:left;
+                width:50%;
+                box-sizing:border-box;
+                padding:0 1rem;
+            }
+            .info_label{
+                
+            }
+            .info_bx{
+                
+            }
+        }
+    }
+    .content_footer_wrap{
+        line-height:4rem;
+    }
     .admin_title{
+        margin:5rem 0 2rem;
+        padding: 0 10px;
         color:#242424;
         font-size: 1.8rem;
         line-height:2.3rem;
     }
 
-    .admin_item{
+    .admin_back_btn{
+        position:absolute;
+        top:1rem;
+        left:1rem;
+        background-color:#cecece;
+        border:1px solid #333;
+        color:#888;
+    }
+
+    .admin_menu_item{
         display: block;
         padding: 2rem;
         color:#242424;
