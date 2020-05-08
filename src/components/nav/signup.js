@@ -33,6 +33,8 @@ const SignUp = (props) => {
                 const email = formElements[0].value;
                 const password = formElements[1].value;
                 const agentName = formElements[3].value;
+                const nowTimeStamp = Math.floor(new Date().getTime()/1000);
+                console.log(email);
                 await firebaseApp.auth()
                     .createUserWithEmailAndPassword(email, password);
                 props.history.push('/home');
@@ -44,6 +46,7 @@ const SignUp = (props) => {
                     'agentName': agentName,
                     'rank': '준회원',
                     'aliance': '',
+                    'timestamp': nowTimeStamp,
                 });
             } catch(error) {
                 alert(error);

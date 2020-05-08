@@ -44,10 +44,11 @@
         }
         .card_wrap{
             padding:2rem;
-            background-color:#ababab;
+            background-color:#dedede;
             border:1px solid #333;
-            box-sizing:border-box;
             border-radius:20px;
+            box-shadow: 0 0 1px 1px #111;
+            box-sizing:border-box;
             &:after{
                 @include clear;
             }
@@ -63,22 +64,37 @@
             .user_name{
                 display:block;
                 margin:5px;
-                font-size:1.6rem;
-                line-height:2rem;
-                font-weight:bold;
-                color:#fff;
+                font-size:2rem;
+                line-height:2.5rem;
+                font-weight:800;
+                color:#333;
             }
             .info_wrap{
                 float:left;
                 width:50%;
                 box-sizing:border-box;
-                padding:0 1rem;
+                padding:1rem 1rem 0;
             }
             .info_label{
-                
+                display:inline-block;
+                vertical-align:top;
+                padding:0 5px;
+                min-width:4rem;
+                font-size:1.3rem;
+                line-height:2.5rem;
+                color:#fff;
+                background-color:#242424;
+                border-radius:10px 10px 0 0;
+                text-align:center;
             }
             .info_bx{
-                
+                padding:5px 5px 5px 8px;
+                height:2rem;
+                background-color:#fff;
+                border-radius: 0 10px 10px 10px;
+                overflow:hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
             }
         }
     }

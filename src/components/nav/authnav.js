@@ -89,6 +89,60 @@ const AuthNav = (props) => {
         }
     },[initialFlag])
 
+    //유저 등급 라벨
+    const setUserRankLabel = (userRank) => {
+        switch (userRank) {
+            case '준회원':
+                return (
+                    <Fragment>
+                        <span className="label type_cadre">준회원</span>
+                    </Fragment>
+                )
+            case '관리자':
+                return (
+                    <Fragment>
+                        <span className="label type_cadre">관리자</span>
+                    </Fragment>
+                )
+            case '1급':
+                return (
+                    <Fragment>
+                        <span className="label type_cadre">1급</span>
+                    </Fragment>
+                )
+            case '연합장':
+                return (
+                    <Fragment>
+                        <span className="label type_cadre">연합장</span>
+                    </Fragment>
+                )
+            default:
+                return (
+                    <Fragment>
+                        <span className="label type_blind"></span>
+                    </Fragment>
+                )
+        }
+    }
+
+    //유저 연합
+    const setUserAlianceLabel = (userAliance) => {
+        switch (userAliance) {
+            case '아르카디아 클랜':
+                return (
+                    <Fragment>
+                        <span className="label type_arca">Arca</span>
+                    </Fragment>
+                )
+            default:
+                return (
+                    <Fragment>
+                        <span className="label type_blind"></span>
+                    </Fragment>
+                )
+        }
+    }
+
     return(
         <div className="cap_layer type_auth">
             <div className="profile_area">
@@ -96,10 +150,8 @@ const AuthNav = (props) => {
                     { currentUser?
                         <Fragment>
                             <div className="label_wrap">
-                                { userRank === '준회원'? 
-                                    <span className="label type_cadre">준회원</span> :
-                                    <span className="label type_cadre">1급</span>
-                                }
+                                { setUserRankLabel(userRank) }
+                                { userAliance === ''}
                                 <span className="label type_arca">Arca</span>
                             </div>
                             <p className="profile_id">{userAgentName}</p>

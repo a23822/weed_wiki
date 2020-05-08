@@ -147,6 +147,7 @@
         background-color:#fff;
         box-shadow: 0 0 0.5rem 0.5rem #fff;
         .profile_wrap{
+            position:relative;
             .placeholder{
                 font-size:1.2rem;
                 line-height:1.5rem;
@@ -181,6 +182,16 @@
                 &.type_arca{
                     background-color: #dd0e02;
                     color:#fff;
+                }
+                &.type_blind{
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:1px;
+                    left:1px;
+                    overflow:hidden;
+                    margin:-1px -1px 0 0;
+                    clip:rect(0 0 0 0);
                 }
             }
         }
