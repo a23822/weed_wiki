@@ -7,12 +7,17 @@
         opacity:1;
         right:0;
         left:15.5rem;
-        transition: 1s all ease-out;
+        transition:0.6s right ease-out,0.5s left ease-in, 0.6s opacity ease-in;
         transition-delay:0.3s;
+        .form_area{
+            opacity:1;
+            transition:0.5s opacity ease-in;
+            transition-delay:0.7s;
+        }
 
         & + .type_auth{
             left:0;
-            transition: 0.8s left ease-out;
+            transition:0.4s left ease-out;
         }
     }
 }
@@ -21,9 +26,8 @@
     padding:5rem 0;
     pointer-events:none;
     opacity:0;
-    transition: 1s right ease-in;
     background-color: rgba(0,0,0,0.85);
-    transition: 0.8s all ease-in;
+    transition:0.6s right ease-in, 0.6s left ease-in, 0.6s opacity ease-in;
     &.is_visible{
         pointer-events:initial;
     }
@@ -47,6 +51,7 @@
         transform:translateY(-50%);
         max-height:100%;
         overflow-y:auto;
+        opacity:0;
     }
     .ico_area{
         text-align:center;
@@ -70,14 +75,14 @@
     }
     .form_inner{
         padding: 0 1.5rem;
-        .inp_wrap{
+        .inp_area{
             position: relative;
             padding: 0 2rem;
-            line-height:5rem;
+            height:5.5rem;
             border-radius: 3rem;
             background-color:#fff;
             overflow:hidden;
-            & + .inp_wrap{
+            & + .inp_area{
                 margin-top: 2rem;
             }
             @include tablet{
@@ -89,20 +94,44 @@
         }
         .inp_label{
             position:absolute;
-            top:0.4rem;
+            // top:0.4rem;
+            top:0;
             left:2rem;
-            color:#999;
-            font-size:1.4rem;
-            line-height:1.7rem;
+            // color:rgba(0,0,0,0.5);
+            color:#555;
+            font-size:1.6rem;
+            // line-height:1.5rem;
+            line-height:5.5rem;
             font-weight:bold;
+            letter-spacing:0.6px;
             font-family: 'Black Has Sans', sans-serif;
+            transition:all 0.3s ease-in;
+            pointer-events:none;
+        }
+        .inp_wrap{
+            height:100%;
+            color:transparent;
+            background-color:transparent;
+            font-size:1.6rem;
+            line-height:4.5rem;
+            & .inp_bx::placeholder{
+                color:transparent;
+            }
+            &.is_filled{
+                &+.inp_label{
+                    top:0.4rem;
+                    font-size:1.2rem;
+                    line-height:1.5rem;
+                    color:rgba(0,0,0,0.5);
+                    transition:all 0.3s ease-out;
+                }
+            }
         }
         .inp_bx{
             width:100%;
             height:5.5rem;
             background-color:transparent;
-            font-size:1.6rem;
-            line-height:4.5rem;
+            
             &:focus{
                 outline:0;
             }
@@ -138,8 +167,8 @@
     width:15rem;
     background-color:#f6f6f6;
     box-shadow: 0 0 0.5rem 0.5rem #f6f6f6;
-    transition: 1.1s left ease-out;
-    transition-delay:0.6s;
+    transition: 0.6s left ease-out;
+    transition-delay:0.3s;
 
     .profile_area{
         padding:2rem 0;

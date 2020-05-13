@@ -25,11 +25,11 @@ const SignIn = ({ history, setBtn }) => {
             </div>
             <p className="tit">잡초위키</p>
             <div className="form_inner">
-                <div className="inp_wrap">
+                <div className="inp_area">
                     <input type="text" aria-label="이메일" className="inp_bx"/>
                     <label className="inp_label" aria-hidden="true">이메일</label>
                 </div>
-                <div className="inp_wrap">
+                <div className="inp_area">
                     <input type="password" aria-label="비밀번호" className="inp_bx"/>
                     <label className="inp_label" aria-hidden="true">비밀번호</label>
                 </div>

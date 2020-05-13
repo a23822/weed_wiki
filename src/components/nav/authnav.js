@@ -34,28 +34,26 @@ const AuthNav = (props) => {
     const [isAdmin, setIsAdmin] = useState(false);
     const adminId = process.env.REACT_APP_ADMIN_ID;
 
-    firebaseApp.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            var userRef = firebaseApp.database().ref('users/' + user.uid)
-            userRef.once('value').then(function(snapshot) {
-                setUserAgentName(snapshot.child('agentName').val());
-                setUserRank(snapshot.child('rank').val());
-                setUserAliance(snapshot.child('aliance').val());
-            })
-        }
-        else {
-            console.log("no logged in")
-        }
-        //admin 계정인지 아닌지
-        if (user && user.uid === adminId) {
-            setIsAdmin(true);
-        }
-    })
-    // var userRef = firebaseApp.database().ref('users/' + user_id);
-    // userRef.once('value')
-    //     .then(funtion(snapshot) {
-    //         const agentName = snapshot.agentName;
-    //     })
+    //TODO useEffect 로 둘러싸게 바뀌었는데 오류없을 시 보존 아니면 롤백
+    useEffect(()=>{
+        firebaseApp.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                var userRef = firebaseApp.database().ref('users/' + user.uid)
+                userRef.once('value').then(function(snapshot) {
+                    setUserAgentName(snapshot.child('agentName').val());
+                    setUserRank(snapshot.child('rank').val());
+                    setUserAliance(snapshot.child('aliance').val());
+                })
+            }
+            else {
+                console.log("no logged in")
+            }
+            //admin 계정인지 아닌지
+            if (user && user.uid === adminId) {
+                setIsAdmin(true);
+            }
+        })
+    }, [currentUser])
 
     const changeAriaSelected = (index) => {
         setNavItems(
