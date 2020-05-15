@@ -14,10 +14,6 @@ const Auth = () => {
     const [visible, setVisible] = useState(false);
     const is_visible = visible?true:false;
     const cap_layer_classNames = classNames('cap_layer', 'type_sign', {is_visible});
-    //링크버튼
-    const [btn_clicked, setBtn] = useState(false);
-    const is_clicked = btn_clicked? true:false;
-    const signin_btn_classNames = classNames('signin_btn', {is_clicked});
 
     // nav버튼 초기화
     const [isNavInitial, setNavInitial] = useState(false);
@@ -29,19 +25,25 @@ const Auth = () => {
     //로그인여부
     const { currentUser } = useContext(AuthContext);
 
-    const onClickLink = () => {
+    //링크버튼
+    const onClickLink = (e) => {
         if (!is_clicked){
             setTempLocation(location);
             setBtn(true);
             setVisible(true);
             setNavInitial(false);
         } else {
+            e.target.classList.add('is_closing');
             setBtn(false);
             setVisible(false);
             setNavInitial(true);
             history.push(temp_location);
         }
     }
+    const [btn_clicked, setBtn] = useState(false);
+    const is_clicked = btn_clicked? true:false;
+    const signin_btn_classNames = classNames('signin_btn', {is_clicked});
+
     //닫기버튼
     const [btn_hovered, setBtnHover] = useState(false);
     const onHoverOver = (e) => {
