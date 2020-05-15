@@ -16,7 +16,19 @@ const SignIn = ({ history, setBtn }) => {
         } catch (error) {
             console.log(error);
         }
-    } 
+    }
+
+    //input focus
+    const inputFocused = (e) => {
+        e.target.parentNode.classList.add('is_filled');
+    }
+    
+    //input blur
+    const inputBlur = (e) => {
+        if (!e.target.value){
+            e.target.parentNode.classList.remove('is_filled');
+        }
+    }
 
     return(
         <form onSubmit={handleSignIn}>
@@ -26,11 +38,15 @@ const SignIn = ({ history, setBtn }) => {
             <p className="tit">잡초위키</p>
             <div className="form_inner">
                 <div className="inp_area">
-                    <input type="text" aria-label="이메일" className="inp_bx"/>
+                    <div className="inp_wrap">
+                        <input type="text" aria-label="이메일" className="inp_bx" onFocus={inputFocused} onBlur={inputBlur}/>
+                    </div>
                     <label className="inp_label" aria-hidden="true">이메일</label>
                 </div>
                 <div className="inp_area">
-                    <input type="password" aria-label="비밀번호" className="inp_bx"/>
+                    <div className="inp_wrap">
+                        <input type="password" aria-label="비밀번호" className="inp_bx" onFocus={inputFocused} onBlur={inputBlur}/>
+                    </div>
                     <label className="inp_label" aria-hidden="true">비밀번호</label>
                 </div>
                 <div className="btn_area">

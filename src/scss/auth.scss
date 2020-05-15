@@ -8,8 +8,8 @@
         transform:translateX(0);
         transition:0.5s opacity ease-in, 0.5s transform ease-in;
         & + .type_auth{
-            left:0;
-            transition:0.4s left ease-out;
+            transform:translateX(0);
+            transition:0.4s transform ease-out;
         }
     }
 }
@@ -154,12 +154,12 @@
     }
 }
 .type_auth{
-    left:-20rem;
     right:initial;
     width:15rem;
     background-color:#f6f6f6;
     box-shadow: 0 0 0.5rem 0.5rem #f6f6f6;
-    transition: 0.6s left ease-out;
+    transform:translateX(-20rem);
+    transition: 0.6s transform ease-out;
     transition-delay:0.3s;
 
     .profile_area{

@@ -33,7 +33,6 @@ const Auth = () => {
             setVisible(true);
             setNavInitial(false);
         } else {
-            e.target.classList.add('is_closing');
             setBtn(false);
             setVisible(false);
             setNavInitial(true);
