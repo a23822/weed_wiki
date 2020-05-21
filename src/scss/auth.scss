@@ -64,6 +64,11 @@
         text-align:center;
         text-shadow:1px 1px 1px #a4d792;
         font-family:'Gugi', sans-serif;
+        @include galfol{
+            padding-bottom:3rem;
+            font-size:3rem;
+            line-height:4rem;
+        }
     }
     .form_inner{
         padding: 0 1.5rem;
@@ -106,9 +111,6 @@
             background-color:transparent;
             font-size:1.6rem;
             line-height:4.5rem;
-            & .inp_bx::placeholder{
-                color:transparent;
-            }
             &.is_filled{
                 &+.inp_label{
                     top:0.4rem;
@@ -117,19 +119,22 @@
                     color:rgba(0,0,0,0.5);
                     transition:all 0.3s ease-out;
                 }
+                .inp_bx:empty::placeholder{
+                    color:rgba(#666, 0.7);
+                }
             }
         }
         .inp_bx{
             width:100%;
             height:5.5rem;
             background-color:transparent;
-            
             &:focus{
                 outline:0;
             }
             &::placeholder{
-                color:rgba(#666, 0.5);
+                color:transparent;
                 font-size:1.2rem;
+                transition:0.3s color ease-out;
             }
         }
         .btn_area{

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import classNames from 'classnames';
 import { useHistory } from 'react-router-dom';
 import { firebaseApp } from '../firebase/index';
 
@@ -10,14 +11,18 @@ const Customer = () => {
     const [filter, setFilter] = useState('');
     //data
     const [customersInfo, setCustomersInfo] = useState([]);
+    //총 page갯수
+    const [totalPageNum, setTotalPageNum] = useState(0);
     // DB연결
     const customersRef = firebaseApp.database().ref('users/');
     const linkDB = () => {
-        customersRef.once('value').then(function(snapshot) {
+        customersRef.orderByChild('timestamp').once('value').then(function(snapshot) {
             var pageIndexEnd = pageNum * 10;
             var pageIndexStart = (pageNum-1) * 10;
             var count = 0;
             var infoList = [];
+            var total_count = snapshot.numChildren();
+            setTotalPageNum(Math.floor(total_count/10) + 1);
             snapshot.forEach(function(childSnapshot) {
                 if (count >= pageIndexStart && count < pageIndexEnd) {
                     // console.log(count);
@@ -40,9 +45,21 @@ const Customer = () => {
     console.log(customersInfo);
 
     //뒤로가기 버튼
-    
     const goBack = () => {
         history.goBack();
+    }
+
+    //페이지 이동
+    const [pageInpFocused, setPageInpFocused] = useState(false);
+    const is_focused = pageInpFocused? true:false;
+    const page_inp_classNames = classNames('page_inp', {is_focused});
+    const onClickPageLabel = (e) => {
+        setPageInpFocused(true);
+    };
+    const onChangeInpPageNum = (e) => {
+        if (e.target.value <= totalPageNum) {
+            setPageNum(e.target.value);
+        }
     }
 
     return (
@@ -82,9 +99,12 @@ const Customer = () => {
                     </div>
                 </div>
                 <div className="content_footer_wrap">
-                    <button type="button" className="content_prev_btn">이전</button>
-                    <input type="number" className="content_num_inp"/>
-                    <button type="button" className="content_next_btn">다음</button>
+                    <button type="button" className="content_btn type_prev">이전</button>
+                    <label htmlFor="inp_page" onClick={onClickPageLabel} className="page_bx">{pageNum}</label>
+                    <input type="number" id="inp_page" onChange={onChangeInpPageNum} className={page_inp_classNames}/>
+                    <span className="page_bx">/{totalPageNum}</span>
+                    {/* <button type="button" className="content_btn type_move">이동</button> */}
+                    <button type="button" className="content_btn type_next">다음</button>
                 </div>
             </div>
         </div>

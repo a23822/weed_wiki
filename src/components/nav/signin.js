@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Ico_WeedMan from '../../img/ico_weedman.png';
 import { firebaseApp } from '../firebase/index';
 
-const SignIn = ({ history, setBtn }) => {
+const SignIn = ({ history, setBtn, setVisible }) => {
     const handleSignIn = (e) => {
         e.preventDefault();
         const formElements = e.target.elements;
@@ -13,8 +13,13 @@ const SignIn = ({ history, setBtn }) => {
             firebaseApp.auth().signInWithEmailAndPassword(email, password);
             history.push('/home');
             setBtn(false);
+            setVisible(false);
         } catch (error) {
-            console.log(error);
+            if (error.code ==='auth/invalid-email'){
+                alert('이메일 형식이 잘못되었습니다.');
+            } else {
+                alert('비밀번호를 다시 입력해주세요.');
+            }
         }
     }
 
@@ -22,7 +27,7 @@ const SignIn = ({ history, setBtn }) => {
     const inputFocused = (e) => {
         e.target.parentNode.classList.add('is_filled');
     }
-    
+
     //input blur
     const inputBlur = (e) => {
         if (!e.target.value){

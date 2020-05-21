@@ -100,6 +100,37 @@
     }
     .content_footer_wrap{
         line-height:4rem;
+        text-align:center;
+        .content_btn{
+            padding:5px;
+            border-radius:8px;
+            border:1px solid #333;
+            font-weight:bold;
+            color:#fff;
+            background-color:rgba(#111,0.45);
+            &.type_next{
+                margin-left:12px;
+            }
+        }
+        .page_bx{
+            display:inline-block;
+            vertical-align:top;
+            width:3rem;
+        }
+        label.page_bx{
+            text-align:right;
+        }
+        .page_inp{
+            display:none;
+            margin-left:-3rem;
+            vertical-align:top;
+            line-height:4rem;
+            width:3rem;
+            text-align:right;
+            &.is_focused{
+                display:inline-block;
+            }
+        }
     }
     .admin_title{
         margin:5rem 0 2rem;

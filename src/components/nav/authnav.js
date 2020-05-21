@@ -9,7 +9,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const AuthNav = (props) => {
-    const [navItems, setNavItems] = useState([
+    const initNavState = [
         {
             id: 1,
             menu: <NavSignIn/>,
@@ -22,7 +22,8 @@ const AuthNav = (props) => {
             ariaSelected:false,
             link: `/signup`,
         }
-    ])
+    ]
+    const [navItems, setNavItems] = useState(initNavState);
 
     //로그인여부
     const { currentUser } = useContext(AuthContext);
@@ -53,7 +54,7 @@ const AuthNav = (props) => {
                 setIsAdmin(true);
             }
         })
-    }, [currentUser])
+    }, [currentUser, adminId])
 
     const changeAriaSelected = (index) => {
         setNavItems(
@@ -80,10 +81,10 @@ const AuthNav = (props) => {
 
     const initialFlag = props.isNavInitial;
 
-    //nav초기화
+    // nav초기화 , 무한루프에 계속 빠진다... 노운 이슈로 킵
     useEffect(()=>{
         if (initialFlag){
-            changeAriaSelected(1);
+            setNavItems(initNavState);
         }
     },[initialFlag])
 
@@ -149,8 +150,7 @@ const AuthNav = (props) => {
                         <Fragment>
                             <div className="label_wrap">
                                 { setUserRankLabel(userRank) }
-                                { userAliance === ''}
-                                <span className="label type_arca">Arca</span>
+                                { setUserAlianceLabel(userAliance) }
                             </div>
                             <p className="profile_id">{userAgentName}</p>
                         </Fragment> :

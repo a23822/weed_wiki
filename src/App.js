@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Main from './components/main/main';
 import Header from './components/header/header';
 import Wiki from './components/wiki/wiki';
-import Todo from './components/toto/todo';
+import Todo from './components/todo/todo';
 import Uniform from './components/uniform/uniform';
 import Admin from './components/admin/admin';
 import Customer from './components/admin/customer';

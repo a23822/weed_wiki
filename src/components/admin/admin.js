@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { firebaseApp } from '../firebase/index';
+// import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { firebaseApp } from '../firebase/index';
 
 const Admin = (props) => {
     

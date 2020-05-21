@@ -1,5 +1,5 @@
 import React from 'react';
-import { firebaseApp } from '../firebase/index';
+// import { firebaseApp } from '../firebase/index';
 
 const Character = () => {
 

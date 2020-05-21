@@ -12,13 +12,6 @@ const SignUp = (props) => {
         'form_agentName':'',
     })
 
-    const [isValid, setIsValid] = useState({
-        'email':false,
-        'pw':false,
-        'pw_re':false,
-        'agentName':false,
-    })
-
     const changeFormData = (e) => {
         setDataList({
             ...dataList,
@@ -36,11 +29,14 @@ const SignUp = (props) => {
         }
     }
 
-    // const isValid = dataList['form_email'].length > 0 &&
-    //     dataList['form_pw'].length >= 6 &&
-    //     dataList['form_pw'] === dataList['form_pw_chk'] &&
-    //     dataList['form_pw'].length>0 &&
-    //     dataList['form_agentName'].length>0;
+    // valid 구별
+    const form_email_isValid = dataList['form_email'].length > 3 &&
+                            dataList['form_email'].indexOf('@') !== -1 &&
+                            dataList['form_email'].indexOf('.') !== -1;
+    const form_pw_isValid = dataList['form_pw'].length >= 6;
+    const form_pw_chk_isValid = dataList['form_pw_chk'] === dataList['form_pw'] && dataList['form_pw_chk'].length > 0;
+    const form_agentName_isValid = dataList['form_agentName'].length>0;
+    const isValid = form_email_isValid && form_pw_isValid && form_pw_chk_isValid && form_agentName_isValid;
 
     //회원가입 관련
     const handleSignUp = useCallback(
@@ -57,6 +53,7 @@ const SignUp = (props) => {
                     .createUserWithEmailAndPassword(email, password);
                 props.history.push('/home');
                 props.setBtn(false);
+                props.setVisible(false);
                 const user_id = firebaseApp.auth().currentUser.uid;
                 const userRef = firebaseApp.database().ref('users/' + user_id);
                 userRef.set({
@@ -67,9 +64,13 @@ const SignUp = (props) => {
                     'timestamp': nowTimeStamp,
                 });
             } catch(error) {
-                alert(error);
+                if (error.code ==='auth/invalid-email'){
+                    alert('이메일 형식이 잘못되었습니다.');
+                } else {
+                    alert('양식을 다시 확인해주세요.');
+                }
             }
-        }, []
+        }, [props]
     )
 
     return(
@@ -78,34 +79,34 @@ const SignUp = (props) => {
                 <div className="inp_area">
                     <div className="inp_wrap">
                         <input type="text" aria-label="이메일" name="form_email" placeholder="honggildong@gmail.com"
-                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className="inp_bx"/>
+                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className='inp_bx'/>
                     </div>
                     <label className="inp_label" aria-hidden="true">이메일</label>
                 </div>
                 <div className="inp_area">
                     <div className="inp_wrap">
                         <input type="password" aria-label="비밀번호" name="form_pw" placeholder="최소 6글자 입력해주세요"
-                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className="inp_bx"/>
+                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className='inp_bx'/>
                     </div>
                     <label className="inp_label" aria-hidden="true">비밀번호</label>
                 </div>
                 <div className="inp_area">
                     <div className="inp_wrap">
                         <input type="password" aria-label="비밀번호 재확인" name="form_pw_chk" placeholder="비밀번호를 다시 입력해주세요"
-                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className="inp_bx"/>
+                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className='inp_bx'/>
                     </div>
                     <label className="inp_label" aria-hidden="true">비밀번호 재확인</label>
                 </div>
                 <div className="inp_area">
                     <div className="inp_wrap">
                         <input type="text" aria-label="에이전트명" name="form_agentName" placeholder="에이전트명을 입력해주세요"
-                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className="inp_bx"/>
+                        onChange={changeFormData} onFocus={inputFocused} onBlur={inputBlur} className='inp_bx'/>
                     </div>
                     <label className="inp_label" aria-hidden="true">에이전트명</label>
                 </div>
                 <div className="btn_area">
                     <button type="submit" className="submit_btn" disabled={!isValid}>
-                        회원가입
+                        {isValid? '회원가입' : '양식을 다시 확인해주세요'}
                     </button>
                 </div>
             </div>

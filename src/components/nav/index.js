@@ -73,12 +73,12 @@ const Auth = () => {
                             render={(props)=>(
                                 currentUser?
                                     <NavContent/> :
-                                    <SignIn {...props} setBtn={setBtn}/>
+                                    <SignIn {...props} setBtn={setBtn} setVisible={setVisible}/>
                                 )
                             }/>
                         <Route exact path={`/signup`}
                             render={(props)=>(
-                                <SignUp {...props} setBtn={setBtn}/>
+                                <SignUp {...props} setBtn={setBtn} setVisible={setVisible}/>
                             )}
                         />
                     </Switch>
