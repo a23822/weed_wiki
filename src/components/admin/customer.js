@@ -48,17 +48,30 @@ const Customer = () => {
     const goBack = () => {
         history.goBack();
     }
-
+    
     //페이지 이동
     const [pageInpFocused, setPageInpFocused] = useState(false);
     const is_focused = pageInpFocused? true:false;
     const page_inp_classNames = classNames('page_inp', {is_focused});
+    const type_first = pageNum === 1? true:false;
+    const type_last = pageNum === totalPageNum? true:false;
+    console.log(`pageNum: ${pageNum}// typeFirst: ${type_first}// typeLast: ${type_last}`);
+    const prev_btn_classes = classNames('content_btn', {type_first});
+    const next_btn_classes = classNames('content_btn', {type_last});
     const onClickPageLabel = (e) => {
         setPageInpFocused(true);
     };
     const onChangeInpPageNum = (e) => {
         if (e.target.value <= totalPageNum) {
             setPageNum(e.target.value);
+        }
+    }
+    const onClickOrderBtn = (e) => {
+        let flag = e.target.innerHTML;
+        if (flag === '다음') {
+            setPageNum(pageNum+1);
+        } else if (flag ==='이전') {
+            setPageNum(pageNum-1);
         }
     }
 
@@ -99,12 +112,12 @@ const Customer = () => {
                     </div>
                 </div>
                 <div className="content_footer_wrap">
-                    <button type="button" className="content_btn type_prev">이전</button>
+                    <button type="button" onClick={onClickOrderBtn} className={prev_btn_classes}>이전</button>
                     <label htmlFor="inp_page" onClick={onClickPageLabel} className="page_bx">{pageNum}</label>
                     <input type="number" id="inp_page" onChange={onChangeInpPageNum} className={page_inp_classNames}/>
                     <span className="page_bx">/{totalPageNum}</span>
                     {/* <button type="button" className="content_btn type_move">이동</button> */}
-                    <button type="button" className="content_btn type_next">다음</button>
+                    <button type="button" onClick={onClickOrderBtn} className={next_btn_classes}>다음</button>
                 </div>
             </div>
         </div>
