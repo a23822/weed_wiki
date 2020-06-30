@@ -4,6 +4,7 @@ import Main from './components/main/main';
 import Header from './components/header/header';
 import Wiki from './components/wiki/wiki';
 import Todo from './components/todo/todo';
+import Card from './components/card/card';
 import Uniform from './components/uniform/uniform';
 import Admin from './components/admin/admin';
 import Customer from './components/admin/customer';
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/todo" component={Todo}/>
         <Route exact path="/uniform" component={Uniform}/>
         <Route exact path="/admin" component={Admin}/>
+        <Route exact path="/card" component={Card}/>
         <Route exact path="/admin/customer" component={Customer}/>
         <Route exact path="/admin/characterdb" component={CharacterDB}/>
       </Switch>
