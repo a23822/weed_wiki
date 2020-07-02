@@ -25,3 +25,5 @@ yarn-error.log*
 
 # ex-JSON
 /DB
+
+/.firebase

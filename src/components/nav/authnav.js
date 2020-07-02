@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, Fragment } from 'react';
+import React, { useState, useEffect, useContext, Fragment, useCallback } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import NavSignIn from './navsignin';
 import NavSignUp from './navsignup';
@@ -81,12 +81,28 @@ const AuthNav = (props) => {
 
     const initialFlag = props.isNavInitial;
 
-    // nav초기화 , 무한루프에 계속 빠진다... 노운 이슈로 킵
-    useEffect(()=>{
+    const setInitNavState = useCallback(() => {
         if (initialFlag){
-            setNavItems(initNavState);
+            setNavItems([
+                {
+                    id: 1,
+                    menu: <NavSignIn/>,
+                    ariaSelected:true,
+                    link: `/signin`,
+                },
+                {
+                    id: 2,
+                    menu: <NavSignUp/>,
+                    ariaSelected:false,
+                    link: `/signup`,
+                }
+            ]);
         }
-    },[initialFlag])
+    }, [initialFlag])
+
+    useEffect(()=>{
+        setInitNavState();
+    },[setInitNavState])
 
     //유저 등급 라벨
     const setUserRankLabel = (userRank) => {

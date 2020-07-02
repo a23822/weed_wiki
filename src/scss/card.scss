@@ -5,7 +5,16 @@
     .set_area{
         padding: 30px 18px 0;
     }
+    .user_info_wrap{
+        .name{
+
+        }
+        .preset_wrap{
+            margin-top: 1rem;
+        }
+    }
     .card_list{
+        margin-top: 1.5rem;
         &:after{
             @include clear;
         }

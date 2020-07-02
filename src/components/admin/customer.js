@@ -8,15 +8,15 @@ const Customer = () => {
     //page 수
     const [pageNum, setPageNum] = useState(1);
     //filter
-    const [filter, setFilter] = useState('');
+    // const [filter, setFilter] = useState('');
     //data
     const [customersInfo, setCustomersInfo] = useState([]);
     //총 page갯수
     const [totalPageNum, setTotalPageNum] = useState(0);
     // DB연결
-    const customersRef = firebaseApp.database().ref('users/');
-    const linkDB = () => {
-        customersRef.orderByChild('timestamp').once('value').then(function(snapshot) {
+    const linkDB = useCallback(() => {
+            const customersRef = firebaseApp.database().ref('users/');
+            customersRef.orderByChild('timestamp').once('value').then(function(snapshot) {
             var pageIndexEnd = pageNum * 10;
             var pageIndexStart = (pageNum-1) * 10;
             var count = 0;
@@ -25,10 +25,8 @@ const Customer = () => {
             setTotalPageNum(Math.floor(total_count/10) + 1);
             snapshot.forEach(function(childSnapshot) {
                 if (count >= pageIndexStart && count < pageIndexEnd) {
-                    // console.log(count);
                     var key = childSnapshot.key; // 유저 uid
                     var data = childSnapshot.val(); //agentName, aliance, email, rank
-                    // console.log(data);
                     infoList.push({'uid':key,'data':data});
                 } else if (count >= pageIndexEnd) {
                     return true;
@@ -37,12 +35,11 @@ const Customer = () => {
             })
             setCustomersInfo(infoList);
         })
-    }
+    },[pageNum])
 
     useEffect(() => {
         linkDB();
-    },[pageNum])
-    console.log(customersInfo);
+    },[linkDB])
 
     //뒤로가기 버튼
     const goBack = () => {
@@ -116,7 +113,6 @@ const Customer = () => {
                     <label htmlFor="inp_page" onClick={onClickPageLabel} className="page_bx">{pageNum}</label>
                     <input type="number" id="inp_page" onChange={onChangeInpPageNum} className={page_inp_classNames}/>
                     <span className="page_bx">/{totalPageNum}</span>
-                    {/* <button type="button" className="content_btn type_move">이동</button> */}
                     <button type="button" onClick={onClickOrderBtn} className={next_btn_classes}>다음</button>
                 </div>
             </div>
