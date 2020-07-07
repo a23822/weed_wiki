@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext, useCallback, Fragment } from 'react';
 import { firebaseApp, AuthContext } from '../firebase/index';
+import { IoIosCloseCircle, IoIosCloseCircleOutline } from "react-icons/io";
+import DetailInfo from './detail';
 
 const Card = () => {
     //로그인여부
@@ -12,7 +14,33 @@ const Card = () => {
     const [shownPresets, setShownPreset] = useState([]);
     const [presetIndex, setPresetIndex] = useState(0);
     //카드리스트
-    const [cardList, setCardList] = useState([])
+    const [cardList, setCardList] = useState([
+        {
+            id: 1,
+            cardId: 1,
+            level: 1,
+        },
+        {
+            id: 2,
+            cardId: 1,
+            level: 1,
+        },
+        {
+            id: 3,
+            cardId: 1,
+            level: 1,
+        },
+        {
+            id: 4,
+            cardId: 1,
+            level: 1,
+        },
+        {
+            id: 5,
+            cardId: 1,
+            level: 1,
+        },
+    ])
     //카드작수치
     const [cardValue, setCardValue] = useState({});
 
@@ -96,6 +124,46 @@ const Card = () => {
         linkDB()
     }, [linkDB])
 
+    // 프리셋 선택
+    const onSelectPreset = (e) => {
+        console.log(e);
+    }
+
+    //카드정보 불러오기
+    const loadCardInfo = (index) => {
+        console.log(`${index} + 1`);
+        return(
+            <Fragment>
+                <div>카드이름</div>
+            </Fragment>
+        )
+    }
+
+    // 카드 클릭 시
+    const [viewCardIndex, setViewCardIndex] = useState(0);
+    const card_detail_layer = document.getElementById('card_detail_layer');
+    const onClickCardItem = (e) => {
+        e.preventDefault();
+        card_detail_layer.classList.add('show');
+        //TODO 번호지정
+        setViewCardIndex(1);
+    }
+
+    // 버튼 hover 처리
+    const [btn_hovered, setBtnHover] = useState(false);
+    const onHoverOver = (e) => {
+        setBtnHover(true);
+    }
+
+    const onHoverOut = () => {
+        setBtnHover(false);
+    }
+        //닫기버튼
+    const onClickCloseBtn = (e) => {
+        e.preventDefault();
+        card_detail_layer.classList.remove('show');
+    }
+
     return(
         <Fragment>
             {currentUser?
@@ -104,42 +172,41 @@ const Card = () => {
                         <div className="user_info_wrap">
                             <div className="name">{userAgentName}</div>
                             <div className="preset_wrap">
-                                <select name="preset_list">                            
+                                <ul className="preset_list">
                                     {
                                         presetList.map((preset,index) => (
-                                            <option key={index}>{preset}</option>
+                                            <li key={index} className="item_wrap">
+                                                <button type="button" onClick={onSelectPreset} className="preset_btn">
+                                                    {preset}
+                                                </button>
+                                            </li>
                                         ))
                                     }
-                                </select>
+                                </ul>
                             </div>
                         </div>
-                        <ul className="card_list">
-                            <li className="card_wrap">
-                                <span role="button" className="card_btn">
-                                    <span></span>
-                                </span>
-                            </li>
-                            <li className="card_wrap">
-                                <span role="button" className="card_btn">
-                                    
-                                </span>
-                            </li>
-                            <li className="card_wrap">
-                                <span role="button" className="card_btn">
-                                    
-                                </span>
-                            </li>
-                            <li className="card_wrap">
-                                <span role="button" className="card_btn">
-                                    
-                                </span>
-                            </li>
-                            <li className="card_wrap">
-                                <span role="button" className="card_btn">
-                                    
-                                </span>
-                            </li>
-                        </ul>
+                        <div className="card_list_wrap">
+                            <ul className="card_list">
+                                {
+                                    cardList.map(card => (
+                                        <li key={card.id} className="card_wrap">
+                                            <button type="button" onClick={onClickCardItem} className="spcard card_default card_btn">
+                                                {loadCardInfo(card.cardId)}
+                                            </button>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    {/* 카드레이어 */}
+                    <div id="card_detail_layer" className="card_datail_layer">
+                        <button type="button"
+                        onClick={onClickCloseBtn} onMouseEnter={onHoverOver} onMouseLeave={onHoverOut}
+                        className={'close_btn'}>
+                            {btn_hovered?<IoIosCloseCircle fill="#fff"/>:<IoIosCloseCircleOutline fill="#fff"/>}
+                        </button>
+                        <DetailInfo viewCardIndex={viewCardIndex}/>
                     </div>
                 </div>
                 //비로그인

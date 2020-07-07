@@ -10,22 +10,81 @@
 
         }
         .preset_wrap{
-            margin-top: 1rem;
+            margin: 1rem -18px 0;
+        }
+        .preset_list{
+            font-size:0;
+            line-height:0;
+            overflow-x:auto;
+            white-space:nowrap;
+            .item_wrap{
+                display:inline-block;
+                vertical-align:top;
+                margin-left:1.2rem;
+                &:first-child{
+                    margin-left:18px;
+                }
+                &:last-child{
+                    margin-right:18px;
+                }
+            }
+            .preset_btn{
+                display:block;
+                
+            }
         }
     }
-    .card_list{
-        margin-top: 1.5rem;
+    .card_list_wrap{
+        margin: 1.5rem -18px 0;
         &:after{
             @include clear;
         }
-        .card_wrap{
-            float:left;
-            width:20%;
-            height: 100px;
-            background-color:red;
+        .card_list{
+            font-size:0;
+            line-height:0;
+            overflow-x:auto;
+            white-space:nowrap;
+            .card_wrap{
+                display:inline-block;
+                vertical-align:top;
+                margin-left:1.2rem;
+                &:first-child{
+                    margin-left:18px;
+                }
+                &:last-child{
+                    margin-right:18px;
+                }
+            }
+            .card_btn{
+                display:block;
+                text-align: center;
+            }
         }
-        .card_btn{
+    }
+    // 디테일 페이지
+    .card_datail_layer{
+        display: none;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,0.45);
+        z-index:200;
+        &.show{
             display:block;
         }
+        .close_btn{
+            position:absolute;
+            top:1.2rem;
+            right:1.2rem;
+            width:3rem;
+            height:3rem;
+            svg{
+                width:100%;
+                height:100%;
+            }
+        }
+        
     }
 }

@@ -13,7 +13,7 @@
     background-color:#fff;
     z-index:1000;
   }
-
+  @import './scss/sprite/card_sprite.scss';
   @import './scss/header.scss';
   @import './scss/main.scss';
   @import './scss/auth.scss';
