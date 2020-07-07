@@ -30,7 +30,16 @@
             }
             .preset_btn{
                 display:block;
-                
+                padding:0 0.8rem;
+                line-height:2.5rem;
+                background-color:#fff;
+                color:#30bf87;
+                font-weight:bold;
+                border-radius: 4.5px;
+                &[aria-selected=true]{
+                    background-color:#30bf87;
+                    color:#fff;
+                } 
             }
         }
     }

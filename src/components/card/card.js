@@ -43,7 +43,6 @@ const Card = () => {
     ])
     //카드작수치
     const [cardValue, setCardValue] = useState({});
-
     //정보 불러오기
     const linkDB = useCallback(() => {
         firebaseApp.auth().onAuthStateChanged(function(user) {
@@ -118,15 +117,18 @@ const Card = () => {
             }
         })
     }, [presetIndex])
+    
 
     //TODO useEffect 로 둘러싸게 바뀌었는데 오류없을 시 보존 아니면 롤백
     useEffect(()=>{
-        linkDB()
+        linkDB();
     }, [linkDB])
 
     // 프리셋 선택
     const onSelectPreset = (e) => {
-        console.log(e);
+        var target = e.target;
+        var preset_btns = e.target.parentNode.parentNode.getElementsByClassName('preset_btn');
+        setPresetIndex(Array.prototype.indexOf.call(preset_btns, target));
     }
 
     //카드정보 불러오기
@@ -143,12 +145,19 @@ const Card = () => {
     const [viewCardIndex, setViewCardIndex] = useState(0);
     const card_detail_layer = document.getElementById('card_detail_layer');
     const onClickCardItem = (e) => {
-        e.preventDefault();
-        card_detail_layer.classList.add('show');
-        //TODO 번호지정
-        setViewCardIndex(1);
+        var target = e.target;
+        var card_btns = e.target.parentNode.parentNode.getElementsByClassName('card_btn');
+        var idx = Array.prototype.indexOf.call(card_btns, target)
+        if (idx == -1){
+            console.log('다시 눌러주세요')
+        } else {
+            setViewCardIndex(Array.prototype.indexOf.call(card_btns, target));
+            card_detail_layer.classList.add('show');
+        }
+        console.log(card_btns);
+        console.log(`먼가 잘못됨 ${Array.prototype.indexOf.call(card_btns,target)}`);
     }
-
+    console.log(viewCardIndex);
     // 버튼 hover 처리
     const [btn_hovered, setBtnHover] = useState(false);
     const onHoverOver = (e) => {
@@ -176,9 +185,14 @@ const Card = () => {
                                     {
                                         presetList.map((preset,index) => (
                                             <li key={index} className="item_wrap">
-                                                <button type="button" onClick={onSelectPreset} className="preset_btn">
+                                                {index == presetIndex?
+                                                <button type="button" aria-selected="true" onClick={onSelectPreset} className="preset_btn">
                                                     {preset}
                                                 </button>
+                                                :<button type="button" aria-selected="false" onClick={onSelectPreset} className="preset_btn">
+                                                    {preset}
+                                                </button>
+                                                }
                                             </li>
                                         ))
                                     }
@@ -188,8 +202,8 @@ const Card = () => {
                         <div className="card_list_wrap">
                             <ul className="card_list">
                                 {
-                                    cardList.map(card => (
-                                        <li key={card.id} className="card_wrap">
+                                    cardList.map((card,index) => (
+                                        <li key={index} className="card_wrap">
                                             <button type="button" onClick={onClickCardItem} className="spcard card_default card_btn">
                                                 {loadCardInfo(card.cardId)}
                                             </button>
