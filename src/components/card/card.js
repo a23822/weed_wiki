@@ -3,6 +3,7 @@ import { firebaseApp, AuthContext } from '../firebase/index';
 import { IoIosCloseCircle, IoIosCloseCircleOutline } from "react-icons/io";
 import DetailInfo from './detail';
 
+
 const Card = () => {
     //로그인여부
     const { currentUser } = useContext(AuthContext);
@@ -52,36 +53,37 @@ const Card = () => {
                     setUserAgentName(snapshot.child('agentName').val());
                     var presetObject = snapshot.child('cardSet').val();
                     var tempPreset = [];
-                    var presetList = Object.keys(presetObject);
                     if (presetObject){
+                        var presetList = Object.keys(presetObject);
                         presetList.map(preset => (
                             tempPreset.push(presetObject[preset])
                         ))
+                        setPresetList(presetList);
                     } else {
                         const initCardList = [
                             {
                                 id: 1,
-                                cardid: 1,
+                                cardId: 1,
                                 level: 1,
                             },
                             {
                                 id: 2,
-                                cardid: 1,
+                                cardId: 1,
                                 level: 1,
                             },
                             {
                                 id: 3,
-                                cardid: 1,
+                                cardId: 1,
                                 level: 1,
                             },
                             {
                                 id: 4,
-                                cardid: 1,
+                                cardId: 1,
                                 level: 1,
                             },
                             {
                                 id: 5,
-                                cardid: 1,
+                                cardId: 1,
                                 level: 1,
                             },
                         ];
@@ -108,7 +110,6 @@ const Card = () => {
                             },
                         )
                     }
-                    setPresetList(presetList);
                     setShownPreset(tempPreset[presetIndex]);
                 })
             }
@@ -136,7 +137,7 @@ const Card = () => {
         console.log(`${index} + 1`);
         return(
             <Fragment>
-                <div>카드이름</div>
+                <div className="no-event">카드이름</div>
             </Fragment>
         )
     }
@@ -145,19 +146,10 @@ const Card = () => {
     const [viewCardIndex, setViewCardIndex] = useState(0);
     const card_detail_layer = document.getElementById('card_detail_layer');
     const onClickCardItem = (e) => {
-        var target = e.target;
-        var card_btns = e.target.parentNode.parentNode.getElementsByClassName('card_btn');
-        var idx = Array.prototype.indexOf.call(card_btns, target)
-        if (idx == -1){
-            console.log('다시 눌러주세요')
-        } else {
-            setViewCardIndex(Array.prototype.indexOf.call(card_btns, target));
-            card_detail_layer.classList.add('show');
-        }
-        console.log(card_btns);
-        console.log(`먼가 잘못됨 ${Array.prototype.indexOf.call(card_btns,target)}`);
+        setViewCardIndex(parseInt(e.target.getAttribute('data-index')));
+        card_detail_layer.classList.add('show');
     }
-    console.log(viewCardIndex);
+    console.log(`프리셋은 ${presetList} 이고 카드는 ${viewCardIndex}`);
     // 버튼 hover 처리
     const [btn_hovered, setBtnHover] = useState(false);
     const onHoverOver = (e) => {
@@ -204,7 +196,7 @@ const Card = () => {
                                 {
                                     cardList.map((card,index) => (
                                         <li key={index} className="card_wrap">
-                                            <button type="button" onClick={onClickCardItem} className="spcard card_default card_btn">
+                                            <button type="button" data-index={card.id} onClick={onClickCardItem} className="spcard card_default card_btn">
                                                 {loadCardInfo(card.cardId)}
                                             </button>
                                         </li>
@@ -220,7 +212,7 @@ const Card = () => {
                         className={'close_btn'}>
                             {btn_hovered?<IoIosCloseCircle fill="#fff"/>:<IoIosCloseCircleOutline fill="#fff"/>}
                         </button>
-                        <DetailInfo viewCardIndex={viewCardIndex}/>
+                        <DetailInfo viewCardIndex={viewCardIndex} presetIndex={presetIndex}/>
                     </div>
                 </div>
                 //비로그인
