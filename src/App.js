@@ -1,14 +1,20 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Main from './components/main/main';
+import Header from './components/nheader/header';
+import Gnb from './components/gnb/gnb';
+import Body from './components/nbody/body';
+import Footer from './components/nfooter/footer';
 
 function App() {
   return (
     <div className="weed_wiki">
+      <div className="dummy type_small">
+      </div>
       <Header/>
-      <Switch>
-        <Route exact path={["/", "/home"]} component={Main}/>
-      </Switch>
+      <Gnb/>
+      <Body/>
+      <div className="dummy">
+      </div>
+      <Footer/>
     </div>
   );
 }
