@@ -84,25 +84,35 @@ const Customer = () => {
                     {
                         customersInfo.map(info => (
                             <div className="card_wrap" key={info.uid}>
-                                <span className="user_name">{info.data.agentName}</span>
-                                <div className="info_wrap">
-                                    <span className="info_label">연합명</span>
-                                    <div className="info_bx">
-                                        {info.data.aliance}
-                                    </div>
+                                <div className="name_wrap">
+                                    <span className="user_name">{info.data.agentName}</span>
                                 </div>
-                                <div className="info_wrap">
-                                    <span className="info_label">이메일</span>
-                                    <div className="info_bx">
-                                        {info.data.email}
-                                    </div>
-                                </div>
-                                <div className="info_wrap">
-                                    <span className="info_label">등급</span>
-                                    <div className="info_bx">
-                                        {info.data.rank}
-                                    </div>
-                                </div>
+                                <ul className="info_list">
+                                    <li class="item">
+                                        <div className="info_wrap">
+                                            <span className="info_label">연합명</span>
+                                            <div className="info_bx">
+                                                {info.data.aliance}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div className="info_wrap">
+                                            <span className="info_label">이메일</span>
+                                            <div className="info_bx">
+                                                {info.data.email}
+                                            </div>
+                                        </div>                             
+                                    </li>
+                                    <li class="item">
+                                        <div className="info_wrap">
+                                            <span className="info_label">등급</span>
+                                            <div className="info_bx">
+                                                {info.data.rank}
+                                            </div>
+                                        </div>                              
+                                    </li>
+                                </ul>
                             </div>
                         ))   
                     }
