@@ -9,7 +9,7 @@ const Body = () => {
     return(
         <div role="main" className="main_wrap">
             <Switch>
-                <Route exact path={["/", "/home"]} component={Main}/>
+                <Route exact path="/" component={Main}/>
                 <Route exact path="/wiki" component={Wiki}/>
                 <Route exact path="/todo" component={Todo}/>
                 <Route exact path="/uniform" component={Uniform}/>

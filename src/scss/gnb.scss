@@ -15,6 +15,17 @@
     ::-webkit-scrollbar {
         display: none;
     }
+    .profile_wrap {
+        &:after {
+            @include clear;
+        }
+        .thumb_area {
+            float: left;
+        }
+        .info_area {
+            overflow: hidden;
+        }
+    }
     .menu_tab_list {
         overflow-x: auto;
         white-space: nowrap;
@@ -33,7 +44,7 @@
             color: $color-font2;
             font-size: 1.3rem;
             line-height: 4.5rem;
-            &.active {
+            &.is_selected {
                 background-color: $color-tab-active;
                 color: $color-font-strong;
                 &:after {

@@ -6,7 +6,7 @@ const Gnb = () => {
         {
             id: 1,
             menuName:'Home',
-            link:'/home',
+            link:'/',
         },
         {
             id: 2,
@@ -27,19 +27,10 @@ const Gnb = () => {
 
     return(
         <div className="gnb_wrap">
-            <div className="profile_wrap">
-                <div className="thumb_wrap">
-                    <img src="../../img/ico_default_profile.svg" width="30" height="30" className="img" alt="프로필 이미지"/>
-                </div>
-                <div className="info_wrap">
-                    <span className="info"></span>
-                    <div className="badge_wrap"></div>
-                </div>
-            </div>
             <ul role="tablist" className="menu_tab_list">
                 {tab_info.map(info => (
                     <li key={info.id} role="presentation" className="menu_tab">
-                        <NavLink role="tab" className="tab" exact to={info.link}>{info.menuName}</NavLink>
+                        <NavLink role="tab" className="tab" activeClassName="is_selected" exact to={info.link}>{info.menuName}</NavLink>
                     </li>
                 ))}
             </ul>
