@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 @import './scss/common/reset.scss';
 @import './scss/common/variables';
+@import './scss//common/mixins.scss';
 
 .weed_wiki {
   position: relative;
@@ -12,6 +13,6 @@
     }
   }
   @import './scss/header.scss';
-  @import './scss//gnb.scss';
+  @import './scss/gnb.scss';
 }
 

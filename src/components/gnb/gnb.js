@@ -23,6 +23,11 @@ const Gnb = () => {
             menuName:'Uniform',
             link:'/uniform',
         },
+        {
+            id: 5,
+            menuName: 'Card',
+            link: '/card',
+        }
     ]
 
     return(

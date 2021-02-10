@@ -4,6 +4,7 @@ import Main from '../main/main';
 import Wiki from '../wiki/wiki';
 import Todo from '../todo/todo';
 import Uniform from '../uniform/uniform';
+import Card from '../ncard/card';
 
 const Body = () => {
     return(
@@ -13,6 +14,7 @@ const Body = () => {
                 <Route exact path="/wiki" component={Wiki}/>
                 <Route exact path="/todo" component={Todo}/>
                 <Route exact path="/uniform" component={Uniform}/>
+                <Route exact path="/card" component={Card}/>
             </Switch>
         </div>
     )
