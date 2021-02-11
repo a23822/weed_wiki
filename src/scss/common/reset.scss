@@ -17,15 +17,15 @@ html {
     font-size:10px;
     line-height:10px;
     background-color: $color-bg;
-    @include galfol{
+    @include mod_galfol{
         font-size:8px;
         line-height:8px;
     }
-    @include tablet{
+    @include mod_tablet{
         font-size:12px;
         line-height:12px;
     }
-    @include pc{
+    @include mod_pc{
         font-size:16px;
         line-height:16px;
     }

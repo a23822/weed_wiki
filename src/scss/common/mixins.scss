@@ -14,6 +14,23 @@
     bottom: $length;
 }
 
+@mixin elss($lineNum: 1, $lineHeight: 1rem) {
+    overflow: hidden;
+    @if ($lineNum > 1) {
+        display: block;
+        display: -webkit-box;
+        max-height: $lineHeight * $lineNum;
+        -webkit-line-clamp: $lineNum;
+        -webkit-box-orient:vertical;
+        line-height:$lineHeight;
+        word-break:break-all;
+        word-wrap:break-word;
+    } @else {
+        white-space: nowrap;
+    }
+    text-overflow: ellipsis;
+}
+
 @mixin noScroll{
     -ms-overflow-style:none;
     scrollbar-width:none;
@@ -22,7 +39,7 @@
     }
 }
 
-@mixin galfol {
+@mixin mod_galfol {
     @media screen and (max-width: 320px) {
         @content;
     }
@@ -34,7 +51,7 @@
     // }
 }
 
-@mixin tablet {
+@mixin mod_tablet {
     @media screen and (min-width: 768px) {
         @content;
     }
@@ -46,7 +63,7 @@
     // }
 }
 
-@mixin pc {
+@mixin mod_pc {
     @media screen and (min-width: 1024px) {
         @content;
     }
@@ -56,4 +73,10 @@
     // @media screen and (min-width: 1024px) and (orientation:landscape) {
     //     @content;
     // }
+}
+
+@mixin mod_dark {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
 }

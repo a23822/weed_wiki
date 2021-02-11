@@ -1,0 +1,52 @@
+@charset 'UTF-8';
+
+@import '../../scss/common/mixins.scss';
+@import '../../scss/common/variables';
+
+.sc {
+    position: relative;
+    .item_list_wrap {
+        height: 390px;
+        .item_bx {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .item {
+            overflow: hidden;
+            display: block;
+            position: relative;
+            width: 126px;
+            border-radius: 6px;
+            &[fontType='white']{
+                color: #fff;
+            }
+            &:before {
+                @include mask;
+                content: '';
+                border: 1px solid rgba(0, 0, 0, 0.6);
+                border-radius: 6px;
+            }
+        }
+        .thumb_area {
+            .thumb_wrap {
+                position: relative;
+                &:before {
+                    @include mask;
+                    content: '';
+                    border: 1px solid rgba(0, 0, 0, 0.6);
+                    border-bottom: 1px solid rgba(17, 17, 17, 0.16);
+                    border-radius: 6px 6px 0 0;
+                }
+            }
+            .name {
+                @include elss(2, 1.6rem);
+                margin: 6px 0;
+                padding: 0 6px;
+                height: 3.2rem;
+                box-sizing: border-box;
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

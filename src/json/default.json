@@ -1,0 +1,29 @@
+//https://www.htmlcsscolor.com/hex/
+{
+    "default" : {
+        "" : {
+            "id": 1,
+            "rank": "normal",
+            "name": "",
+            "option1" : "",
+            "option2" : "",
+            "option3" : [],
+            "option4" : [],
+            "option5" : [],
+            "option6" : [],
+            "hasCollection" : true
+        },
+        "" : {
+            "id": 1,
+            "rank": "premium",
+            "name": "",
+            "option1" : "",
+            "option2" : "",
+            "option3" : "",
+            "option4" : [],
+            "option5" : [],
+            "option6" : [],
+            "hasCollection" : true
+        }
+    }
+}
