@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import * as app from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import 'firebase/firebase-firestore';
@@ -17,7 +17,7 @@ const config = {
     appId: process.env.REACT_APP_ID,
     measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 }
-export const firebaseApp = app.initializeApp(config);
+export const firebaseApp = firebase.initializeApp(config);
 export const AuthContext = createContext('');
 export const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);

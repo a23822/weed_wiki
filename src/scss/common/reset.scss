@@ -1,5 +1,6 @@
 @charset 'UTF-8';
-@import './scss/common/mixins.scss';
+@import './variables';
+@import './mixins.scss';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,legend,input,textarea,button,article,aside,footer,header,nav,section{
@@ -10,11 +11,12 @@ body,input,textarea,select,table,button {
     font-family: 'Noto Sans KR', sans-serif;
     font-size:1.4rem;
     line-height:2rem;
-    color:#333;
+    color: $color-font;
 }
 html {
     font-size:10px;
     line-height:10px;
+    background-color: $color-bg;
     @include galfol{
         font-size:8px;
         line-height:8px;
