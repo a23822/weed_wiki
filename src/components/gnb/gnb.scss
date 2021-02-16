@@ -14,7 +14,7 @@
         right: 0;
         bottom: -20px;
         height: 20px;
-        background: linear-gradient(to bottom, $color-bg, transparent);
+        background: linear-gradient(to bottom, var(--color-bg), transparent);
     }
     ::-webkit-scrollbar {
         display: none;
@@ -35,7 +35,7 @@
         white-space: nowrap;
         font-size: 0;
         line-height: 0;
-        background-color: $color-tab-inactive;
+        background-color: var(--color-tab-inactive);
         height: 4.5rem;
     }
     .menu_tab {
@@ -45,12 +45,12 @@
             display: block;
             position: relative;
             padding: 0 1rem;
-            color: $color-font2;
+            color: var(--color-font2);
             font-size: 1.3rem;
             line-height: 4.5rem;
             &.is_selected {
-                background-color: $color-tab-active;
-                color: $color-font-strong;
+                background-color: var(--color-tab-active);
+                color: var(--color-font-strong);
                 &:after {
                     content: '';
                     position: absolute;
@@ -58,7 +58,7 @@
                     right: 1rem;
                     bottom: 0;
                     height: 1px;
-                    background-color: $color-theme;
+                    background-color: var(--color-theme);
                 }
             }
         }

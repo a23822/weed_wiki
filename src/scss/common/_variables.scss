@@ -1,25 +1,35 @@
 @charset 'UTF-8';
 
 //색
-$color-font: #232323;
-$color-font2: #fff;
-$color-font-strong: #21825c;
-$color-tab-inactive: #424141;
-$color-tab-active: #f6f6f6;
-$color-theme: #a4d792;
-$color-bg: #fff;
+:root {
+    --color-font: #0f1a15;
+    --color-font2: #fff;
+    --color-font-strong: #21825c;
+    --color-tab-inactive: #424141;
+    --color-tab-active: #f6f6f6;
+    --color-theme: #a4d792;
+    --color-bg: #dbeae2;
+    --color-bg2: #fff;
+    --color-border: #{rgba(#262626, 0.23)};
+    --color-border2: #{rgba(#434343, 0.23)};
+    --color-scroll-bg: #eff3ef;
+    
+    // //색 - 다크모드
+    // @media (prefers-color-scheme: dark) {
+    //     --color-font: #e0f0e0;
+    //     --color-font2: #222;
+    //     --color-font-strong: #a4d792;
+    //     --color-tab-inactive: #bdbebe;
+    //     --color-tab-active: #090909;
+    //     --color-theme: #21825c;
+    //     --color-bg: #525252;
+    //     --color-bg2: #373737;
+    //     --color-border: #{rgba(#7b7b7b, 0.23)};
+    //     // --color-border2: 
+    //     // --color-scroll-bg: #eff3ef;
+    // }
 
-//색 - 다크모드
-@media (prefers-color-scheme: dark) {
-    $color-font: #f2f2f2;
-    $color-font2: #222;
-    // $color-font-strong: #21825c;
-    // $color-tab-inactive: #424141;
-    // $color-tab-active: #f6f6f6;
-    // $color-theme: #a4d792;
-    $color-bg: #373737;
+    //간격
+    --gap-both: 20px;
+    --G-letter-spacing: -0.32px;
 }
-
-
-//간격
-$gap-both: 20px;

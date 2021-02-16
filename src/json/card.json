@@ -4,8 +4,8 @@
             "id": 1,
             "rank": "normal",
             "name": "1602 위치 헌터 안젤라 #1",
-            "option1" : "치피",
-            "option2" : "냉저",
+            "option1" : ["치피"],
+            "option2" : ["냉저"],
             "option3" : ["전저","물방","방무","모공","정저"],
             "option4" : ["공속","이속","쿨감","상감","피격5%생명20%"],
             "option5" : ["회복","모방","회피","에방","생명"],
@@ -20,8 +20,8 @@
             "id": 2,
             "rank": "normal",
             "name": "1872 #1",
-            "option1" : "공속",
-            "option2" : "이속",
+            "option1" : ["공속"],
+            "option2" : ["이속"],
             "option3" : ["회피","생명","치피","화저","정저"],
             "option4" : ["냉저","쿨감","상감","방무","공격5%공속20%"],
             "option5" : ["에방","물방","모방","회복","전저"],
@@ -36,8 +36,8 @@
             "id": 3,
             "rank": "normal",
             "name": "1872 #1(셰이너 베리언트)",
-            "option1" : "물공",
-            "option2" : "치율",
+            "option1" : ["물공"],
+            "option2" : ["치율"],
             "option3" : ["쿨감","회피","생명","화저","정저"],
             "option4" : ["공속","이속","치피","상감","공격5%치율20%"],
             "option5" : ["물방","모방","에방","회복","전저"],
@@ -52,8 +52,8 @@
             "id": 4,
             "rank": "normal",
             "name": "M.O.D.O.K. 어쌔씬 #1",
-            "option1" : "상감",
-            "option2" : "정저",
+            "option1" : ["상감"],
+            "option2" : ["정저"],
             "option3" : ["생명","회피","치피","화저","방무"],
             "option4" : ["공속","이속","쿨감","냉저","공격5%방무20%"],
             "option5" : ["전저","물방","모방","에방","회복"],
@@ -68,8 +68,8 @@
             "id": 5,
             "rank": "normal",
             "name": "S.H.E.I.L.D. (2014) #1 (영 베리언트)",
-            "option1" : "화저",
-            "option2" : "방무",
+            "option1" : ["화저"],
+            "option2" : ["방무"],
             "option3" : ["물방","회피","치피","생명","정저"],
             "option4" : ["공속","이속","쿨감","상감","공격5%이속20%"],
             "option5" : ["모방","냉저","에방","회복","전저"],
@@ -84,8 +84,8 @@
             "id": 6,
             "rank": "rare",
             "name": "S.H.I.E.L.D. (2014) #12",
-            "option1" : "치피",
-            "option2" : "모공",
+            "option1" : ["치피"],
+            "option2" : ["모공"],
             "option3" : ["방무","회복","모방","에공","생명"],
             "option4" : ["공속","상감","냉저","전저","회피5%이속20%"],
             "option5" : ["이속","물방","치율","화저","독저"],
@@ -100,8 +100,8 @@
             "id": 7,
             "rank": "normal",
             "name": "S.H.I.E.L.D. (2014) #6 (NYC 베리언트)",
-            "option1" : "냉저",
-            "option2" : "치율",
+            "option1" : ["냉저"],
+            "option2" : ["치율"],
             "option3" : ["에방","회피","생명","치피","화저"],
             "option4" : ["공속","이속","쿨감","상감","공격5%치율20%"],
             "option5" : ["물방","모방","방무","회복","전저"],
@@ -116,8 +116,8 @@
             "id": 8,
             "rank": "normal",
             "name": "S.H.I.E.L.D. (2014) #7",
-            "option1" : "전저",
-            "option2" : "치피",
+            "option1" : ["전저"],
+            "option2" : ["치피"],
             "option3" : ["물공","회피","생명","냉저","화저"],
             "option4" : ["공속","이속","쿨감","상감","피격5%상감20%"],
             "option5" : ["회복","정저","물방","모방","에방"],
@@ -132,8 +132,8 @@
             "id": 9,
             "rank": "normal",
             "name": "S.H.I.E.L.D. (2014) #8",
-            "option1" : "독저",
-            "option2" : "회피",
+            "option1" : ["독저"],
+            "option2" : ["회피"],
             "option3" : ["에공","방무","생명","치피","화저"],
             "option4" : ["공속","이속","쿨감","상감","피격5%공속20%"],
             "option5" : ["회복","전저","물방","모방","에방"],
@@ -148,8 +148,8 @@
             "id": 10,
             "rank": "premium",
             "name": "가디언즈 오브 갤럭시:베스트 스토리 에버 (2015) #1",
-            "option1" : "생명",
-            "option2" : "모공",
+            "option1" : ["생명"],
+            "option2" : ["모공"],
             "option3" : "공속",
             "option4" : ["치율","치피","쿨감","화저","공격5%이속20%"],
             "option5" : ["에공","에방","방무","회피","정저"],
@@ -164,152 +164,152 @@
             "id": 11,
             "rank": "normal",
             "name": "가디언즈 오브 더 갤럭시 (2013) #1",
-            "option1" : "공속",
-            "option2" : "독저",
+            "option1" : ["공속"],
+            "option2" : ["독저"],
             "option3" : ["에공","회피","생명","치피","화저"],
             "option4" : ["물방","이속","상감","쿨감","피격5%방무20%"],
             "option5" : ["모방","방무","에방","회복","전저"],
             "option6" : ["치율","모공","물공","냉저","정저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#223a54",
+                "fontColor": "#C8CED4"
             }
         },
         {
             "id": 12,
             "rank": "premium",
             "name": "가디언즈 오브 더 갤럭시 (2013) #7",
-            "option1" : "방무",
-            "option2" : "에공",
+            "option1" : ["방무"],
+            "option2" : ["에공"],
             "option3" : "모방",
             "option4" : ["공속","이속","쿨감","상감","피격5%모방10%"],
             "option5" : ["회피","독저","물방","회복","전저"],
             "option6" : ["치율","생명","물공","냉저","정저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#f7fbfe",
+                "fontColor": "#5C5D5F"
             }
         },
         {
             "id": 13,
             "rank": "normal",
             "name": "그루트 (2015) #5",
-            "option1" : "치피",
-            "option2" : "방무",
+            "option1" : ["치피"],
+            "option2" : ["방무"],
             "option3" : ["에공","치율","생명","회복","화저"],
             "option4" : ["공속","이속","상감","쿨감","회피5%모방20%"],
             "option5" : ["모방","에방","물방","독저","전저"],
             "option6" : ["회피","모공","물공","냉저","정저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#7b6b84",
+                "fontColor": "#2E2831"
             }
         },
         {
             "id": 14,
             "rank": "normal",
             "name": "그웬풀 (2016) #3",
-            "option1" : "상감",
-            "option2" : "회복",
+            "option1" : ["상감"],
+            "option2" : ["회복"],
             "option3" : ["회피","방무","생명","치피","화저"],
             "option4" : ["공속","이속","쿨감","에공","피격5%에방20%"],
             "option5" : ["모방","물방","독저","에방","전저"],
             "option6" : ["치율","모공","물공","냉저","정저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#0b4b80",
+                "fontColor": "#C2D2DF"
             }
         },
         {
             "id": 15,
             "rank": "premium",
             "name": "뉴 어벤져스 #9",
-            "option1" : "방무",
-            "option2" : "생명",
+            "option1" : ["방무"],
+            "option2" : ["생명"],
             "option3" : "치피",
             "option4" : ["모방","물방","상감","치율","피격5%생명20%"],
             "option5" : ["모공","회피","화저","에공","전저"],
             "option6" : ["쿨감","공속","에방","냉저","정저"],
             "hasCollection" : false,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#000",
+                "fontColor": "#f0f0f0"
             }
         },
         {
             "id": 16,
             "rank": "normal",
             "name": "드랙스 (2015) #1",
-            "option1" : "회복",
-            "option2" : "물공",
+            "option1" : ["회복"],
+            "option2" : ["물공"],
             "option3" : ["에공","방무","생명","치피","화저"],
             "option4" : ["공속","이속","쿨감","상감","피격5%치율20%"],
             "option5" : ["회피","물방","에방","독저","전저"],
             "option6" : ["치율","모공","모방","냉저","정저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#798147",
+                "fontColor": "#DEDFD1"
             }
         },
         {
             "id": 17,
             "rank": "premium",
             "name": "로키 (2004) #2",
-            "option1" : "에공",
-            "option2" : "방무",
+            "option1" : ["에공"],
+            "option2" : ["방무"],
             "option3" : "쿨감",
             "option4" : ["공속","치율","생명","전저","피격5%상감20%"],
             "option5" : ["치피","상감","냉저","회복","화저"],
             "option6" : ["모공","에방","물방","이속","독저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#ddecf7",
+                "fontColor": "#52585C"
             }
         },
         {
             "id": 18,
             "rank": "premium",
             "name": "로키 (2010) #1",
-            "option1" : "쿨감",
-            "option2" : "공속",
+            "option1" : ["쿨감"],
+            "option2" : ["공속"],
             "option3" : "방무",
             "option4" : ["생명","회복","화저","정저","치명5%쿨감20%"],
             "option5" : ["에공","상감","에방","이속","회피"],
             "option6" : ["모공","물방","치율","전저","독저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#dbc094",
+                "fontColor": "#514837"
             }
         },
         {
             "id": 19,
             "rank": "normal",
             "name": "로키:아스가르드의 요원 #17",
-            "option1" : "모공",
-            "option2" : "쿨감",
+            "option1" : ["모공"],
+            "option2" : ["쿨감"],
             "option3" : ["방무","회피","생명","치피","정저"],
             "option4" : ["공속","이속","냉저","상감","치명5%물공20%"],
             "option5" : ["회복","모방","물방","에방","전저"],
             "option6" : ["물공","화저","에공","치율","독저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#f0f0f0",
+                "fontColor": "#000400"
             }
         },
         {
             "id": 20,
             "rank": "normal",
             "name": "마블 좀비스 #2",
-            "option1" : "회피",
-            "option2" : "쿨감",
+            "option1" : ["회피"],
+            "option2" : ["쿨감"],
             "option3" : ["치피","물방","독저","화저","정저"],
             "option4" : ["공속","모방","방무","에공","회피5%쿨감20%"],
             "option5" : ["전저","이속","냉저","에방","회복"],
@@ -324,80 +324,80 @@
             "id": 21,
             "rank": "normal",
             "name": "마블 좀비스 #2 (왈타 베리언트)",
-            "option1" : "에방",
-            "option2" : "회피",
+            "option1" : ["에방"],
+            "option2" : ["회피"],
             "option3" : ["이속","냉저","생명","치피","정저"],
             "option4" : ["공속","화저","쿨감","상감","피격5%회피20%"],
             "option5" : ["전저","모방","물방","방무","회복"],
             "option6" : ["에공","모공","물공","치율","독저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#f7e3a5",
+                "fontColor": "#5C543D"
             }
         },
         {
             "id": 22,
-            "rank": "normal",
+            "rank": "rare",
             "name": "마블 퓨처파이트 #1",
-            "option1" : "방무",
-            "option2" : "생명",
+            "option1" : ["방무"],
+            "option2" : ["생명"],
             "option3" : ["모공","회피","정저","치피","화저"],
             "option4" : ["쿨감","이속","냉저","상감","회피5%생명20%"],
             "option5" : ["모방","물방","물공","에공","전저"],
             "option6" : ["치율","공속","에방","회복","독저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#294194",
+                "fontColor": "#CAD0E4"
             }
         },
         {
             "id": 23,
-            "rank": "normal",
+            "rank": "rare",
             "name": "마블 퓨처파이트 #2",
-            "option1" : "회복",
-            "option2" : "에공",
+            "option1" : ["회복"],
+            "option2" : ["에공"],
             "option3" : ["방무","생명","상감","치율","화저"],
             "option4" : ["공속","회피","쿨감","이속","피격5%에공20%"],
             "option5" : ["치피","물방","에방","정저","냉저"],
             "option6" : ["모공","모방","물공","독저","냉저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#322f7c",
+                "fontColor": "#CCCBDE"
             }
         },
         {
             "id": 24,
-            "rank": "normal",
+            "rank": "rare",
             "name": "몬스터즈 언리쉬드 (2017) #1",
-            "option1" : "물공",
-            "option2" : "회피",
+            "option1" : ["물공"],
+            "option2" : ["회피"],
             "option3" : ["치피","이속","상감","독저","화저"],
             "option4" : ["공속","쿨감","생명","회복","공격5%모방20%"],
             "option5" : ["치율","정저","물방","에방","냉저"],
             "option6" : ["모공","모방","에공","방무","전저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#c7d46b",
+                "fontColor": "#4A4F28"
             }
         },
         {
             "id": 25,
-            "rank": "normal",
-            "name": "",
-            "option1" : "",
-            "option2" : "",
-            "option3" : [],
-            "option4" : [],
-            "option5" : [],
-            "option6" : [],
+            "rank": "rare",
+            "name": "몬스터즈 언리쉬드 (2017) #2",
+            "option1" : ["모공"],
+            "option2" : ["상감"],
+            "option3" : ["이속","회피","모방","방무","화저"],
+            "option4" : ["공속","쿨감","생명","독저","피격5%모방20%"],
+            "option5" : ["치율","치피","물방","에방","냉저"],
+            "option6" : ["회복","물공","에공","정저","전저"],
             "hasCollection" : true,
             "bgInfo" : {
-                "bgColor": "#000400",
-                "fontColor": "#BFC0BF"
+                "bgColor": "#704480",
+                "fontColor": "#DBD0DF"
             }
         }
     ]

@@ -12,9 +12,40 @@
       height: 250px;
     }
   }
-  .sc {
-    padding-top: 12px;
+
+  .main_wrap {
+    padding-top: 20px;
+    background-color: var(--color-bg);
   }
+
+  //섹션
+  .sc {
+    overflow: hidden;
+    margin: 0 6px;
+    border: 1px solid rgba(#206b4d, 0.2);
+    border-radius: 4px;
+    background-color: var(--color-bg2);
+    box-shadow: 0px 0px 6px 2px rgba(#72ab8f, 0.6);
+    @include mod_dark {
+      border-color: rgba(#1f3129, 0.2);
+      box-shadow: 0px 0px 6px 2px rgba(#101915, 0.6);
+    }
+    & + .sc {
+      margin-top: 12px;
+    }
+    .sc_title_area {
+      padding: 17px var(--gap-both) 16px;
+      border-bottom: 1px solid var(--color-border);
+      .title {
+        @include elss;
+        color: var(--color-font);
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+        letter-spacing: var(--G-letter-spacing);
+      }
+    }
+  }
+
   @import './scss/header.scss';
 }
 

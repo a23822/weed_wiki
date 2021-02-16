@@ -3,10 +3,14 @@ import { firebaseApp, AuthContext } from '../firebase/index';
 import classNames from 'classnames';
 import Flicking from "@egjs/react-flicking";
 import cardData from '../../json/card.json';
+import TotalCardList from './totalCardList';
 
 // scss
 import '../../sprite/card/sp_card.scss';
 import styles from './card.module.scss';
+
+// icon
+import { RiCheckboxBlankCircleLine, RiCheckboxCircleFill } from "react-icons/ri";
 
 const Card = () => {
     //로그인여부
@@ -19,29 +23,55 @@ const Card = () => {
         getCardInfoList(cardData["cards"]);
     }, []);
 
-    console.log(cardInfoList);
-    
-    return(
-        <section className={`sc ${styles.sc}`}>
-            <Flicking className={`flicking ${styles.item_list_wrap}`} gap={12} autoResize={true} anchor={"50%"} hanger={"50%"} circular={true}>
-                {
-                    cardInfoList.map(card => (
-                        <div key={card.id} className={styles.item_bx}>
-                            <button className={styles.item} style={{backgroundColor:`${card.bgInfo.bgColor}`,color:`${card.bgInfo.fontColor}`}}>
-                                <div className={styles.thumb_area}>
-                                    <div className={styles.thumb_wrap}>
-                                        <i className={classNames('spcard','img_card'+card.id)}></i>
-                                    </div>
-                                    <div className={styles.name}>{card.name}</div>
-                                </div>
-                                <div className={"info_area"}>
+    // console.log(cardInfoList);
 
-                                </div>
-                            </button>
+    // 필터 버튼 클릭 시
+    const [filterState, setFilterState] = useState([
+        {
+            "id" : 1,
+            "name" : "프카만",
+            "state" : false
+        },
+        {
+            "id": 2,
+            "name" : "컬렉션작용",
+            "state" : false
+        }
+    ])
+
+    const onClickFilterBtn = (index) => {
+        setFilterState(
+            filterState.map(filter => 
+                filter.id === index ? {...filter, "state" : !filter.state} : filter
+            )
+        )
+    }
+    
+    return (
+        <section className={`sc ${styles.sc}`}>
+            <div className="sc_title_area">
+                <h2 className="title">코믹스 카드</h2>
+            </div>
+            <div className={styles.filter_wrap}>
+                <div className={"scroll_area"}>
+                    <div className={"scroll_wrap"}>
+                        <div className={"scroll_inner"}>
+                            {
+                                filterState.map(filter => (
+                                    <div key={filter.id} className={"item_bx"}>
+                                        <button onClick={() => onClickFilterBtn(filter.id)} className={styles.btn_filter} aria-pressed={filter.state}>
+                                            <RiCheckboxBlankCircleLine className={styles.ico}/>
+                                            <RiCheckboxCircleFill className={`${styles.ico} ${styles.type_selected}`}/>
+                                            {filter.name}
+                                        </button>
+                                    </div>
+                                ))
+                            }
                         </div>
-                    ))
-                }
-            </Flicking>
+                    </div>
+                </div>
+            </div>
+            <TotalCardList cardlistdata={cardInfoList} filterlistdata={filterState}/>
         </section>
     )
 }

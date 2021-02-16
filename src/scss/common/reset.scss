@@ -11,12 +11,12 @@ body,input,textarea,select,table,button {
     font-family: 'Noto Sans KR', sans-serif;
     font-size:1.4rem;
     line-height:2rem;
-    color: $color-font;
+    color: var(--color-font);
 }
 html {
     font-size:10px;
     line-height:10px;
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     @include mod_galfol{
         font-size:8px;
         line-height:8px;
