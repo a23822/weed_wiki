@@ -23,8 +23,6 @@ const Card = () => {
         getCardInfoList(cardData["cards"]);
     }, []);
 
-    // console.log(cardInfoList);
-
     // 필터 버튼 클릭 시
     const [filterState, setFilterState] = useState([
         {
@@ -39,12 +37,89 @@ const Card = () => {
         }
     ])
 
+    // 필터
     const onClickFilterBtn = (index) => {
         setFilterState(
             filterState.map(filter => 
                 filter.id === index ? {...filter, "state" : !filter.state} : filter
             )
-        )
+        );
+        const premiumFlag = filterState[0].state;
+        const collectionFlag = filterState[1].state;
+        if (index === 1) {
+            if (premiumFlag) {
+                // 프카만 보기 해제
+                if (collectionFlag) {
+                    //컬렉션용 보기 ON
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
+                        )
+                    )
+                } else {
+                    //컬렉션용 보기 OFF
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.display === false?{...card,"display":true}: card
+                        )
+                    )
+                }
+            } else {
+                //프카만 보기
+                if (collectionFlag) {
+                    //컬렉션용 보기 ON
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.rank === "premium" && card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
+                        )
+                    )
+                } else {
+                    //컬렉션용 보기 OFF
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.rank === "premium"?{...card,"display":true}:{...card,"display":false}
+                        )
+                    )
+                }
+            }
+        }
+        else if (index === 2) {
+            if (collectionFlag) {
+                //컬렉션용 보기 해제
+                if (premiumFlag) {
+                    //프카만 보기 ON
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.rank === "premium"?{...card,"display":true}:{...card,"display":false}
+                        )
+                    )
+                } else {
+                    //프카만 보기 OFF
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.display === false?{...card,"display":true}: card
+                        )
+                    )
+                }
+            } else {
+                //컬렉션용 보기
+                if (premiumFlag) {
+                    //프카만 보기 ON
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.rank === "premium" && card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
+                        )
+                    )
+                } else {
+                    //프카만 보기 OFF
+                    getCardInfoList(
+                        cardInfoList.map(card =>
+                            card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
+                        )
+                    )
+                }
+            }
+        }
     }
     
     return (
@@ -71,7 +146,7 @@ const Card = () => {
                     </div>
                 </div>
             </div>
-            <TotalCardList cardlistdata={cardInfoList} filterlistdata={filterState}/>
+            <TotalCardList cardlistdata={cardInfoList}/>
         </section>
     )
 }

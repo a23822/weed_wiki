@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import classNames from 'classnames';
 import Flicking from "@egjs/react-flicking";
 
@@ -17,6 +17,7 @@ const totalCardList = (props) => {
             <Flicking className={`flicking ${styles.item_list_wrap}`} gap={12} autoResize={true} anchor={"50%"} hanger={"50%"} circular={true}>
                 {
                     cardList.map(card => (
+                        card.display?
                         <div key={card.id} className={styles.item_bx}>
                             <button className={styles.item} style={{backgroundColor:`${card.bgInfo.bgColor}`,color:`${card.bgInfo.fontColor}`}}>
                                 <div className={styles.thumb_area}>
@@ -27,6 +28,8 @@ const totalCardList = (props) => {
                                 </div>
                             </button>
                         </div>
+                        :
+                        null
                     ))
                 }
             </Flicking>
