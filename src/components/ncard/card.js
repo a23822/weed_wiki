@@ -38,12 +38,10 @@ const Card = () => {
         filterState.map(filter =>
             filter.state?trueFilterList.push(filter.id):null
         )
-        console.log(`true: ${trueFilterList}`)
 
         const filterPremiumFilter = (list) => {
             if (trueFilterList.includes(1)) {
-                console.log('asd');
-                var res = list.map(card => card.rank==="premium"?{...card, display: true}:card);
+                var res = list.map(card => !card.display && card.rank==="premium"?{...card, display: false}:{...card, display: true});
                 return res
             } else {
                 return list
@@ -52,12 +50,16 @@ const Card = () => {
 
         const filterCollectionFilter = (list) => {
             if (trueFilterList.includes(2)) {
-                console.log('222')
-                var res = list.map(card => card.hasCollection?{...card, display: true}:card);
+                var res = list.map(card => !card.display && card.hasCollection?{...card, display: false}:{...card, display: true});
                 return res
             } else {
                 return list
             }
+        }
+
+        const filterReverseList = (list) => {
+            var res = list.map(card => card.display?{...card, display: !card.display}:{...card, display: !card.display});
+            return res
         }
 
         const makeTempCardList = (list) => {
@@ -67,15 +69,10 @@ const Card = () => {
 
         const test = async() => {
             const temp = makeTempCardList(cardData["cards"]);
-            console.log('temp');
-            console.log(temp);
-            const firstFilter = await filterPremiumFilter(temp);
-            console.log('firstFilter');
-            console.log(firstFilter);
-            const secondFilter = await filterCollectionFilter(firstFilter);
-            console.log('secondFilter');
-            console.log(secondFilter);
-            // return getCardInfoList(secondFilter)
+            const false_p_filter = await filterPremiumFilter(temp);
+            const false_c_filter = await filterCollectionFilter(false_p_filter);
+            const reverse = await filterReverseList(false_c_filter);
+            return getCardInfoList(reverse);
         }
 
         if (trueFilterList.length === 0) {
@@ -95,82 +92,6 @@ const Card = () => {
                 filter.id === index ? {...filter, "state" : !filter.state} : filter
             )
         );
-        // const premiumFlag = filterState[0].state;
-        // const collectionFlag = filterState[1].state;
-        // if (index === 1) {
-        //     if (premiumFlag) {
-        //         // 프카만 보기 해제
-        //         if (collectionFlag) {
-        //             //컬렉션용 보기 ON
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
-        //                 )
-        //             )
-        //         } else {
-        //             //컬렉션용 보기 OFF
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.display === false?{...card,"display":true}: card
-        //                 )
-        //             )
-        //         }
-        //     } else {
-        //         //프카만 보기
-        //         if (collectionFlag) {
-        //             //컬렉션용 보기 ON
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.rank === "premium" && card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
-        //                 )
-        //             )
-        //         } else {
-        //             //컬렉션용 보기 OFF
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.rank === "premium"?{...card,"display":true}:{...card,"display":false}
-        //                 )
-        //             )
-        //         }
-        //     }
-        // }
-        // else if (index === 2) {
-        //     if (collectionFlag) {
-        //         //컬렉션용 보기 해제
-        //         if (premiumFlag) {
-        //             //프카만 보기 ON
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.rank === "premium"?{...card,"display":true}:{...card,"display":false}
-        //                 )
-        //             )
-        //         } else {
-        //             //프카만 보기 OFF
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.display === false?{...card,"display":true}: card
-        //                 )
-        //             )
-        //         }
-        //     } else {
-        //         //컬렉션용 보기
-        //         if (premiumFlag) {
-        //             //프카만 보기 ON
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.rank === "premium" && card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
-        //                 )
-        //             )
-        //         } else {
-        //             //프카만 보기 OFF
-        //             getCardInfoList(
-        //                 cardInfoList.map(card =>
-        //                     card.hasCollection === true?{...card,"display":true}:{...card,"display":false}
-        //                 )
-        //             )
-        //         }
-        //     }
-        // }
     }
     
     return (
