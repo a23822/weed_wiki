@@ -30,6 +30,9 @@ html {
         line-height:16px;
     }
 }
+body {
+    @include noScroll;
+}
 input {
     border: 0;
 }

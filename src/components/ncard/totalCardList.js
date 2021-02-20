@@ -7,8 +7,6 @@ import '../../sprite/card/sp_card.scss';
 import styles from './card.module.scss';
 
 const totalCardList = (props) => {
-    console.log(props);
-
     const cardList = props.cardlistdata;
     const filterList = props.filterlistdata;
 
