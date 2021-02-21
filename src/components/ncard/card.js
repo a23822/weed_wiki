@@ -124,7 +124,7 @@ const Card = () => {
                 </div>
             </div>
             <TotalCardList cardlistdata={cardInfoList} getdetailcardindex={getDetailCardIndex} getisshowdetail={getIsShowDetail}/>
-            <CardDetail cardindex={detailCardIndex} cardinfolist={cardInfoList} isshowdetail={isShowDetail}/>
+            <CardDetail cardindex={detailCardIndex} cardinfolist={cardInfoList} isshowdetail={isShowDetail} getisshowdetail={getIsShowDetail}/>
         </section>
     )
 }
