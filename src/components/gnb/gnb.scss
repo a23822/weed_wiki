@@ -6,7 +6,7 @@
 .gnb_wrap {
     position: sticky;
     top: 0;
-    z-index: 9000;
+    z-index: 5000;
     &:after {
         content: '';
         position: absolute;

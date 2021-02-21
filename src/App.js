@@ -7,13 +7,9 @@ import Footer from './components/nfooter/footer';
 function App() {
   return (
     <div className="weed_wiki">
-      <div className="dummy type_small">
-      </div>
       <Header/>
       <Gnb/>
       <Body/>
-      <div className="dummy">
-      </div>
       <Footer/>
     </div>
   );

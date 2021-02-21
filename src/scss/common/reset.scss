@@ -16,18 +16,9 @@ body,input,textarea,select,table,button {
 html {
     font-size:10px;
     line-height:10px;
-    background-color: var(--color-bg);
     @include mod_galfol{
         font-size:8px;
         line-height:8px;
-    }
-    @include mod_tablet{
-        font-size:12px;
-        line-height:12px;
-    }
-    @include mod_pc{
-        font-size:16px;
-        line-height:16px;
     }
 }
 body {

@@ -5,22 +5,17 @@
 
 .weed_wiki {
   position: relative;
-  .dummy {
-    height: 1500px;
-    background-color: black;
-    &.type_small {
-      height: 250px;
-    }
-  }
+  background-color: var(--color-bg);
 
   .main_wrap {
-    padding-top: 20px;
+    padding: 20px 0 36px;
     background-color: var(--color-bg);
   }
 
   //섹션
   .sc {
     overflow: hidden;
+    position: relative;
     margin: 0 6px;
     border: 1px solid rgba(#206b4d, 0.2);
     border-radius: 4px;
@@ -46,6 +41,21 @@
     }
   }
 
-  @import './scss/header.scss';
+  // fixed 레이어
+  .ly_info {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.76);
+    pointer-events: none;
+    z-index: 9000;
+    &.is_show {
+      display: block;
+    }
+  }
 }
 

@@ -3,108 +3,113 @@
 @import '../../scss/common/mixins.scss';
 @import '../../scss/common/variables';
 
-.sc {
-    position: relative;
-    .item_list_wrap {
-        margin-top: 12px;
-        height: 234px;
-        .item_bx {
-            display: inline-block;
-            vertical-align: top;
+.item_list_wrap {
+    margin: 12px 0;
+    height: 234px;
+    .item_bx {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .item {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        width: 126px;
+        border-radius: 6px;
+        &[fontType='white']{
+            color: #fff;
         }
-        .item {
-            overflow: hidden;
-            display: block;
-            position: relative;
-            width: 126px;
+        &:before {
+            @include mask;
+            content: '';
+            border: 1px solid rgba(0, 0, 0, 0.36);
             border-radius: 6px;
-            &[fontType='white']{
-                color: #fff;
-            }
+        }
+    }
+    .thumb_area {
+        .thumb_wrap {
+            position: relative;
             &:before {
                 @include mask;
                 content: '';
-                border: 1px solid rgba(0, 0, 0, 0.6);
-                border-radius: 6px;
+                border: 1px solid rgba(0, 0, 0, 0.36);
+                border-bottom: 1px solid rgba(17, 17, 17, 0.16);
+                border-radius: 6px 6px 0 0;
             }
         }
-        .thumb_area {
-            .thumb_wrap {
-                position: relative;
-                &:before {
-                    @include mask;
-                    content: '';
-                    border: 1px solid rgba(0, 0, 0, 0.6);
-                    border-bottom: 1px solid rgba(17, 17, 17, 0.16);
-                    border-radius: 6px 6px 0 0;
-                }
-            }
-            .name {
-                @include elss(2, 1.6rem);
-                margin: 6px 0;
-                padding: 0 6px;
-                height: 3.2rem;
-                box-sizing: border-box;
-                font-size: 1.3rem;
-                font-weight: 700;
-            }
+        .name {
+            @include elss(2, 1.6rem);
+            margin: 6px 0;
+            padding: 0 6px;
+            height: 3.2rem;
+            box-sizing: border-box;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
     }
-    .filter_wrap {
-        padding: 8px 0;
-        border-bottom: 1px solid var(--color-border2);
-        background-color: var(--color-scroll-bg);
-        :global(.scroll_area) {
-            overflow: hidden;
-            position: relative;
-            height: 4rem;
-            font-size: 0;
-            line-height: 0;
+}
+.filter_wrap {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border2);
+    background-color: var(--color-scroll-bg);
+    :global(.scroll_area) {
+        overflow: hidden;
+        position: relative;
+        height: 4rem;
+        font-size: 0;
+        line-height: 0;
+    }
+    :global(.scroll_wrap) {
+        margin-bottom: 14px;
+    }
+    :global(.scroll_inner) {
+        height: 55px;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    :global(.item_bx) {
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: top;
+        &:first-child {
+            margin-left: var(--gap-both);
         }
-        :global(.scroll_wrap) {
-            margin-bottom: 14px;
+        &:last-child {
+            margin-right: var(--gap-both);
         }
-        :global(.scroll_inner) {
-            height: 55px;
-            overflow-x: scroll;
-            white-space: nowrap;
-        }
-        :global(.item_bx) {
+    }
+    .btn_filter {
+        padding: 0 8px;
+        border-radius: 6px;
+        background-color: #111;
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 4rem;
+        .ico {
             display: inline-block;
-            margin-left: 8px;
-            vertical-align: top;
-            &:first-child {
-                margin-left: var(--gap-both);
-            }
-            &:last-child {
-                margin-right: var(--gap-both);
+            margin-right: 4px;
+            vertical-align: -2px;
+            &.type_selected {
+                display: none;
             }
         }
-        .btn_filter {
-            padding: 0 8px;
-            border-radius: 6px;
-            background-color: #111;
-            color: #fff;
-            font-size: 1.4rem;
-            line-height: 4rem;
+        &[aria-pressed="true"]{
             .ico {
-                display: inline-block;
-                margin-right: 4px;
-                vertical-align: -2px;
+                display: none;
                 &.type_selected {
-                    display: none;
-                }
-            }
-            &[aria-pressed="true"]{
-                .ico {
-                    display: none;
-                    &.type_selected {
-                        display: inline-block;
-                    }
+                    display: inline-block;
                 }
             }
         }
     }
+}
 
-    
+// detail 레이어
+.detail_wrap {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--color-bg);
+    pointer-events: initial;
 }

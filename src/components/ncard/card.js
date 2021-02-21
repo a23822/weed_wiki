@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { firebaseApp, AuthContext } from '../firebase/index';
-import classNames from 'classnames';
-import Flicking from "@egjs/react-flicking";
 import cardData from '../../json/card.json';
+
+// component
 import TotalCardList from './totalCardList';
+import CardDetail from './cardDetail';
 
 // scss
 import '../../sprite/card/sp_card.scss';
@@ -93,19 +94,23 @@ const Card = () => {
             )
         );
     }
+
+    // 카드 상세정보 보기
+    const [detailCardIndex, getDetailCardIndex] = useState(0);
+    const [isShowDetail, getIsShowDetail] = useState(false);
     
     return (
-        <section className={`sc ${styles.sc}`}>
-            <div className="sc_title_area">
-                <h2 className="title">코믹스 카드</h2>
+        <section className={`sc`}>
+            <div className={`sc_title_area`}>
+                <h2 className={`title`}>코믹스 카드</h2>
             </div>
             <div className={styles.filter_wrap}>
-                <div className={"scroll_area"}>
-                    <div className={"scroll_wrap"}>
-                        <div className={"scroll_inner"}>
+                <div className={`scroll_area`}>
+                    <div className={`scroll_wrap`}>
+                        <div className={`scroll_inner`}>
                             {
                                 filterState.map(filter => (
-                                    <div key={filter.id} className={"item_bx"}>
+                                    <div key={filter.id} className={`item_bx`}>
                                         <button onClick={() => onClickFilterBtn(filter.id)} className={styles.btn_filter} aria-pressed={filter.state}>
                                             <RiCheckboxBlankCircleLine className={styles.ico}/>
                                             <RiCheckboxCircleFill className={`${styles.ico} ${styles.type_selected}`}/>
@@ -118,7 +123,8 @@ const Card = () => {
                     </div>
                 </div>
             </div>
-            <TotalCardList cardlistdata={cardInfoList}/>
+            <TotalCardList cardlistdata={cardInfoList} getdetailcardindex={getDetailCardIndex} getisshowdetail={getIsShowDetail}/>
+            <CardDetail cardindex={detailCardIndex} cardinfolist={cardInfoList} isshowdetail={isShowDetail}/>
         </section>
     )
 }

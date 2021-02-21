@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+@import '../../scss/common/mixins.scss';
+@import '../../scss/common/variables';
+
+:global(.footer_wrap) {
+    background-color: var(--color-bg2);
+    .inner {
+        padding: 19px var(--gap-both) 18px;
+        border-top: 1px solid var(--color-border);
+    }
+}
