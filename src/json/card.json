@@ -2,7 +2,7 @@
     "cards" : [
         {
             "id": 1,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "1602 위치 헌터 안젤라 #1",
             "option1" : ["치피"],
             "option2" : ["냉저"],
@@ -19,7 +19,7 @@
         },
         {
             "id": 2,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "1872 #1",
             "option1" : ["공속"],
             "option2" : ["이속"],
@@ -36,7 +36,7 @@
         },
         {
             "id": 3,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "1872 #1(셰이너 베리언트)",
             "option1" : ["물공"],
             "option2" : ["치율"],
@@ -53,7 +53,7 @@
         },
         {
             "id": 4,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "M.O.D.O.K. 어쌔씬 #1",
             "option1" : ["상감"],
             "option2" : ["정저"],
@@ -70,7 +70,7 @@
         },
         {
             "id": 5,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "S.H.E.I.L.D. (2014) #1 (영 베리언트)",
             "option1" : ["화저"],
             "option2" : ["방무"],
@@ -87,7 +87,7 @@
         },
         {
             "id": 6,
-            "rank": "rare",
+            "rank": "Rare",
             "name": "S.H.I.E.L.D. (2014) #12",
             "option1" : ["치피"],
             "option2" : ["모공"],
@@ -104,7 +104,7 @@
         },
         {
             "id": 7,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "S.H.I.E.L.D. (2014) #6 (NYC 베리언트)",
             "option1" : ["냉저"],
             "option2" : ["치율"],
@@ -121,7 +121,7 @@
         },
         {
             "id": 8,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "S.H.I.E.L.D. (2014) #7",
             "option1" : ["전저"],
             "option2" : ["치피"],
@@ -138,7 +138,7 @@
         },
         {
             "id": 9,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "S.H.I.E.L.D. (2014) #8",
             "option1" : ["독저"],
             "option2" : ["회피"],
@@ -155,11 +155,11 @@
         },
         {
             "id": 10,
-            "rank": "premium",
+            "rank": "Premium",
             "name": "가디언즈 오브 갤럭시:베스트 스토리 에버 (2015) #1",
             "option1" : ["생명"],
             "option2" : ["모공"],
-            "option3" : "공속",
+            "option3" : ["공속"],
             "option4" : ["치율","치피","쿨감","화저","공격5%이속20%"],
             "option5" : ["에공","에방","방무","회피","정저"],
             "option6" : ["모방","물공","물방","상감","전저"],
@@ -172,7 +172,7 @@
         },
         {
             "id": 11,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "가디언즈 오브 더 갤럭시 (2013) #1",
             "option1" : ["공속"],
             "option2" : ["독저"],
@@ -189,11 +189,11 @@
         },
         {
             "id": 12,
-            "rank": "premium",
+            "rank": "Premium",
             "name": "가디언즈 오브 더 갤럭시 (2013) #7",
             "option1" : ["방무"],
             "option2" : ["에공"],
-            "option3" : "모방",
+            "option3" : ["모방"],
             "option4" : ["공속","이속","쿨감","상감","피격5%모방10%"],
             "option5" : ["회피","독저","물방","회복","전저"],
             "option6" : ["치율","생명","물공","냉저","정저"],
@@ -206,7 +206,7 @@
         },
         {
             "id": 13,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "그루트 (2015) #5",
             "option1" : ["치피"],
             "option2" : ["방무"],
@@ -223,7 +223,7 @@
         },
         {
             "id": 14,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "그웬풀 (2016) #3",
             "option1" : ["상감"],
             "option2" : ["회복"],
@@ -240,11 +240,11 @@
         },
         {
             "id": 15,
-            "rank": "premium",
+            "rank": "Premium",
             "name": "뉴 어벤져스 #9",
             "option1" : ["방무"],
             "option2" : ["생명"],
-            "option3" : "치피",
+            "option3" : ["치피"],
             "option4" : ["모방","물방","상감","치율","피격5%생명20%"],
             "option5" : ["모공","회피","화저","에공","전저"],
             "option6" : ["쿨감","공속","에방","냉저","정저"],
@@ -257,7 +257,7 @@
         },
         {
             "id": 16,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "드랙스 (2015) #1",
             "option1" : ["회복"],
             "option2" : ["물공"],
@@ -274,11 +274,11 @@
         },
         {
             "id": 17,
-            "rank": "premium",
+            "rank": "Premium",
             "name": "로키 (2004) #2",
             "option1" : ["에공"],
             "option2" : ["방무"],
-            "option3" : "쿨감",
+            "option3" : ["쿨감"],
             "option4" : ["공속","치율","생명","전저","피격5%상감20%"],
             "option5" : ["치피","상감","냉저","회복","화저"],
             "option6" : ["모공","에방","물방","이속","독저"],
@@ -291,11 +291,11 @@
         },
         {
             "id": 18,
-            "rank": "premium",
+            "rank": "Premium",
             "name": "로키 (2010) #1",
             "option1" : ["쿨감"],
             "option2" : ["공속"],
-            "option3" : "방무",
+            "option3" : ["방무"],
             "option4" : ["생명","회복","화저","정저","치명5%쿨감20%"],
             "option5" : ["에공","상감","에방","이속","회피"],
             "option6" : ["모공","물방","치율","전저","독저"],
@@ -308,7 +308,7 @@
         },
         {
             "id": 19,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "로키:아스가르드의 요원 #17",
             "option1" : ["모공"],
             "option2" : ["쿨감"],
@@ -325,7 +325,7 @@
         },
         {
             "id": 20,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "마블 좀비스 #2",
             "option1" : ["회피"],
             "option2" : ["쿨감"],
@@ -342,7 +342,7 @@
         },
         {
             "id": 21,
-            "rank": "normal",
+            "rank": "Normal",
             "name": "마블 좀비스 #2 (왈타 베리언트)",
             "option1" : ["에방"],
             "option2" : ["회피"],
@@ -359,7 +359,7 @@
         },
         {
             "id": 22,
-            "rank": "rare",
+            "rank": "Rare",
             "name": "마블 퓨처파이트 #1",
             "option1" : ["방무"],
             "option2" : ["생명"],
@@ -376,7 +376,7 @@
         },
         {
             "id": 23,
-            "rank": "rare",
+            "rank": "Rare",
             "name": "마블 퓨처파이트 #2",
             "option1" : ["회복"],
             "option2" : ["에공"],
@@ -393,7 +393,7 @@
         },
         {
             "id": 24,
-            "rank": "rare",
+            "rank": "Rare",
             "name": "몬스터즈 언리쉬드 (2017) #1",
             "option1" : ["물공"],
             "option2" : ["회피"],
@@ -410,7 +410,7 @@
         },
         {
             "id": 25,
-            "rank": "rare",
+            "rank": "Rare",
             "name": "몬스터즈 언리쉬드 (2017) #2",
             "option1" : ["모공"],
             "option2" : ["상감"],

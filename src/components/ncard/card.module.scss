@@ -4,8 +4,8 @@
 @import '../../scss/common/variables';
 
 .item_list_wrap {
-    margin: 12px 0;
-    height: 234px;
+    margin: 16px 0 20px;
+    height: 239px;
     .item_bx {
         display: inline-block;
         vertical-align: top;
@@ -39,7 +39,7 @@
         }
         .name {
             @include elss(2, 1.6rem);
-            margin: 6px 0;
+            margin: 8px 0 9px;
             padding: 0 6px;
             height: 3.2rem;
             box-sizing: border-box;
@@ -107,12 +107,13 @@
 // detail 레이어
 .detail_wrap {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
+    top: 50%;
+    left: var(--gap-both);
+    right: var(--gap-both);
+    transform: translateY(-50%);
     padding: 18px;
-    background-color: var(--color-bg);
     border-radius: 4px;
+    background-color: var(--color-bg);
     pointer-events: initial;
     .btn_close {
         position: absolute;
@@ -141,15 +142,83 @@
     }
     .detail_inner {
         position: relative;
+        border-radius: 6px;
         background-color: var(--color-bg2);
         .title_area {
+            display: flex;
             padding-right: 42px;
             line-height: 42px;
             .title {
-                padding: 0 12px;
+                overflow: hidden;
+                padding: 0 6px 0 12px;
+                .txt {
+                    @include elss;
+                }
             }
-            .txt {
-                @include elss;
+            .tag_group {
+                flex: 0 0 auto;
+                position: relative;
+                .ly_sub {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: -75px;
+                    right: -75px;
+                    border: 1px solid #000;
+                    background-color: var(--color-bg2);
+                    color: #000;
+                    z-index: 10;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: -6px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-top: none;
+                        border-bottom: 6px solid #000;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent; 
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: -4px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-top: none;
+                        border-bottom: 4px solid #fff;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent; 
+                    }
+                }
+            }
+            .btn_label {
+                display: inline-block;
+                padding: 0 4px;
+                border-radius: 3.5px;
+                color: #fff;
+                font-size: 12px;
+                line-height: 20px;
+                vertical-align: 0;
+                &:global(.type_normal) {
+                    background-color: #a9b0ad;
+                }
+                &:global(.type_rare) {
+                    background-color: #296de3;
+                }
+                &:global(.type_premium) {
+                    background-color: #FFD700;
+                }
+                .ico_info {
+                    display: inline-block;
+                    margin-left: 2px;
+                    vertical-align: -1px;
+                }
+                &[aria-pressed="true"]{
+                    & + .ly_sub {
+                        display: block;
+                    }
+                }
             }
         }
         .thumb_area {
@@ -176,7 +245,12 @@
             }
         }
         .info_area {
-            
+            padding: 12px;
+            .title {
+                font-size: 1.7rem;
+                line-height: 2.4rem;
+                font-weight: 900;
+            }
         }
     }
 }

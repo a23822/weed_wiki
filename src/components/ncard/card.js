@@ -42,7 +42,7 @@ const Card = () => {
 
         const filterPremiumFilter = (list) => {
             if (trueFilterList.includes(1)) {
-                var res = list.map(card => !card.display && card.rank==="premium"?{...card, display: false}:{...card, display: true});
+                var res = list.map(card => !card.display && card.rank==="Premium"?{...card, display: false}:{...card, display: true});
                 return res
             } else {
                 return list
@@ -98,6 +98,17 @@ const Card = () => {
     // 카드 상세정보 보기
     const [detailCardIndex, getDetailCardIndex] = useState(0);
     const [isShowDetail, getIsShowDetail] = useState(false);
+    const [isPressedLabelInfoBtn, setIsPressedLabelInfoBtn] = useState(false);
+
+    // props 정리
+    const detailProps = {
+        "cardIndex" : detailCardIndex,
+        "cardInfoList" : cardInfoList,
+        "isShowDetail" : isShowDetail,
+        "getIsShowDetail" : getIsShowDetail,
+        "isPressedLabelInfoBtn" : isPressedLabelInfoBtn,
+        "setIsPressedLabelInfoBtn" : setIsPressedLabelInfoBtn
+    }
     
     return (
         <section className={`sc`}>
@@ -124,7 +135,7 @@ const Card = () => {
                 </div>
             </div>
             <TotalCardList cardlistdata={cardInfoList} getdetailcardindex={getDetailCardIndex} getisshowdetail={getIsShowDetail}/>
-            <CardDetail cardindex={detailCardIndex} cardinfolist={cardInfoList} isshowdetail={isShowDetail} getisshowdetail={getIsShowDetail}/>
+            <CardDetail detailprops={detailProps}/>
         </section>
     )
 }
