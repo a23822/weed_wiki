@@ -31,8 +31,39 @@ const Card = () => {
             "id": 2,
             "name" : "컬렉션작용",
             "state" : false
+        },
+        {
+            "id": 3,
+            "name": "모공,생명,물/에공 올인원",
+            "state": false,
         }
     ])
+
+    const preAllinOneFilterFlag = (count) => {
+        if (count >=4 ) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    const preAllinOneFilter = async(card) => {
+        let filterCount = 0;
+        const optionList = [card.option1, card.option2, card.option3, card.option4, card.option5, card.option6];
+        for (var i=0;i<optionList.length;i++) {
+            for (var j=0;j<optionList[i].length;j++) {
+                if (optionList[i][j]=='물공'||optionList[i][j]=='생명'||optionList[i][j]=='에공'||optionList[i][j]=='모공') {
+                    filterCount += 1;
+                    break;
+                }
+            }
+            if (filterCount>=4) {
+                break;
+            }
+        }
+        const res = await preAllinOneFilterFlag(filterCount);
+        return res;
+    }
 
     useEffect(() => {
         const trueFilterList = [];
@@ -40,7 +71,7 @@ const Card = () => {
             filter.state?trueFilterList.push(filter.id):null
         )
 
-        const filterPremiumFilter = (list) => {
+        const filterPremium = (list) => {
             if (trueFilterList.includes(1)) {
                 var res = list.map(card => !card.display && card.rank==="Premium"?{...card, display: false}:{...card, display: true});
                 return res
@@ -49,9 +80,18 @@ const Card = () => {
             }
         }
 
-        const filterCollectionFilter = (list) => {
+        const filterCollection = (list) => {
             if (trueFilterList.includes(2)) {
-                var res = list.map(card => !card.display && card.hasCollection?{...card, display: false}:{...card, display: true});
+                var res = list.map(card => !card.display && card.collectionInfo.hasCollection?{...card, display: false}:{...card, display: true});
+                return res
+            } else {
+                return list
+            }
+        }
+
+        const filterAllinOne = async(list) => {
+            if (trueFilterList.includes(3)) {
+                var res = list.map(card => !card.display && card.hasAllinOne?{...card, display: false}:{...card, display: true});
                 return res
             } else {
                 return list
@@ -68,21 +108,19 @@ const Card = () => {
             return res
         }
 
-        const test = async() => {
-            const temp = makeTempCardList(cardData["cards"]);
-            const false_p_filter = await filterPremiumFilter(temp);
-            const false_c_filter = await filterCollectionFilter(false_p_filter);
-            const reverse = await filterReverseList(false_c_filter);
+        const doFiltering = async() => {
+            let temp = makeTempCardList(cardData["cards"]);
+            let false_p_filter = await filterPremium(temp);
+            let false_c_filter = await filterCollection(false_p_filter);
+            let false_aio_filter = await filterAllinOne(false_c_filter);
+            let reverse = await filterReverseList(false_aio_filter);
             return getCardInfoList(reverse);
         }
 
         if (trueFilterList.length === 0) {
             getCardInfoList(cardData["cards"]);
         } else {
-            trueFilterList.map(filter => (
-                console.log(filter)
-            ))
-            const temp = test();
+            doFiltering();
         }
     },[filterState])
 

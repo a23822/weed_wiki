@@ -16,17 +16,18 @@ const cardDetail = (props) => {
     // layer on/off 유무
     const isShowDetail = props.detailprops.isShowDetail;
     const getIsShowDetail = props.detailprops.getIsShowDetail;
-
-    // 닫기 버튼
-    const onClickCloseBtn = () => {
-        getIsShowDetail(!isShowDetail);
-    }
     
     // 라벨 인포메이션 버튼
     const isPressedLabelInfoBtn = props.detailprops.isPressedLabelInfoBtn;
     const setIsPressedLabelInfoBtn = props.detailprops.setIsPressedLabelInfoBtn;
     const onClickLabelInfoBtn = (e) => {
         setIsPressedLabelInfoBtn(!isPressedLabelInfoBtn);
+    }
+
+    // 닫기 버튼
+    const onClickCloseBtn = () => {
+        getIsShowDetail(!isShowDetail);
+        setIsPressedLabelInfoBtn(false);
     }
 
     // 옵션목록 라벨로 변경
@@ -111,7 +112,7 @@ const cardDetail = (props) => {
                                             <div className={styles.sub_info}>
                                                 <em className={`${styles.label} ${styles.type_premium}`}>Premium</em>
                                                 <span className={styles.txt}>해당 카드들은 과금, 특정 컨텐츠에서만 얻을 수 있습니다.</span>
-                                                <span className={styles.txt}>ex) 월드보스상자, 카드깡, 레전더리 배틀</span>
+                                                <span className={styles.txt}>ex) 월드보스상자, 카드깡, 레전더리 배틀 익스트림 보상</span>
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +126,7 @@ const cardDetail = (props) => {
                                     <div className={styles.info_group}>
                                         <h4 className={styles.title}>옵션</h4>
                                         <div className={styles.info}>
-                                            <div className={styles.value}><span className={styles.txt_index}>첫번째</span> 7.5% ~ 11%</div>
+                                            <div className={styles.value}><span className={styles.txt_index}>첫번째</span> 7.5% ~ 10% , 11%</div>
                                             <div className={styles.option}>
                                                 {
                                                     info_detail.option1.map((item,index) => (
@@ -135,7 +136,7 @@ const cardDetail = (props) => {
                                             </div>
                                         </div>
                                         <div className={styles.info}>
-                                            <div className={styles.value}><span className={styles.txt_index}>두번째</span> 7.5% ~ 11%</div>
+                                            <div className={styles.value}><span className={styles.txt_index}>두번째</span> 7.5% ~ 10% , 11%</div>
                                             <div className={styles.option}>
                                                 {
                                                     info_detail.option2.map((item,index) => (

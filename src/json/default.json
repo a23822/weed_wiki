@@ -13,17 +13,26 @@
             "option6" : [],
             "hasCollection" : true
         },
-        "" : {
-            "id": 1,
-            "rank": "premium",
+        {
+            "id": 68,
+            "rank": "",
             "name": "",
-            "option1" : "",
-            "option2" : "",
-            "option3" : "",
+            "option1" : [],
+            "option2" : [],
+            "option3" : [],
             "option4" : [],
             "option5" : [],
             "option6" : [],
-            "hasCollection" : true
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#704480",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
         }
     }
 }

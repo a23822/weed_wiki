@@ -10,11 +10,15 @@
             "option4" : ["공속","이속","쿨감","상감","피격5%생명20%"],
             "option5" : ["회복","모방","회피","에방","생명"],
             "option6" : ["물공","화저","에공","치율","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 19,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#000400",
                 "fontColor": "#BFC0BF"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -27,11 +31,15 @@
             "option4" : ["냉저","쿨감","상감","방무","공격5%공속20%"],
             "option5" : ["에방","물방","모방","회복","전저"],
             "option6" : ["독저","모공","물공","에공","치율"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 1,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#184d76",
                 "fontColor": "#C5D3DD"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -44,11 +52,15 @@
             "option4" : ["공속","이속","치피","상감","공격5%치율20%"],
             "option5" : ["물방","모방","에방","회복","전저"],
             "option6" : ["독저","모공","냉저","에공","방무"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 1,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#f8b536",
                 "fontColor": "#5D4314"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -61,11 +73,15 @@
             "option4" : ["공속","이속","쿨감","냉저","공격5%방무20%"],
             "option5" : ["전저","물방","모방","에방","회복"],
             "option6" : ["에공","물공","모공","치율","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 19,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#f1d773",
                 "fontColor": "#5A502B"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -78,11 +94,15 @@
             "option4" : ["공속","이속","쿨감","상감","공격5%이속20%"],
             "option5" : ["모방","냉저","에방","회복","전저"],
             "option6" : ["치율","모공","에공","물공","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 16,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#e7f3ff",
                 "fontColor": "#565A5F"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -95,11 +115,15 @@
             "option4" : ["공속","상감","냉저","전저","회피5%이속20%"],
             "option5" : ["이속","물방","치율","화저","독저"],
             "option6" : ["쿨감","회피","에방","물공","정저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 16,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#2ba3dd",
                 "fontColor": "#16516E"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -112,11 +136,15 @@
             "option4" : ["공속","이속","쿨감","상감","공격5%치율20%"],
             "option5" : ["물방","모방","방무","회복","전저"],
             "option6" : ["에공","물공","모공","정저","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 16,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#f7f4bc",
                 "fontColor": "#5C5B46"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -129,11 +157,15 @@
             "option4" : ["공속","이속","쿨감","상감","피격5%상감20%"],
             "option5" : ["회복","정저","물방","모방","에방"],
             "option6" : ["방무","치율","독저","에공","모공"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 16,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#69784c",
                 "fontColor": "#DADDD2"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -146,11 +178,15 @@
             "option4" : ["공속","이속","쿨감","상감","피격5%공속20%"],
             "option5" : ["회복","전저","물방","모방","에방"],
             "option6" : ["냉저","정저","치율","모공","물공"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 16,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#fffeff",
                 "fontColor": "#5F5F5F"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -163,11 +199,15 @@
             "option4" : ["치율","치피","쿨감","화저","공격5%이속20%"],
             "option5" : ["에공","에방","방무","회피","정저"],
             "option6" : ["모방","물공","물방","상감","전저"],
-            "hasCollection" : false,
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : false
+            },
             "bgInfo" : {
                 "bgColor": "#841c33",
                 "fontColor": "#E0C6CC"
             },
+            "hasAllinOne" : true,
             "display" : true
         },
         {
@@ -180,11 +220,15 @@
             "option4" : ["물방","이속","상감","쿨감","피격5%방무20%"],
             "option5" : ["모방","방무","에방","회복","전저"],
             "option6" : ["치율","모공","물공","냉저","정저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 17,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#223a54",
                 "fontColor": "#C8CED4"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -197,11 +241,15 @@
             "option4" : ["공속","이속","쿨감","상감","피격5%모방10%"],
             "option5" : ["회피","독저","물방","회복","전저"],
             "option6" : ["치율","생명","물공","냉저","정저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 6,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#f7fbfe",
                 "fontColor": "#5C5D5F"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -214,11 +262,15 @@
             "option4" : ["공속","이속","상감","쿨감","회피5%모방20%"],
             "option5" : ["모방","에방","물방","독저","전저"],
             "option6" : ["회피","모공","물공","냉저","정저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 17,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#7b6b84",
                 "fontColor": "#2E2831"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -231,11 +283,15 @@
             "option4" : ["공속","이속","쿨감","에공","피격5%에방20%"],
             "option5" : ["모방","물방","독저","에방","전저"],
             "option6" : ["치율","모공","물공","냉저","정저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 22,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#0b4b80",
                 "fontColor": "#C2D2DF"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -248,11 +304,15 @@
             "option4" : ["모방","물방","상감","치율","피격5%생명20%"],
             "option5" : ["모공","회피","화저","에공","전저"],
             "option6" : ["쿨감","공속","에방","냉저","정저"],
-            "hasCollection" : false,
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : false
+            },
             "bgInfo" : {
                 "bgColor": "#000",
                 "fontColor": "#f0f0f0"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -265,11 +325,15 @@
             "option4" : ["공속","이속","쿨감","상감","피격5%치율20%"],
             "option5" : ["회피","물방","에방","독저","전저"],
             "option6" : ["치율","모공","모방","냉저","정저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 17,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#798147",
                 "fontColor": "#DEDFD1"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -282,11 +346,15 @@
             "option4" : ["공속","치율","생명","전저","피격5%상감20%"],
             "option5" : ["치피","상감","냉저","회복","화저"],
             "option6" : ["모공","에방","물방","이속","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 5,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#ddecf7",
                 "fontColor": "#52585C"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -299,11 +367,15 @@
             "option4" : ["생명","회복","화저","정저","치명5%쿨감20%"],
             "option5" : ["에공","상감","에방","이속","회피"],
             "option6" : ["모공","물방","치율","전저","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 5,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#dbc094",
                 "fontColor": "#514837"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -316,11 +388,15 @@
             "option4" : ["공속","이속","냉저","상감","치명5%물공20%"],
             "option5" : ["회복","모방","물방","에방","전저"],
             "option6" : ["물공","화저","에공","치율","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 5,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#f0f0f0",
                 "fontColor": "#000400"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -333,11 +409,15 @@
             "option4" : ["공속","모방","방무","에공","회피5%쿨감20%"],
             "option5" : ["전저","이속","냉저","에방","회복"],
             "option6" : ["상감","모공","물공","치율","생명"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 2,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#000400",
                 "fontColor": "#BFC0BF"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -350,11 +430,15 @@
             "option4" : ["공속","화저","쿨감","상감","피격5%회피20%"],
             "option5" : ["전저","모방","물방","방무","회복"],
             "option6" : ["에공","모공","물공","치율","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 2,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#f7e3a5",
                 "fontColor": "#5C543D"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -367,11 +451,15 @@
             "option4" : ["쿨감","이속","냉저","상감","회피5%생명20%"],
             "option5" : ["모방","물방","물공","에공","전저"],
             "option6" : ["치율","공속","에방","회복","독저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 11,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#294194",
                 "fontColor": "#CAD0E4"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -384,11 +472,15 @@
             "option4" : ["공속","회피","쿨감","이속","피격5%에공20%"],
             "option5" : ["치피","물방","에방","정저","냉저"],
             "option6" : ["모공","모방","물공","독저","냉저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 10,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#322f7c",
                 "fontColor": "#CCCBDE"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -401,11 +493,15 @@
             "option4" : ["공속","쿨감","생명","회복","공격5%모방20%"],
             "option5" : ["치율","정저","물방","에방","냉저"],
             "option6" : ["모공","모방","에공","방무","전저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 12,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#c7d46b",
                 "fontColor": "#4A4F28"
             },
+            "hasAllinOne" : false,
             "display" : true
         },
         {
@@ -418,12 +514,1029 @@
             "option4" : ["공속","쿨감","생명","독저","피격5%모방20%"],
             "option5" : ["치율","치피","물방","에방","냉저"],
             "option6" : ["회복","물공","에공","정저","전저"],
-            "hasCollection" : true,
+            "collectionInfo" : {
+                "collectionId" : 12,
+                "hasCollection" : true
+            },
             "bgInfo" : {
                 "bgColor": "#704480",
                 "fontColor": "#DBD0DF"
             },
+            "hasAllinOne" : false,
             "display" : true
+        },
+        {
+            "id": 26,
+            "rank": "Rare",
+            "name": "몬스터즈 언리쉬드 (2017) #3",
+            "option1" : ["생명"],
+            "option2" : ["물공"],
+            "option3" : ["에방","회피","에공","독저","화저"],
+            "option4" : ["공속","쿨감","회복","방무","공격5%물공20%"],
+            "option5" : ["치율","치피","물방","이속","냉저"],
+            "option6" : ["모방","모공","상감","정저","전저"],
+            "collectionInfo" : {
+                "collectionId" : 12,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#356494",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 27,
+            "rank": "Rare",
+            "name": "몬스터즈 언리쉬드(2017) #4",
+            "option1" : ["생명"],
+            "option2" : ["에공"],
+            "option3" : ["방무","회피","상감","치율","화저"],
+            "option4" : ["공속","쿨감","회복","이속","공격5%에공20%"],
+            "option5" : ["치피","물방","에방","정저","냉저"],
+            "option6" : ["모공","모방","물공","독저","전저"],
+            "collectionInfo" : {
+                "collectionId" : 12,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#67231b",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 28,
+            "rank": "Rare",
+            "name": "몬스터즈 언리쉬드 (2017) #5",
+            "option1" : ["쿨감"],
+            "option2" : ["물공"],
+            "option3" : ["에공","회피","상감","독저","화저"],
+            "option4" : ["공속","생명","회복","방무","피격5%모공20%"],
+            "option5" : ["치율","치피","물방","에방","냉저"],
+            "option6" : ["모공","모방","정저","이속","전저"],
+            "collectionInfo" : {
+                "collectionId" : 12,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#3f7cbc",
+                "fontColor": "#dbdfea"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 29,
+            "rank": "Normal",
+            "name": "블랙 위도우 #20",
+            "option1" : ["모방"],
+            "option2" : ["생명"],
+            "option3" : ["회피","냉저","치피","화저","정저"],
+            "option4" : ["공속","회복","쿨감","상감","공격5%쿨감20%"],
+            "option5" : ["이속","방무","독저","에방","전저"],
+            "option6" : ["물방","모공","물공","에공","치율"],
+            "collectionInfo" : {
+                "collectionId" : 13,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#000",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 30,
+            "rank": "Normal",
+            "name": "블랙 위도우 (2016) #1",
+            "option1" : ["이속"],
+            "option2" : ["상감"],
+            "option3" : ["치피","회피","모방","에공","독저"],
+            "option4" : ["생명","물공","회복","화저","공격5%물공20%"],
+            "option5" : ["방무","에방","물방","치율","전저"],
+            "option6" : ["모공","공속","쿨감","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 13,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#d4b0ae",
+                "fontColor": "#000"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 31,
+            "rank": "Premium",
+            "name": "블랙 위도우 (2016) #10",
+            "option1" : ["쿨감"],
+            "option2" : ["생명"],
+            "option3" : ["모공"],
+            "option4" : ["치피","물공","회복","화저","피격5%에공20%"],
+            "option5" : ["에공","에방","물방","치율","전저"],
+            "option6" : ["방무","공속","상감","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 13,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#d7bdbd",
+                "fontColor": "#000"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 32,
+            "rank": "Premium",
+            "name": "블랙 팬서 #166",
+            "option1" : ["모공"],
+            "option2" : ["쿨감"],
+            "option3" : ["치피"],
+            "option4" : ["물공","생명","치율","전저","공격5%모방20%"],
+            "option5" : ["상감","에공","에방","방무","냉저"],
+            "option6" : ["공속","모방","회복","화저","독저"],
+            "collectionInfo" : {
+                "collectionId" : 7,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#599b8a",
+                "fontColor": "#22332e"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 33,
+            "rank": "Premium",
+            "name": "블랙 팬서 #35",
+            "option1" : ["물공"],
+            "option2" : ["방무"],
+            "option3" : ["쿨감"],
+            "option4" : ["공속","치율","생명","전저","피격5%상감20%"],
+            "option5" : ["치피","상감","냉저","회복","화저"],
+            "option6" : ["모공","에방","물방","이속","독저"],
+            "collectionInfo" : {
+                "collectionId" : 7,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#202020",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 34,
+            "rank": "Normal",
+            "name": "스타 로드 (2015) #2",
+            "option1" : ["방무"],
+            "option2" : ["치율"],
+            "option3" : ["물공","회피","생명","냉저","화저"],
+            "option4" : ["공속","전저","쿨감","상감","회피5%이속20%"],
+            "option5" : ["에방","모방","물방","회복","정저"],
+            "option6" : ["에공","모공","치피","이속","독저"],
+            "collectionInfo" : {
+                "collectionId" : 17,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#931d1b",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 35,
+            "rank": "Normal",
+            "name": "시빌 워 (2006) #3",
+            "option1" : ["쿨감"],
+            "option2" : ["상감"],
+            "option3" : ["물공","회피","생명","냉저","화저"],
+            "option4" : ["공속","이속","전저","치피","공격5%물공20%"],
+            "option5" : ["에방","모방","물방","회복","정저"],
+            "option6" : ["에공","모공","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 18,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#bc3131"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 36,
+            "rank": "Normal",
+            "name": "시빌 워 (2006) #4",
+            "option1" : ["모공"],
+            "option2" : ["물방"],
+            "option3" : ["물공","회피","생명","냉저","화저"],
+            "option4" : ["공속","이속","쿨감","상감","치명5%쿨감20%"],
+            "option5" : ["에방","모방","치피","회복","정저"],
+            "option6" : ["에공","전저","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 18,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#5288b4"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 37,
+            "rank": "Rare",
+            "name": "시빌 워 (2006) #5",
+            "option1" : ["물공"],
+            "option2" : ["방무"],
+            "option3" : ["치피","이속","치율","물방","독저"],
+            "option4" : ["쿨감","상감","회피","정저","피격5%모공20%"],
+            "option5" : ["생명","모방","냉저","에공","전저"],
+            "option6" : ["모공","화저","물방","회복","에방"],
+            "collectionInfo" : {
+                "collectionId" : 18,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#ac361e"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 38,
+            "rank": "Normal",
+            "name": "시빌 워 (2006) #7",
+            "option1" : ["회복"],
+            "option2" : ["치율"],
+            "option3" : ["에공","방무","생명","치피","화저"],
+            "option4" : ["공속","이속","쿨감","상감","회피5%모방20%"],
+            "option5" : ["모방","물방","에방","독저","전저"],
+            "option6" : ["회피","모공","물공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 18,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#de4a41"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 39,
+            "rank": "Normal",
+            "name": "시빌 워: 더 이니시에이티브 (2007) #1",
+            "option1" : ["에방"],
+            "option2" : ["치피"],
+            "option3" : ["물공","회피","생명","냉저","화저"],
+            "option4" : ["공속","이속","쿨감","상감","공격5%물공20%"],
+            "option5" : ["전저","모방","물방","회복","정저"],
+            "option6" : ["에공","모공","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 18,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fffefc",
+                "fontColor": "#8c3625"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 40,
+            "rank": "Normal",
+            "name": "시빌 워: 프론트 라인(2006) #9",
+            "option1" : ["회피"],
+            "option2" : ["물방"],
+            "option3" : ["방무","상감","공속","물공","전저"],
+            "option4" : ["모공","이속","치율","독저","피격5%모방20%"],
+            "option5" : ["생명","에공","에방","냉저","정저"],
+            "option6" : ["치피","모방","화저","회복","쿨감"],
+            "collectionInfo" : {
+                "collectionId" : 18,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#94969c",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 41,
+            "rank": "Normal",
+            "name": "시크릿 워즈 2099 #1",
+            "option1" : ["회복"],
+            "option2" : ["전저"],
+            "option3" : ["정저","회피","생명","치피","화저"],
+            "option4" : ["공속","이속","쿨감","상감","치명5%물방20%"],
+            "option5" : ["모방","물방","에방","냉저","방무"],
+            "option6" : ["치율","모공","물공","에공","독저"],
+            "collectionInfo" : {
+                "collectionId" : 4,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ef411f",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 42,
+            "rank": "Rare",
+            "name": "시크릿 워즈 2099 #1 (림 베리언트)",
+            "option1" : ["공속"],
+            "option2" : ["방무"],
+            "option3" : ["물방","생명","치피","화저","정저"],
+            "option4" : ["회피","이속","에공","상감","피격5%방무20%"],
+            "option5" : ["회복","모방","냉저","에방","전저"],
+            "option6" : ["물공","모공","쿨감","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 4,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ef411f",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 43,
+            "rank": "Normal",
+            "name": "시크릿 워즈 2099 (2015) #2",
+            "option1" : ["정저"],
+            "option2" : ["회복"],
+            "option3" : ["공속","에공","에방","냉저","물방"],
+            "option4" : ["생명","이속","회피","독저","회피5%생명20%"],
+            "option5" : ["쿨감","상감","치율","방무","화저"],
+            "option6" : ["모공","물공","모방","치피","전저"],
+            "collectionInfo" : {
+                "collectionId" : 4,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ef411f",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 44,
+            "rank": "Normal",
+            "name": "시크릿 워즈: 배틀월드 #2",
+            "option1" : ["생명"],
+            "option2" : ["화저"],
+            "option3" : ["치피","회피","방무","냉저","정저"],
+            "option4" : ["공속","물방","치율","상감","피격5%이속20%"],
+            "option5" : ["에방","물공","이속","회복","전저"],
+            "option6" : ["모공","모방","에공","쿨감","독저"],
+            "collectionInfo" : {
+                "collectionId" : 3,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#eb4b61",
+                "fontColor": "#f6f3d2"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 45,
+            "rank": "Normal",
+            "name": "시크릿 워즈: 배틀 월드 (2015) #1",
+            "option1" : ["모방"],
+            "option2" : ["물방"],
+            "option3" : ["쿨감","상감","치율","공속","독저"],
+            "option4" : ["생명","이속","회피","전저","피격5%회피20%"],
+            "option5" : ["물공","치피","에방","회복","화저"],
+            "option6" : ["모공","방무","에공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 3,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f6ea78",
+                "fontColor": "#a36799"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 46,
+            "rank": "Normal",
+            "name": "시크릿 워즈: 배틀월드 (2015) #3",
+            "option1" : ["물공"],
+            "option2" : ["독저"],
+            "option3" : ["생명","이속","공속","회복","화저"],
+            "option4" : ["쿨감","물방","상감","치율","회피5%쿨감20%"],
+            "option5" : ["방무","회피","모방","에공","전저"],
+            "option6" : ["모공","치피","에방","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 3,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#741934",
+                "fontColor": "#a36799"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 47,
+            "rank": "Normal",
+            "name": "아머 워즈 #1",
+            "option1" : ["이속"],
+            "option2" : ["정저"],
+            "option3" : ["생명","회피","치피","화저","냉저"],
+            "option4" : ["공속","방무","쿨감","상감","치명5%이속20%"],
+            "option5" : ["물방","모방","에방","회복","전저"],
+            "option6" : ["독저","모공","물공","에공","치율"],
+            "collectionInfo" : {
+                "collectionId" : 19,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#64b6e0",
+                "fontColor": "#fdcf35"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 48,
+            "rank": "Normal",
+            "name": "아이언맨 (2004) #13",
+            "option1" : ["에공"],
+            "option2" : ["에방"],
+            "option3" : ["회피","방무","생명","치피","화저"],
+            "option4" : ["공속","이속","쿨감","상감","피격5%에공20%"],
+            "option5" : ["모방","물방","독저","회복","전저"],
+            "option6" : ["치율","모공","물공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 20,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#efa229",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 49,
+            "rank": "Normal",
+            "name": "아이언맨 (2004) #14",
+            "option1" : ["회복"],
+            "option2" : ["모방"],
+            "option3" : ["에공","방무","생명","치피","화저"],
+            "option4" : ["공속","이속","쿨감","상감","피격5%치율20%"],
+            "option5" : ["회피","물방","에방","독저","전저"],
+            "option6" : ["치율","모공","물공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 20,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#efa229",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 50,
+            "rank": "Normal",
+            "name": "앤트맨 & 와스프 (2010) #1",
+            "option1" : ["이속"],
+            "option2" : ["독저"],
+            "option3" : ["모공","에방","모방","생명","전저"],
+            "option4" : ["쿨감","치율","냉저","화저","회피5%생명20%"],
+            "option5" : ["치피","상감","회복","에공","정저"],
+            "option6" : ["공속","방무","물방","물공","회피"],
+            "collectionInfo" : {
+                "collectionId" : 23,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f7a558",
+                "fontColor": "#c61d24"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 51,
+            "rank": "Normal",
+            "name": "앤트맨 (2015) #1",
+            "option1" : ["치피"],
+            "option2" : ["생명"],
+            "option3" : ["회피","방무","에방","상감","화저"],
+            "option4" : ["공속","이속","쿨감","에공","피격5%물공20%"],
+            "option5" : ["모방","물방","독저","회복","전저"],
+            "option6" : ["치율","모공","물공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 23,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#de1c21"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 52,
+            "rank": "Normal",
+            "name": "앤트맨 (2015) #5",
+            "option1" : ["모방"],
+            "option2" : ["전저"],
+            "option3" : ["생명","에방","회복","냉저","화저"],
+            "option4" : ["치피","에공","물방","회피","회피5%쿨감20%"],
+            "option5" : ["공속","치율","쿨감","물공","정저"],
+            "option6" : ["모공","상감","이속","방무","독저"],
+            "collectionInfo" : {
+                "collectionId" : 23,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#e73928",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 53,
+            "rank": "Normal",
+            "name": "어나일레이션: 로난 (2006) #1",
+            "option1" : ["에공"],
+            "option2" : ["화저"],
+            "option3" : ["물공","회피","생명","냉저","상감"],
+            "option4" : ["공속","이속","전저","치피","공격5%물공20%"],
+            "option5" : ["에방","모방","물방","회복","정저"],
+            "option6" : ["쿨감","모공","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 17,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#0a2640",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 54,
+            "rank": "Normal",
+            "name": "어메이징 스파이더맨 (1999) #533",
+            "option1" : ["공속"],
+            "option2" : ["회피"],
+            "option3" : ["에공","방무","생명","치피","화저"],
+            "option4" : ["독저","이속","쿨감","상감","치명5%회피20%"],
+            "option5" : ["모방","물방","에방","회복","전저"],
+            "option6" : ["치율","모공","물공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 15,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ad1418",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 55,
+            "rank": "Normal",
+            "name": "어메이징 스파이더맨 (1999) #535",
+            "option1" : ["생명"],
+            "option2" : ["공속"],
+            "option3" : ["물공","회피","치피","냉저","화저"],
+            "option4" : ["전저","이속","쿨감","상감","치명5%공속20%"],
+            "option5" : ["에방","모방","물방","회복","정저"],
+            "option6" : ["에공","모공","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 15,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ad1c18",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 56,
+            "rank": "Premium",
+            "name": "어메이징 스파이더맨 (1999) #605",
+            "option1" : ["모공"],
+            "option2" : ["방무"],
+            "option3" : ["공속"],
+            "option4" : ["치율","모방","에공","전저","피격5%상감20%"],
+            "option5" : ["쿨감","물공","냉저","회복","정저"],
+            "option6" : ["회피","에방","생명","화저","치피"],
+            "collectionInfo" : {
+                "collectionId" : 15,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#d4aac4",
+                "fontColor": "#fcfafc"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 57,
+            "rank": "Rare",
+            "name": "어메이징 스파이더맨 (1999) #653",
+            "option1" : ["회피"],
+            "option2" : ["모공"],
+            "option3" : ["공속","모방","쿨감","에공","정저"],
+            "option4" : ["생명","상감","이속","물공","피격5%치율20%"],
+            "option5" : ["방무","에방","치율","냉저","전저"],
+            "option6" : ["화저","치피","회복","물방","독저"],
+            "collectionInfo" : {
+                "collectionId" : 15,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#182322",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 58,
+            "rank": "Normal",
+            "name": "어메이징 스파이더맨 (1999) #674",
+            "option1" : ["쿨감"],
+            "option2" : ["냉저"],
+            "option3" : ["치피","모방","물공","에공","독저"],
+            "option4" : ["공속","회복","물방","화저","피격5%회피20%"],
+            "option5" : ["생명","이속","상감","에방","정저"],
+            "option6" : ["모공","치율","회피","방무","전저"],
+            "collectionInfo" : {
+                "collectionId" : 15,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#5b443b",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 59,
+            "rank": "Premium",
+            "name": "어메이징 스파이더맨 (2014) #13",
+            "option1" : ["방무"],
+            "option2" : ["쿨감"],
+            "option3" : ["모공"],
+            "option4" : ["공속","이속","전저","치피","공격5%모방10%"],
+            "option5" : ["에방","회피","물방","회복","정저"],
+            "option6" : ["에공","생명","화저","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 6,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#8e6342",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 60,
+            "rank": "Premium",
+            "name": "어벤져스 (1963) #12",
+            "option1" : ["쿨감"],
+            "option2" : ["물공"],
+            "option3" : ["모공"],
+            "option4" : ["공속","이속","전저","치피","공격5%모방10%"],
+            "option5" : ["에방","생명","물방","회복","정저"],
+            "option6" : ["에공","상감","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 6,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#000",
+                "fontColor": "#fef402"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 61,
+            "rank": "Normal",
+            "name": "어벤져스 (1963) #318",
+            "option1" : ["생명"],
+            "option2" : ["방무"],
+            "option3" : ["물공","회피","모공","냉저","화저"],
+            "option4" : ["공속","이속","쿨감","상감","치명5%쿨감20%"],
+            "option5" : ["에방","모방","치피","회복","정저"],
+            "option6" : ["에공","전저","물방","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : false
+            },
+            "bgInfo" : {
+                "bgColor": "#059ad0",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 62,
+            "rank": "Normal",
+            "name": "어벤져스 (1998) #71",
+            "option1" : ["치피"],
+            "option2" : ["정저"],
+            "option3" : ["생명","치율","모방","물공","회복"],
+            "option4" : ["쿨감","물방","상감","전저","회피5%모방20%"],
+            "option5" : ["공속","냉저","에공","이속","화저"],
+            "option6" : ["모공","방무","에방","회피","독저"],
+            "collectionInfo" : {
+                "collectionId" : 23,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#7f7a34",
+                "fontColor": "#ffd04a"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 63,
+            "rank": "Normal",
+            "name": "어벤져스 오리진: 루크 케이지 (2013) #1",
+            "option1" : ["물공"],
+            "option2" : ["물방"],
+            "option3" : ["공속","에방","이속","방무","정저"],
+            "option4" : ["치피","상감","회피","에공","피격5%물공20%"],
+            "option5" : ["생명","치율","모방","화저","독저"],
+            "option6" : ["모공","회복","쿨감","전저","냉저"],
+            "collectionInfo" : {
+                "collectionId" : 24,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#524110",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 64,
+            "rank": "Normal",
+            "name": "어벤져스 오리진: 비전 (2013) #1",
+            "option1" : ["화저"],
+            "option2" : ["회복"],
+            "option3" : ["생명","회피","모방","방무","정저"],
+            "option4" : ["공속","물방","이속","전저","공격5%에공20%"],
+            "option5" : ["쿨감","에방","치율","물공","독저"],
+            "option6" : ["모공","상감","에공","치피","냉저"],
+            "collectionInfo" : {
+                "collectionId" : 24,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#efbe21",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 65,
+            "rank": "Normal",
+            "name": "어벤져스 오리진: 앤트맨 & 더 와스프 (2013) #1",
+            "option1" : ["정저"],
+            "option2" : ["방무"],
+            "option3" : ["회피","에방","생명","치피","화저"],
+            "option4" : ["공속","이속","쿨감","에공","피격5%상감20%"],
+            "option5" : ["모방","물방","독저","회복","전저"],
+            "option6" : ["치율","모공","물공","냉저","상감"],
+            "collectionInfo" : {
+                "collectionId" : 24,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#212021",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 66,
+            "rank": "Premium",
+            "name": "어벤져스 오리진: 퀵실버 & 스칼렛 위치 (2013) #1",
+            "option1" : ["생명"],
+            "option2" : ["방무"],
+            "option3" : ["모공"],
+            "option4" : ["치피","에방","에공","화저","공격5%물공20%"],
+            "option5" : ["공속","모방","상감","회피","전저"],
+            "option6" : ["쿨감","치율","이속","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 24,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#080a08",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        }
+    ],
+    "collections" : [
+        {
+            "id": 0,
+            "name": "없음",
+            "option": null,
+            "value": 0
+        },
+        {
+            "id": 1,
+            "name": "1872",
+            "option": "이속",
+            "value": 3
+        },
+        {
+            "id": 2,
+            "name": "마블 좀비즈",
+            "option": "물방",
+            "value": 3
+        },
+        {
+            "id": 3,
+            "name": "시크릿워즈:배틀월드",
+            "option": "상감",
+            "value": 3
+        },
+        {
+            "id": 4,
+            "name": "시크릿워즈:2099",
+            "option": "모방",
+            "value": 3
+        },
+        {
+            "id": 5,
+            "name": "로키",
+            "option": "회피",
+            "value": 3
+        },
+        {
+            "id": 6,
+            "name": "아트북",
+            "option": "모공",
+            "value": 5
+        },
+        {
+            "id": 7,
+            "name": "블랙 팬서",
+            "option": "치피",
+            "value": 3
+        },
+        {
+            "id": 8,
+            "name": "퓨처파이트 퍼스트",
+            "option": "공속",
+            "value": 3
+        },
+        {
+            "id": 9,
+            "name": "마블 퓨처파이트 5주년",
+            "option": "회피",
+            "value": 1
+        },
+        {
+            "id": 10,
+            "name": "마블 퓨처파이트 4주년",
+            "option": "회복",
+            "value": 1
+        },
+        {
+            "id": 11,
+            "name": "마블 퓨처파이트 3주년",
+            "option": "상감",
+            "value": 1
+        },
+        {
+            "id": 12,
+            "name": "몬스터즈 언리쉬드!",
+            "option": "모공",
+            "value": 5
+        },
+        {
+            "id": 13,
+            "name": "블랙 위도우",
+            "option": "치율",
+            "value": 3
+        },
+        {
+            "id": 14,
+            "name": "언캐니 어벤져스",
+            "option": "회무",
+            "value": 3
+        },
+        {
+            "id": 15,
+            "name": "어메이징 스파이더맨",
+            "option": "모공",
+            "value": 3
+        },
+        {
+            "id": 16,
+            "name": "S.H.I.E.L.D.",
+            "option": "에공",
+            "value": 3
+        },
+        {
+            "id": 17,
+            "name": "가디언즈 오브 갤럭시",
+            "option": "에방",
+            "value": 3
+        },
+        {
+            "id": 18,
+            "name": "시빌 워",
+            "option": "물공",
+            "value": 3
+        },
+        {
+            "id": 19,
+            "name": "시크릿 워즈",
+            "option": "생명",
+            "value": 3
+        },
+        {
+            "id": 20,
+            "name": "신념의 대립",
+            "option": "공속",
+            "value": 3
+        },
+        {
+            "id": 21,
+            "name": "퍼니셔",
+            "option": "회복",
+            "value": 3
+        },
+        {
+            "id": 22,
+            "name": "언빌리버블 그웬풀",
+            "option": "방무",
+            "value": 3
+        },
+        {
+            "id": 23,
+            "name": "앤트맨 & 와스프",
+            "option": "치피",
+            "value": 3
+        },
+        {
+            "id": 24,
+            "name": "어벤져스 오리진",
+            "option": "쿨감",
+            "value": 3
         }
     ]
 }
