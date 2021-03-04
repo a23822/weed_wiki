@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 
 // scss
 import '../../sprite/card/sp_card.scss';

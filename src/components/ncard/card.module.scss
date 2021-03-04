@@ -81,7 +81,7 @@
     .btn_filter {
         padding: 0 8px;
         border-radius: 6px;
-        background-color: #111;
+        background-color: var(--color-theme3);
         color: #fff;
         font-size: 1.4rem;
         line-height: 4rem;
@@ -94,8 +94,13 @@
             }
         }
         &[aria-pressed="true"]{
+            background-color: var(--color-theme2);
+            font-weight: bold;
             .ico {
                 display: none;
+                &.type_filter {
+                    display: inline-block;
+                }
                 &.type_selected {
                     display: inline-block;
                 }
@@ -133,7 +138,7 @@
             display: inline-block;
             width: 100%;
             height: 100%;
-            fill: var(--color-font-strong);
+            fill: var(--color-theme2);
             vertical-align: top;
             &.type_hover {
                 display: none;
@@ -266,6 +271,9 @@
         }
         .thumb_area {
             text-align: center;
+            margin: 0 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ededed;
             .thumb_wrap {
                 overflow: hidden;
                 display: inline-block;
@@ -288,7 +296,9 @@
             }
         }
         .info_area {
+            overflow-y: auto;
             padding: 12px;
+            max-height: 200px;
             .info_group {
                 .info {
                     & + .info {

@@ -906,7 +906,7 @@
         {
             "id": 44,
             "rank": "Normal",
-            "name": "시크릿 워즈: 배틀월드 #2",
+            "name": "시크릿 워즈: 배틀 월드 #2",
             "option1" : ["생명"],
             "option2" : ["화저"],
             "option3" : ["치피","회피","방무","냉저","정저"],
@@ -948,7 +948,7 @@
         {
             "id": 46,
             "rank": "Normal",
-            "name": "시크릿 워즈: 배틀월드 (2015) #3",
+            "name": "시크릿 워즈: 배틀 월드 (2015) #3",
             "option1" : ["물공"],
             "option2" : ["독저"],
             "option3" : ["생명","이속","공속","회복","화저"],
@@ -961,7 +961,7 @@
             },
             "bgInfo" : {
                 "bgColor": "#741934",
-                "fontColor": "#a36799"
+                "fontColor": "#fff"
             },
             "hasAllinOne" : true,
             "display" : true
@@ -1381,6 +1381,573 @@
             },
             "bgInfo" : {
                 "bgColor": "#080a08",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 67,
+            "rank": "Rare",
+            "name": "어벤져스 오리진: 토르 (2011) #1",
+            "option1" : ["에공"],
+            "option2" : ["방무"],
+            "option3" : ["쿨감","상감","모방","물공","독저"],
+            "option4" : ["공속","이속","치율","회피","피격5%에공20%"],
+            "option5" : ["치피","물방","전저","회복","정저"],
+            "option6" : ["모공","생명","에방","냉저","화저"],
+            "collectionInfo" : {
+                "collectionId" : 24,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#000400",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 68,
+            "rank": "Normal",
+            "name": "어벤져스: 더 이니셔티브 (2007) #20",
+            "option1" : ["공속"],
+            "option2" : ["모방"],
+            "option3" : ["물방","회피","생명","냉저","상감"],
+            "option4" : ["에공","이속","전저","치피","공격5%방무20%"],
+            "option5" : ["에방","화저","물방","회복","정저"],
+            "option6" : ["쿨감","모공","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 23,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#010101"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 69,
+            "rank": "Rare",
+            "name": "언빌리버블 그웬풀 (2016) #1",
+            "option1" : ["모공"],
+            "option2" : ["생명"],
+            "option3" : ["회복","치피","회피","전저","화저"],
+            "option4" : ["치율","쿨감","모방","물공","피격5%모공20%"],
+            "option5" : ["상감","공속","물방","이속","정저"],
+            "option6" : ["방무","에방","냉저","에공","독저"],
+            "collectionInfo" : {
+                "collectionId" : 22,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#b91d39",
+                "fontColor": "#faf38d"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 70,
+            "rank": "Premium",
+            "name": "언빌리버블 그웬풀 (2016) #17",
+            "option1" : ["쿨감"],
+            "option2" : ["생명"],
+            "option3" : ["방무"],
+            "option4" : ["치피","이속","물공","에공","회피5%생명20%"],
+            "option5" : ["공속","에방","회피","전저","독저"],
+            "option6" : ["모공","냉저","모방","치율","화저"],
+            "collectionInfo" : {
+                "collectionId" : 22,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#9d537a",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 71,
+            "rank": "Normal",
+            "name": "언빌리버블 그웬풀 (2016) #2",
+            "option1" : ["상감"],
+            "option2" : ["전저"],
+            "option3" : ["생명","에방","모방","냉저","독저"],
+            "option4" : ["치피","물공","회복","화저","피격5%모방20%"],
+            "option5" : ["공속","회피","에공","치율","정저"],
+            "option6" : ["모공","물방","이속","쿨감","방무"],
+            "collectionInfo" : {
+                "collectionId" :22,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#b1e2f7",
+                "fontColor": "#d0478b"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 72,
+            "rank": "Normal",
+            "name": "언빌리버블 그웬풀 (2016) #6",
+            "option1" : ["냉저"],
+            "option2" : ["상감"],
+            "option3" : ["방무","모공","모방","회복","독저"],
+            "option4" : ["생명","에방","치율","정저","회피5%이속20%"],
+            "option5" : ["치피","이속","물방","물공","화저"],
+            "option6" : ["공속","회피","에공","쿨감","전저"],
+            "collectionInfo" : {
+                "collectionId" : 22,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ee3f82",
+                "fontColor": "#181040"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 73,
+            "rank": "Normal",
+            "name": "언캐니 어벤져스 (2012) #6",
+            "option1" : ["쿨감"],
+            "option2" : ["회복"],
+            "option3" : ["생명","치율","회피","물방","전저"],
+            "option4" : ["모공","치피","상감","이속","공격5%방무20%"],
+            "option5" : ["공속","에방","에공","독저","화저"],
+            "option6" : ["방무","모방","냉저","물공","정저"],
+            "collectionInfo" : {
+                "collectionId" : 14,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f9d64a",
+                "fontColor": "#3a4b53"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 74,
+            "rank": "Normal",
+            "name": "언캐니 어벤져스 (2015) #10",
+            "option1" : ["공속"],
+            "option2" : ["치피"],
+            "option3" : ["물공","회피","생명","냉저","상감"],
+            "option4" : ["에공","이속","전저","화저","공격5%물공20%"],
+            "option5" : ["에방","모방","물방","회복","정저"],
+            "option6" : ["쿨감","모공","방무","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 14,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#d02025",
+                "fontColor": "#010403"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 75,
+            "rank": "Normal",
+            "name": "언캐니 어벤져스 (2015) #12",
+            "option1" : ["치율"],
+            "option2" : ["물방"],
+            "option3" : ["방무","생명","모방","회복","화저"],
+            "option4" : ["모공","회피","에방","냉저","공격5%모공10%"],
+            "option5" : ["쿨감","공속","물공","독저","전저"],
+            "option6" : ["치피","상감","에공","이속","정저"],
+            "collectionInfo" : {
+                "collectionId" : 14,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ee2125",
+                "fontColor": "#0f385f"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 76,
+            "rank": "Premium",
+            "name": "언캐니 어벤져스 (2015) #14",
+            "option1" : ["모공"],
+            "option2" : ["쿨감"],
+            "option3" : ["방무"],
+            "option4" : ["물공","생명","치율","전저","공격5%모방20%"],
+            "option5" : ["상감","에공","에방","치피","냉저"],
+            "option6" : ["공속","모방","회복","화저","독저"],
+            "collectionInfo" : {
+                "collectionId" : 14,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#000400",
+                "fontColor": "#e73c21"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 77,
+            "rank": "Normal",
+            "name": "언캐니 어벤져스 (2015) #3",
+            "option1" : ["치율"],
+            "option2" : ["에방"],
+            "option3" : ["쿨감","회피","방무","냉저","전저"],
+            "option4" : ["모공","상감","치피","정저","공격5%치율20%"],
+            "option5" : ["생명","물방","이속","물공","독저"],
+            "option6" : ["공속","모방","에공","회복","화저"],
+            "collectionInfo" : {
+                "collectionId" : 14,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f7e448",
+                "fontColor": "#000400"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 78,
+            "rank": "Normal",
+            "name": "언캐니 엑스맨 (2018) #8",
+            "option1" : ["모공"],
+            "option2" : ["회피"],
+            "option3" : ["에공","생명","상감","치율","화저"],
+            "option4" : ["공속","쿨감","회복","이속","치명5%치피20%"],
+            "option5" : ["치피","물방","에방","정저","냉저"],
+            "option6" : ["방무","모방","물공","독저","전저"],
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : false
+            },
+            "bgInfo" : {
+                "bgColor": "#f88971",
+                "fontColor": "#081821"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 79,
+            "rank": "Normal",
+            "name": "엑스 포스 (2008) #24",
+            "option1" : ["회피"],
+            "option2" : ["방무"],
+            "option3" : ["에공","생명","상감","치율","화저"],
+            "option4" : ["공속","쿨감","회복","이속","공격5%회복20%"],
+            "option5" : ["치피","물방","에방","정저","냉저"],
+            "option6" : ["모공","모방","물공","독저","전저"],
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : false
+            },
+            "bgInfo" : {
+                "bgColor": "#bddef1",
+                "fontColor": "#070907"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 80,
+            "rank": "Normal",
+            "name": "엑스맨 언리미티드 #8",
+            "option1" : ["물공"],
+            "option2" : ["이속"],
+            "option3" : ["생명","독저","공속","회복","화저"],
+            "option4" : ["쿨감","물방","상감","치율","회피5%쿨감20%"],
+            "option5" : ["방무","회피","모방","에공","전저"],
+            "option6" : ["모공","치피","에방","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 0,
+                "hasCollection" : false
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#006eb6"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 81,
+            "rank": "Premium",
+            "name": "올-뉴, 올-디프런트 어벤져스 (2015) #1",
+            "option1" : ["물공"],
+            "option2" : ["에공"],
+            "option3" : ["모공"],
+            "option4" : ["공속","이속","전저","치피","공격5%모방10%"],
+            "option5" : ["에방","생명","물방","회복","정저"],
+            "option6" : ["방무","회피","화저","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 6,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#d72a28",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 82,
+            "rank": "Normal",
+            "name": "워 오브 렐름즈: 뉴 에이전트 오브 아틀라스",
+            "option1" : ["쿨감"],
+            "option2" : ["회피"],
+            "option3" : ["에공","생명","상감","물공","화저"],
+            "option4" : ["공속","치율","모공","이속","회피5%쿨감20%"],
+            "option5" : ["치피","물방","에방","회복","방무"],
+            "option6" : ["냉저","모방","정저","독저","전저"],
+            "collectionInfo" : {
+                "collectionId" : 9,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#3288af",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 83,
+            "rank": "Normal",
+            "name": "캡틴 마블 & 캐럴 코어 #2",
+            "option1" : ["치율"],
+            "option2" : ["독저"],
+            "option3" : ["화저","회피","생명","치피","정저"],
+            "option4" : ["공속","모방","쿨감","상감","공격5%치피20%"],
+            "option5" : ["물방","이속","에방","모공","전저"],
+            "option6" : ["물공","회복","에공","냉저","방무"],
+            "collectionInfo" : {
+                "collectionId" : 19,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f07275",
+                "fontColor": "#fff"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 84,
+            "rank": "Premium",
+            "name": "캡틴 아메리카 (1968) #109",
+            "option1" : ["물공"],
+            "option2" : ["물방"],
+            "option3" : ["모방"],
+            "option4" : ["공속","이속","쿨감","상감","피격5%모공10%"],
+            "option5" : ["치피","생명","독저","회복","전저"],
+            "option6" : ["치율","에공","회피","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 6,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f01c21",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 85,
+            "rank": "Normal",
+            "name": "캡틴 아메리카 (2004) #22",
+            "option1" : ["물방"],
+            "option2" : ["방무"],
+            "option3" : ["에공","회피","생명","치피","화저"],
+            "option4" : ["공속","이속","쿨감","상감","피격5%방무20%"],
+            "option5" : ["모방","독저","에방","회복","전저"],
+            "option6" : ["치율","모공","물공","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 20,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#ce1821"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 86,
+            "rank": "Rare",
+            "name": "캡틴 아메리카 (2004) #24",
+            "option1" : ["물공"],
+            "option2" : ["쿨감"],
+            "option3" : ["공속","이속","물방","회피","전저"],
+            "option4" : ["상감","치율","생명","에공","회피5%모방20%"],
+            "option5" : ["방무","치피","모방","회복","화저"],
+            "option6" : ["모공","에방","정저","냉저","독저"],
+            "collectionInfo" : {
+                "collectionId" : 20,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#ce1821"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 87,
+            "rank": "Normal",
+            "name": "토르즈 #2 (키온 베리언트)",
+            "option1" : ["에공"],
+            "option2" : ["상감"],
+            "option3" : ["치피","회피","생명","방무","화저"],
+            "option4" : ["공속","이속","쿨감","정저","공격5%치피20%"],
+            "option5" : ["에방","모방","물방","회복","전저"],
+            "option6" : ["모공","물공","냉저","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 19,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#f3d886",
+                "fontColor": "#90983a"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 88,
+            "rank": "Normal",
+            "name": "퍼니셔 #19",
+            "option1" : ["방무"],
+            "option2" : ["공속"],
+            "option3" : ["정저","회피","생명","치피","화저"],
+            "option4" : ["냉저","이속","쿨감","상감","회피5%생명20%"],
+            "option5" : ["모방","물방","에방","회복","전저"],
+            "option6" : ["치율","모공","물공","에공","독저"],
+            "collectionInfo" : {
+                "collectionId" : 21,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#645338",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 89,
+            "rank": "Rare",
+            "name": "퍼니셔(2004) #60",
+            "option1" : ["물공"],
+            "option2" : ["생명"],
+            "option3" : ["쿨감","에방","물방","회복","독저"],
+            "option4" : ["공속","이속","모방","화저","피격5%물공20%"],
+            "option5" : ["방무","상감","치율","에공","전저"],
+            "option6" : ["모공","치피","회피","냉저","정저"],
+            "collectionInfo" : {
+                "collectionId" : 21,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#000"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 90,
+            "rank": "Normal",
+            "name": "퍼니셔 워 저널 (2006) #1",
+            "option1" : ["방무"],
+            "option2" : ["이속"],
+            "option3" : ["물공","회피","생명","냉저","화저"],
+            "option4" : ["공속","전저","쿨감","상감","회피5%이속20%"],
+            "option5" : ["에방","모방","물방","회복","정저"],
+            "option6" : ["에공","모공","치피","치율","독저"],
+            "collectionInfo" : {
+                "collectionId" : 21,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#fff",
+                "fontColor": "#000"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 91,
+            "rank": "Premium",
+            "name": "퓨처파이트 퍼스트: 루나 스노우",
+            "option1" : ["에공"],
+            "option2" : ["모공"],
+            "option3" : ["치율"],
+            "option4" : ["물공","쿨감","냉저","방무","공격5%에공20%"],
+            "option5" : ["공속","전저","생명","화저","치피"],
+            "option6" : ["모방","정저","회복","이속","물방"],
+            "collectionInfo" : {
+                "collectionId" : 8,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#d0d7ea",
+                "fontColor": "#2c2f44"
+            },
+            "hasAllinOne" : true,
+            "display" : true
+        },
+        {
+            "id": 92,
+            "rank": "Premium",
+            "name": "퓨처파이트 퍼스트: 크레센트 & 이오",
+            "option1" : ["모공"],
+            "option2" : ["모방"],
+            "option3" : ["생명"],
+            "option4" : ["공속","화저","회복","방무","공격5%방무20%"],
+            "option5" : ["치율","치피","물방","에방","냉저"],
+            "option6" : ["물공","회피","에공","상감","전저"],
+            "collectionInfo" : {
+                "collectionId" : 8,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#ae4c6f",
+                "fontColor": "#FFF"
+            },
+            "hasAllinOne" : false,
+            "display" : true
+        },
+        {
+            "id": 93,
+            "rank": "Premium",
+            "name": "퓨처파이트 퍼스트: 화이트 폭스",
+            "option1" : ["모공"],
+            "option2" : ["방무"],
+            "option3" : ["치피"],
+            "option4" : ["공속","화저","모방","이속","공격5%물공20%"],
+            "option5" : ["회피","회복","물방","치율","전저"],
+            "option6" : ["물공","상감","에공","에방","생명"],
+            "collectionInfo" : {
+                "collectionId" : 8,
+                "hasCollection" : true
+            },
+            "bgInfo" : {
+                "bgColor": "#317ea8",
                 "fontColor": "#FFF"
             },
             "hasAllinOne" : false,

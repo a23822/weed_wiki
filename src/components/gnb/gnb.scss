@@ -50,7 +50,7 @@
             line-height: 4.5rem;
             &.is_selected {
                 background-color: var(--color-tab-active);
-                color: var(--color-font-strong);
+                color: var(--color-theme2);
                 &:after {
                     content: '';
                     position: absolute;

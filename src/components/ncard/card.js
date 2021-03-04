@@ -12,6 +12,8 @@ import styles from './card.module.scss';
 
 // icon
 import { RiCheckboxBlankCircleLine, RiCheckboxCircleFill } from "react-icons/ri";
+import { IoFilter } from "react-icons/io5";
+import { Fragment } from 'react';
 
 const Card = () => {
     //로그인여부
@@ -25,51 +27,37 @@ const Card = () => {
         {
             "id" : 1,
             "name" : "프카만",
-            "state" : false
+            "state" : false,
+            "filter": false
         },
         {
             "id": 2,
             "name" : "컬렉션작용",
-            "state" : false
+            "state" : false,
+            "filter": false
         },
         {
             "id": 3,
             "name": "모공,생명,물/에공 올인원",
             "state": false,
+            "filter": false
+        },
+        {
+            "id": 4,
+            "name": "옵션 필터",
+            "state": false,
+            "filter": true
         }
     ])
 
-    const preAllinOneFilterFlag = (count) => {
-        if (count >=4 ) {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    const preAllinOneFilter = async(card) => {
-        let filterCount = 0;
-        const optionList = [card.option1, card.option2, card.option3, card.option4, card.option5, card.option6];
-        for (var i=0;i<optionList.length;i++) {
-            for (var j=0;j<optionList[i].length;j++) {
-                if (optionList[i][j]=='물공'||optionList[i][j]=='생명'||optionList[i][j]=='에공'||optionList[i][j]=='모공') {
-                    filterCount += 1;
-                    break;
-                }
-            }
-            if (filterCount>=4) {
-                break;
-            }
-        }
-        const res = await preAllinOneFilterFlag(filterCount);
-        return res;
-    }
+    const [filteredOptionList, setFilteredOptionList] = useState([]);
 
     useEffect(() => {
         const trueFilterList = [];
         filterState.map(filter =>
             filter.state?trueFilterList.push(filter.id):null
         )
+        console.log(trueFilterList);
 
         const filterPremium = (list) => {
             if (trueFilterList.includes(1)) {
@@ -109,11 +97,11 @@ const Card = () => {
         }
 
         const doFiltering = async() => {
-            let temp = makeTempCardList(cardData["cards"]);
-            let false_p_filter = await filterPremium(temp);
-            let false_c_filter = await filterCollection(false_p_filter);
-            let false_aio_filter = await filterAllinOne(false_c_filter);
-            let reverse = await filterReverseList(false_aio_filter);
+            var temp = makeTempCardList(cardData["cards"]);
+            var false_p_filter = await filterPremium(temp);
+            var false_c_filter = await filterCollection(false_p_filter);
+            var false_aio_filter = await filterAllinOne(false_c_filter);
+            var reverse = await filterReverseList(false_aio_filter);
             return getCardInfoList(reverse);
         }
 
@@ -161,8 +149,17 @@ const Card = () => {
                                 filterState.map(filter => (
                                     <div key={filter.id} className={`item_bx`}>
                                         <button onClick={() => onClickFilterBtn(filter.id)} className={styles.btn_filter} aria-pressed={filter.state}>
-                                            <RiCheckboxBlankCircleLine className={styles.ico}/>
-                                            <RiCheckboxCircleFill className={`${styles.ico} ${styles.type_selected}`}/>
+                                            {
+                                                !filter.filter?
+                                                <Fragment>
+                                                    <RiCheckboxBlankCircleLine className={styles.ico}/>
+                                                    <RiCheckboxCircleFill className={`${styles.ico} ${styles.type_selected}`}/>
+                                                </Fragment>
+                                                :
+                                                <Fragment>
+                                                    <IoFilter className={`${styles.ico} ${styles.type_filter}`}/>
+                                                </Fragment>
+                                            }
                                             {filter.name}
                                         </button>
                                     </div>
