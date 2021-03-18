@@ -404,3 +404,16 @@
         }
     }
 }
+
+// 필터옵션 레이어
+.option_wrap {
+    position: absolute;
+    top: 50%;
+    left: var(--gap-both);
+    right: var(--gap-both);
+    transform: translateY(-50%);
+    padding: 18px;
+    border-radius: 4px;
+    background-color: var(--color-bg);
+    pointer-events: initial;
+}

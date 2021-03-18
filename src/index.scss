@@ -5,11 +5,34 @@
 
 .weed_wiki {
   position: relative;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg2);
 
   .main_wrap {
     padding: 20px 0 36px;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg2);
+    @include mod_pc {
+      &:after {
+        @include clear;
+      }
+    }
+  }
+
+  .aside_content {
+    @include mod_pc {
+      float: left;
+      margin-right: 32px;
+      width: 568px;
+      .ly_info {
+        right: initial;
+        width: 568px;
+      }
+    }
+  }
+
+  .main_content {
+    @include mod_pc {
+      overflow: hidden;
+    }
   }
 
   //섹션
@@ -44,7 +67,6 @@
   // fixed 레이어
   .ly_info {
     overflow: hidden;
-    display: none;
     position: fixed;
     top: 0;
     left: 0;

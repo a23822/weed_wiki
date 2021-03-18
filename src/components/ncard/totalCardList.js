@@ -22,7 +22,7 @@ const totalCardList = (props) => {
                     cardList.map(card => (
                         card.display?
                         <div key={card.id} className={styles.item_bx}>
-                            <button onClick={() => onClickCard(card.id)} className={styles.item} style={{backgroundColor:`${card.bgInfo.bgColor}`,color:`${card.bgInfo.fontColor}`}}>
+                            <button type="button" onClick={() => onClickCard(card.id)} className={styles.item} style={{backgroundColor:`${card.bgInfo.bgColor}`,color:`${card.bgInfo.fontColor}`}}>
                                 <div className={styles.thumb_area}>
                                     <div className={styles.thumb_wrap}>
                                         <i className={`spcard img_card${card.id}`}></i>
