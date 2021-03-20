@@ -4,7 +4,7 @@
 @import '../../scss/common/variables';
 
 .item_list_wrap {
-    margin: 16px 0 20px;
+    margin: 16px 0;
     height: 239px;
     .item_bx {
         display: inline-block;
@@ -416,4 +416,29 @@
     border-radius: 4px;
     background-color: var(--color-bg);
     pointer-events: initial;
+    .btn_close {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 30px;
+        height: 30px;
+        &:hover {
+            .ico {
+                display: none;
+                &.type_hover {
+                    display: inline-block;
+                }
+            }
+        }
+        .ico {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            fill: var(--color-theme2);
+            vertical-align: top;
+            &.type_hover {
+                display: none;
+            }
+        }
+    }
 }

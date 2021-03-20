@@ -11,6 +11,9 @@ import FilterOption from './filterOption';
 import '../../sprite/card/sp_card.scss';
 import styles from './card.module.scss';
 
+// context
+import { UIContext } from '../context/ui';
+
 // icon
 import { RiCheckboxBlankCircleLine, RiCheckboxCircleFill } from "react-icons/ri";
 import { IoFilter } from "react-icons/io5";
@@ -19,6 +22,9 @@ import { Fragment } from 'react';
 const Card = () => {
     //로그인여부
     const { currentUser } = useContext(AuthContext);
+
+    // 스크롤
+    const { ui_state, ui_actions } = useContext(UIContext);
 
     //카드정보 불러오기
     const [cardInfoList, getCardInfoList] = useState([]);
@@ -168,9 +174,6 @@ const Card = () => {
         )
         // console.log(trueFilterList);
 
-        //옵션 필터
-        setOnOptionFilter(filterState[3].state);
-
         const filterPremium = (list) => {
             if (trueFilterList.includes(1)) {
                 var res = list.map(card => !card.display && card.rank==="Premium"?{...card, display: false}:{...card, display: true});
@@ -240,6 +243,7 @@ const Card = () => {
                 filter.id === index ? {...filter, "state" : !filter.state} : filter
             )
         );
+
     }
 
 
@@ -252,47 +256,34 @@ const Card = () => {
                 filter.filter?{...filter,"state": !filter.state}:filter
             )
         );
-        setOnOptionFilter(true);
         setIsShowFilterOptionList(true);
+        document.body.classList.add('no_scroll');
+        ui_actions.setTempScrollValue(ui_state.currentScrollValue);
     }
 
     // 카드 상세정보 보기
     const [detailCardIndex, getDetailCardIndex] = useState(0);
     const [isShowDetail, getIsShowDetail] = useState(false);
-    const [isPressedLabelInfoBtn, setIsPressedLabelInfoBtn] = useState(false);
-
-    // flicking
-    const flickingRef = useRef();
-    const [flickingInfo, setFlickingInfo] = useState();
-
-    useEffect(() => {
-        if (flickingRef.current) {
-            setFlickingInfo(flickingRef.current);
-        }
-    }, [])
 
     // props 정리
     const totalCardProps = {
         "cardListData" : cardInfoList,
         "getDetailCardIndex" : getDetailCardIndex,
         "getIsShowDetail" : getIsShowDetail,
-        "flickingRef" : flickingRef,
-        "flickingInfo" : flickingInfo
     }
     const detailProps = {
         "cardIndex" : detailCardIndex,
         "cardInfoList" : cardInfoList,
         "isShowDetail" : isShowDetail,
         "getIsShowDetail" : getIsShowDetail,
-        "isPressedLabelInfoBtn" : isPressedLabelInfoBtn,
-        "setIsPressedLabelInfoBtn" : setIsPressedLabelInfoBtn
     }
 
     const filterOptionProps = {
         "filteredOptionList": filteredOptionList,
         "setFilteredOptionList": setFilteredOptionList,
         "isShowFilterOptionList": isShowFilterOptionList,
-        "setIsShowFilterOptionList": setIsShowFilterOptionList
+        "setIsShowFilterOptionList": setIsShowFilterOptionList,
+        "setOnOptionFilter": setOnOptionFilter,
     }
     
     return (

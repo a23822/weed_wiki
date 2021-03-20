@@ -1,14 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useState } from 'react';
 
 // scss
 import '../../sprite/card/sp_card.scss';
 import styles from './card.module.scss';
 
+// context
+import { UIContext } from '../context/ui';
+
 // icon
 import { IoIosCloseCircleOutline, IoIosCloseCircle } from "react-icons/io";
 import { RiInformationLine } from "react-icons/ri";
 
-const cardDetail = (props) => {
+const CardDetail = (props) => {
     const cardIndex = props.detailprops.cardIndex;
     const cardInfoList = props.detailprops.cardInfoList;
     const info_detail = cardIndex>0?cardInfoList[cardIndex-1]:null;
@@ -18,16 +21,21 @@ const cardDetail = (props) => {
     const getIsShowDetail = props.detailprops.getIsShowDetail;
     
     // 라벨 인포메이션 버튼
-    const isPressedLabelInfoBtn = props.detailprops.isPressedLabelInfoBtn;
-    const setIsPressedLabelInfoBtn = props.detailprops.setIsPressedLabelInfoBtn;
+    const [isPressedLabelInfoBtn, setIsPressedLabelInfoBtn] = useState(false);
+
     const onClickLabelInfoBtn = (e) => {
         setIsPressedLabelInfoBtn(!isPressedLabelInfoBtn);
     }
+
+    // 스크롤
+    const { ui_state } = useContext(UIContext);
 
     // 닫기 버튼
     const onClickCloseBtn = () => {
         getIsShowDetail(!isShowDetail);
         setIsPressedLabelInfoBtn(false);
+        document.body.classList.remove('no_scroll');
+        window.scrollTo(0, ui_state.tempScrollValue);
     }
 
     // 옵션목록 라벨로 변경
@@ -202,4 +210,4 @@ const cardDetail = (props) => {
     )
 }
 
-export default cardDetail;
+export default CardDetail;

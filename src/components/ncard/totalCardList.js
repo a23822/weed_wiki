@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect, useState, useRef } from 'react';
 import Flicking from "@egjs/react-flicking";
 import FlickingBtn from '../common/flickingButton';
 
@@ -6,30 +6,45 @@ import FlickingBtn from '../common/flickingButton';
 import '../../sprite/card/sp_card.scss';
 import styles from './card.module.scss';
 
-const totalCardList = (props) => {
+// context
+import { UIContext } from '../context/ui';
+
+const TotalCardList = (props) => {
     //props
     const cardList = props.totalcardprops.cardListData;
     const getCardIndex = props.totalcardprops.getDetailCardIndex;
     const getIsShowDetail = props.totalcardprops.getIsShowDetail;
-    const flickingRef = props.totalcardprops.flickingRef;
-    const flickingInfo = props.totalcardprops.flickingInfo;
+
+    // 스크롤
+    const { ui_state , ui_actions } = useContext(UIContext);
 
     const onClickCard = (index) => {
         getCardIndex(index);
         getIsShowDetail(true);
+        document.body.classList.add('no_scroll');
+        ui_actions.setTempScrollValue(ui_state.currentScrollValue);
     }
-    
-    console.log(flickingInfo);
 
-    const testBtn = () => {
-        console.log(flickingInfo.getCurrentPanel());
-        var temp = flickingInfo.getCurrentPanel();
-        if (!temp) {
-            flickingInfo.moveTo(1,300);
-        } else {
-            flickingInfo.next(300);
+    // 플리킹 관련
+    const flickingRef = useRef();
+    const [flickingInfo, setFlickingInfo] = useState(flickingRef.current);
+    const [fHeight, setfHeight] = useState(0);
+
+    useEffect(() => {
+        if (flickingRef.current) {
+            setFlickingInfo(flickingRef.current);
+            var target = document.getElementsByClassName(flickingRef.current.props.className)[0];
+            var fInnerHeight = parseInt(target.clientHeight);
+            var margin = 2*parseInt(window.getComputedStyle(target).getPropertyValue('margin-bottom'));
+            setfHeight(fInnerHeight + margin);
         }
-    }
+    }, [flickingRef])
+
+    useEffect(() => {
+        if (flickingInfo){
+            flickingInfo.moveTo(ui_state.tempCardFlickingIndex,300);
+        }
+    }, [flickingInfo])
 
     return (
         <Fragment>
@@ -52,11 +67,10 @@ const totalCardList = (props) => {
                     ))
                 }
             </Flicking>
-            <button type="button" onClick={() => testBtn()}>테스트버튼임</button>
-            <FlickingBtn/>
+            <FlickingBtn flag={'cardInfo'} flickinginfo={flickingInfo} height={fHeight}/>
         </Fragment>
     )
 }
 
 
-export default totalCardList;
+export default TotalCardList;
