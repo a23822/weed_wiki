@@ -20,7 +20,7 @@ export const UIProvider = ({ children }) => {
         ui_state: { currentScrollValue, tempScrollValue, tempCardFlickingIndex },
         ui_actions: { setCurrentScrollValue, setTempScrollValue, setTempCardFlickingIndex }
     }
-
+    
     useEffect(() => {
         window.addEventListener('scroll', () => {
             setCurrentScrollValue(window.pageYOffset);

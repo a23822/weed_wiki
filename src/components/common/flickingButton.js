@@ -12,7 +12,7 @@ const FlickingButton = (props) => {
     const flag = props.flag;
 
     // UI Context
-    const { ui_state , ui_actions } = useContext(UIContext);
+    const { ui_actions } = useContext(UIContext);
 
     useEffect(() => {
         if (flickingInfo) {
@@ -24,12 +24,14 @@ const FlickingButton = (props) => {
     const clickBtn = (dir) => {
         // 카드정보에서 눌렀을 때
         if (flag === 'cardInfo') {
-            console.log();
             if (dir === `left`) {
-                flickingInfo.moveTo(flickingInfo.getCurrentPanel().state.index-3, 300);
+                var movIdx = flickingInfo.getCurrentPanel().state.index-3;
+                flickingInfo.moveTo(movIdx, 300);
             } else {
-                flickingInfo.moveTo(flickingInfo.getCurrentPanel().state.index+3, 300);
+                var movIdx = flickingInfo.getCurrentPanel().state.index+3;
+                flickingInfo.moveTo(movIdx, 300);
             }
+            ui_actions.setTempCardFlickingIndex(movIdx);
         }
     }
 
