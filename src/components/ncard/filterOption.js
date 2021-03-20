@@ -15,8 +15,8 @@ const filterOption = (props) => {
         ))
     }
 
-    console.log('asd');
-    console.log(options);
+    // console.log('asd');
+    // console.log(options);
 
     return (
         <Fragment>

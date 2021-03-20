@@ -1,23 +1,39 @@
 import React, { Fragment } from 'react';
 import Flicking from "@egjs/react-flicking";
+import FlickingBtn from '../common/flickingButton';
 
 // scss
 import '../../sprite/card/sp_card.scss';
 import styles from './card.module.scss';
 
 const totalCardList = (props) => {
-    const cardList = props.cardlistdata;
-    const getCardIndex = props.getdetailcardindex;
-    const getIsShowDetail = props.getisshowdetail;
+    //props
+    const cardList = props.totalcardprops.cardListData;
+    const getCardIndex = props.totalcardprops.getDetailCardIndex;
+    const getIsShowDetail = props.totalcardprops.getIsShowDetail;
+    const flickingRef = props.totalcardprops.flickingRef;
+    const flickingInfo = props.totalcardprops.flickingInfo;
 
     const onClickCard = (index) => {
         getCardIndex(index);
         getIsShowDetail(true);
     }
+    
+    console.log(flickingInfo);
+
+    const testBtn = () => {
+        console.log(flickingInfo.getCurrentPanel());
+        var temp = flickingInfo.getCurrentPanel();
+        if (!temp) {
+            flickingInfo.moveTo(1,300);
+        } else {
+            flickingInfo.next(300);
+        }
+    }
 
     return (
         <Fragment>
-            <Flicking className={`flicking ${styles.item_list_wrap}`} gap={12} autoResize={true} anchor={"50%"} hanger={"50%"} circular={true}>
+            <Flicking ref={flickingRef} className={`flicking ${styles.item_list_wrap}`} gap={12} autoResize={true} anchor={"50%"} hanger={"50%"} circular={true}>
                 {
                     cardList.map(card => (
                         card.display?
@@ -36,6 +52,8 @@ const totalCardList = (props) => {
                     ))
                 }
             </Flicking>
+            <button type="button" onClick={() => testBtn()}>테스트버튼임</button>
+            <FlickingBtn/>
         </Fragment>
     )
 }

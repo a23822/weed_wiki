@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback } from 'react';
+import React, { useState, useEffect, useContext, useCallback, useRef } from 'react';
 import { firebaseApp, AuthContext } from '../firebase/index';
 import cardData from '../../json/card.json';
 
@@ -166,7 +166,7 @@ const Card = () => {
         filterState.map(filter =>
             filter.state?trueFilterList.push(filter.id):null
         )
-        console.log(trueFilterList);
+        // console.log(trueFilterList);
 
         //옵션 필터
         setOnOptionFilter(filterState[3].state);
@@ -261,7 +261,24 @@ const Card = () => {
     const [isShowDetail, getIsShowDetail] = useState(false);
     const [isPressedLabelInfoBtn, setIsPressedLabelInfoBtn] = useState(false);
 
+    // flicking
+    const flickingRef = useRef();
+    const [flickingInfo, setFlickingInfo] = useState();
+
+    useEffect(() => {
+        if (flickingRef.current) {
+            setFlickingInfo(flickingRef.current);
+        }
+    }, [])
+
     // props 정리
+    const totalCardProps = {
+        "cardListData" : cardInfoList,
+        "getDetailCardIndex" : getDetailCardIndex,
+        "getIsShowDetail" : getIsShowDetail,
+        "flickingRef" : flickingRef,
+        "flickingInfo" : flickingInfo
+    }
     const detailProps = {
         "cardIndex" : detailCardIndex,
         "cardInfoList" : cardInfoList,
@@ -312,7 +329,7 @@ const Card = () => {
                             </div>
                         </div>
                     </div>
-                    <TotalCardList cardlistdata={cardInfoList} getdetailcardindex={getDetailCardIndex} getisshowdetail={getIsShowDetail}/>
+                    <TotalCardList totalcardprops={totalCardProps}/>
                     <CardDetail detailprops={detailProps}/>
                     <FilterOption filteroptionprops={filterOptionProps}/>
                 </section>
