@@ -12,14 +12,27 @@
         transform: translateY(-50%);
         width: 50px;
         height: 50px;
-        background-color: red;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
         z-index: 2010;
         pointer-events: initial;
+        .ico {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+        }
         &.type_left {
-            left: 0;
+            left: 3px;
+            .ico {
+                transform: translate(-50%, -50%) scaleX(-1);
+            }
         }
         &.type_right {
-            right: 0;
+            right: 3px;
         }
     }
 }

@@ -6,6 +6,9 @@ import styles from './flickingButton.module.scss';
 // context
 import { UIContext } from '../context/ui';
 
+//icon
+import { MdPlayArrow } from "react-icons/md";
+
 const FlickingButton = (props) => {
     const flickingInfo = props.flickinginfo;
     const height = props.height;
@@ -50,8 +53,8 @@ const FlickingButton = (props) => {
 
     return (
         <div className={styles.flick_btn_area} style={{height: `${height}px`, marginTop: `-${height}px`}}>
-            <button onClick={() => clickBtn('left')} type="button" className={`${styles.btn_move} ${styles.type_left}`}>이전</button>
-            <button onClick={() => clickBtn('right')} type="button" className={`${styles.btn_move} ${styles.type_right}`}>다음</button>
+            <button onClick={() => clickBtn('left')} type="button" className={`${styles.btn_move} ${styles.type_left}`}><MdPlayArrow className={styles.ico}/><span className="blind">Previous</span></button>
+            <button onClick={() => clickBtn('right')} type="button" className={`${styles.btn_move} ${styles.type_right}`}><MdPlayArrow className={styles.ico}/><span className="blind">Next</span></button>
         </div>
     )
 }
